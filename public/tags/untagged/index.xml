@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>untagged on Wolfie</title>
+    <link>https://wolf1e.web.app/tags/untagged/</link>
+    <description>Recent content in untagged on Wolfie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 06 Feb 2021 11:38:21 -0600</lastBuildDate><atom:link href="https://wolf1e.web.app/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[UPDATE] Transitioning Blog</title>
+      <link>https://wolf1e.web.app/posts/2021/02/update-transitioning-blog/</link>
+      <pubDate>Sat, 06 Feb 2021 11:38:21 -0600</pubDate>
+      
+      <guid>https://wolf1e.web.app/posts/2021/02/update-transitioning-blog/</guid>
+      <description>Since I now have this new website where I can blog, I will gradually transition my current blog to this website. If you didn&amp;rsquo;t already know, my blog is wolfiestech.blogspot.com. I will be uploading posts from that blog to here.
+UPDATE: I have finished uploading the posts from my old blog to here. Now, you don&amp;rsquo;t need to visit that site again.</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>https://wolf1e.web.app/posts/2021/02/first-post/</link>
+      <pubDate>Sat, 06 Feb 2021 09:59:26 -0600</pubDate>
+      
+      <guid>https://wolf1e.web.app/posts/2021/02/first-post/</guid>
+      <description>Hello world! This is my first post! Pretty cool!</description>
+    </item>
+    
+  </channel>
+</rss>
