@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OS Tutorial on Wolfie</title>
+    <link>https://wolf1e.web.app/tags/os-tutorial/</link>
+    <description>Recent content in OS Tutorial on Wolfie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 10 Feb 2021 20:30:09 -0600</lastBuildDate><atom:link href="https://wolf1e.web.app/tags/os-tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Run Newer Versions of macOS on Unsupported Macs</title>
+      <link>https://wolf1e.web.app/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
+      <pubDate>Wed, 10 Feb 2021 20:30:09 -0600</pubDate>
+      
+      <guid>https://wolf1e.web.app/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
+      <description>Hello guys! This post is a guide on what macOS versions you can run on a Unsupported Mac and what patcher to use. If you have any issues with the patchers in this post, feel free to join this discord server, and they will help you out. Anyways, enjoy the post!
+Mountain Lion (10.8) Mountain Lion Banner
+Supported Macs (Macs that can run it natively) MacBook Pro – 13″ from mid 2009 or later, 15″ from late 2007 and newer, 17″ from late 2007 and newer MacBook Air – late 2008 and newer iMac – models from mid 2007 and newer MacBook – 13″ aluminum from 2008, 13″ from 2009 and newer Mac Mini – early 2009 and newer Mac Pro – early 2008 models and newer XServe – early 2009 models and newer Unsupported Macs (Macs that can run it using a patcher) iMac4,1* 4,2 (CPU upgraded) iMac5,1* 5,2 6,1 MacBook2,1 3,1 4,1 MacBookAir1,1 MacBookPro2,1* 2,2* Macmini1,1 (CPU upgraded) Macmini2,1 MacPro1,1* 2,1* Xserve1,1* 2,1* Available Patchers NexPostFacto (32 bit) If your mac is equipped with ONLY an ATI X1300/1600/1900 GPU, it is highly recommended to use the f You can tell by seeing if your model has a *.</description>
+    </item>
+    
+  </channel>
+</rss>
