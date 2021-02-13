@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 10 Feb 2021 20:30:09 -0600</lastBuildDate><atom:link href="https://wolf1e.web.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Feb 2021 18:22:17 -0600</lastBuildDate><atom:link href="https://wolf1e.web.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Airpods 1st Generation First Impressions</title>
+      <link>https://wolf1e.web.app/posts/2021/02/airpods-1st-generation-first-impressions/</link>
+      <pubDate>Thu, 11 Feb 2021 18:22:17 -0600</pubDate>
+      
+      <guid>https://wolf1e.web.app/posts/2021/02/airpods-1st-generation-first-impressions/</guid>
+      <description>Airpods (Photo by PCMag)
+Hello guys! I have been trying out the Airpods 1st generation for around a week now, and I have a few things to say. Let&amp;rsquo;s get right into it!
+The Good The Airpods are really nice. The integration with my iPhone 7 is great because I get to use the battery widget. I also like the popup that appears that tells me the case battery percentage and the Airpods themselves.</description>
+    </item>
+    
     <item>
       <title>How to Run Newer Versions of macOS on Unsupported Macs</title>
       <link>https://wolf1e.web.app/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
@@ -100,16 +111,6 @@ Debian Debian is a great operating system. It is free and open source, and it is
       <description>Fedora Logo
 Awhile ago, I decided to try out Fedora. I really like GNOME&amp;rsquo;s workflow and Fedora seemed like the best option because it is based around GNOME.
 Initial Installation I installed it, which was pretty easy thanks to the Anaconda installer, and tried to get the proprietary NVIDIA drivers working, but my card, a NVIDIA GT 8800, is older so the drivers ended up making the experience not great. The background would be all corrupted after suspending.</description>
-    </item>
-    
-    <item>
-      <title>Using the Galaxy S5 in 2020</title>
-      <link>https://wolf1e.web.app/posts/2020/10/using-the-galaxy-s5-in-2020/</link>
-      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://wolf1e.web.app/posts/2020/10/using-the-galaxy-s5-in-2020/</guid>
-      <description>I tend to switch phones somewhat often, just to rediscover what made these devices great. Today, I decided to switch to the Samsung Galaxy S5 for one day. The experience was pretty good, as I will write later in this post. I managed to get Android 10 to run on it using a custom ROM called Resurrection Remix.
-The Good The phone experience was pretty good. It was even better than some low budget phones that I have tried in the past.</description>
     </item>
     
   </channel>

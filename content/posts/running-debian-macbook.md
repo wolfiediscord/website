@@ -1,5 +1,5 @@
 ---
-title: "Running Debian Macbook On My Macbook"
+title: "Running Debian 10 On My Macbook"
 date: 2020-10-12
 draft: false
 toc: false

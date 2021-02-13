@@ -3,23 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://wolf1e.web.app/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</loc>
-    <lastmod>2021-02-10T20:30:09-06:00</lastmod>
+    <loc>https://wolf1e.web.app/posts/2021/02/airpods-1st-generation-first-impressions/</loc>
+    <lastmod>2021-02-11T18:22:17-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wolf1e.web.app/tags/os-tutorial/</loc>
-    <lastmod>2021-02-10T20:30:09-06:00</lastmod>
+    <loc>https://wolf1e.web.app/tags/earbuds-review/</loc>
+    <lastmod>2021-02-11T18:22:17-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.web.app/tags/headphones-review/</loc>
+    <lastmod>2021-02-11T18:22:17-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://wolf1e.web.app/posts/</loc>
-    <lastmod>2021-02-10T20:30:09-06:00</lastmod>
+    <lastmod>2021-02-11T18:22:17-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://wolf1e.web.app/tags/</loc>
-    <lastmod>2021-02-10T20:30:09-06:00</lastmod>
+    <lastmod>2021-02-11T18:22:17-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -34,7 +39,7 @@
   
   <url>
     <loc>https://wolf1e.web.app/</loc>
-    <lastmod>2021-02-10T20:30:09-06:00</lastmod>
+    <lastmod>2021-02-11T18:22:17-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -45,6 +50,16 @@
                 hreflang="en"
                 href="https://wolf1e.web.app/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.web.app/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</loc>
+    <lastmod>2021-02-10T20:30:09-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.web.app/tags/os-tutorial/</loc>
+    <lastmod>2021-02-10T20:30:09-06:00</lastmod>
   </url>
   
   <url>
