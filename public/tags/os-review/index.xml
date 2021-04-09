@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OS Review on Wolfie</title>
-    <link>https://wolf1e.web.app/tags/os-review/</link>
+    <link>https://wolf1e.ga/tags/os-review/</link>
     <description>Recent content in OS Review on Wolfie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://wolf1e.web.app/tags/os-review/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://wolf1e.ga/tags/os-review/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Experience with Ubuntu On My Surface Pro 2</title>
-      <link>https://wolf1e.web.app/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</link>
+      <link>https://wolf1e.ga/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</link>
       <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.web.app/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</guid>
+      <guid>https://wolf1e.ga/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</guid>
       <description>Ubuntu 20.04 Desktop (Screenshot by OMG! Ubuntu!)
 A while ago, I decided to try out Ubuntu on my Surface Pro 2. I thought that since my sister&amp;rsquo;s laptop ran Kubuntu so well, I figured that I should give Ubuntu a try on my Surface Pro 2. I also run Debian on my main machine, so I figured that Ubuntu wouldn&amp;rsquo;t be too bad to try.
 Installation Installation wasn&amp;rsquo;t hard. I booted into the USB drive after repeatedly trying to boot from it.</description>
@@ -21,10 +21,10 @@ Installation Installation wasn&amp;rsquo;t hard. I booted into the USB drive aft
     
     <item>
       <title>Why I Downgraded From Windows 10 to 8.1</title>
-      <link>https://wolf1e.web.app/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</link>
+      <link>https://wolf1e.ga/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</link>
       <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.web.app/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</guid>
+      <guid>https://wolf1e.ga/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</guid>
       <description>Windows 8.1 Start Menu (Photo by Confidential Files!)
 A while ago, I decided to try out Windows 8.1 on my Surface Pro 2. I thought that it might be faster, or I might get better battery life out of it. I downgraded from Windows 10 using a recovery image, and booted into Windows 8.1. I had no idea how much I would love Windows 8.1.
 Once I finished the setup and installed all of the updates, I figured I would get my regular applications.</description>
@@ -32,10 +32,10 @@ Once I finished the setup and installed all of the updates, I figured I would ge
     
     <item>
       <title>Debian Troubles and Why I Switched Back</title>
-      <link>https://wolf1e.web.app/posts/2020/12/debian-troubles-and-why-i-switched-back/</link>
+      <link>https://wolf1e.ga/posts/2020/12/debian-troubles-and-why-i-switched-back/</link>
       <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.web.app/posts/2020/12/debian-troubles-and-why-i-switched-back/</guid>
+      <guid>https://wolf1e.ga/posts/2020/12/debian-troubles-and-why-i-switched-back/</guid>
       <description>Debian Logo
 I have been using Debian again for the past two weeks. I think that the experience is great, even though I have had a few issues (mostly KDE related).
 The Fedora Story I switched back to Debian for one major issue. My old NVIDIA graphics card was acting up on Fedora and causing it to slow down immensely and freeze the system, forcing me to reboot. I also switched back because I know how Debian functions compared to not knowing much in Fedora.</description>
@@ -43,10 +43,10 @@ The Fedora Story I switched back to Debian for one major issue. My old NVIDIA gr
     
     <item>
       <title>Debian vs OS X Mountain Lion | Why I Switched Back to OS X</title>
-      <link>https://wolf1e.web.app/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</link>
+      <link>https://wolf1e.ga/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</link>
       <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.web.app/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</guid>
+      <guid>https://wolf1e.ga/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</guid>
       <description>Mountain Lion Installer
 I have recently started to use my Macbook 4,1 again, even after getting my Surface Pro 2. There are a variety of reasons why, but that is for another time. I decided to try Debian and Mountain Lion, and I have found out which OS is for me.
 Debian Debian is a great operating system. It is free and open source, and it is very stable and secure.</description>
@@ -54,19 +54,19 @@ Debian Debian is a great operating system. It is free and open source, and it is
     
     <item>
       <title>My Personal Top 5 Linux Distros of 2020</title>
-      <link>https://wolf1e.web.app/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</link>
+      <link>https://wolf1e.ga/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</link>
       <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.web.app/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</guid>
+      <guid>https://wolf1e.ga/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</guid>
       <description>Hey guys, I am going to review my personal top five Linux distributions for this year. These distros, (distributions), are ones that I have personally used in the year of 2020. You may not agree with what I say, but that is alright. We are all human beings and we have our own opinions. These distros are just the ones that I selected because I thought they were the best.</description>
     </item>
     
     <item>
       <title>Using Fedora Linux</title>
-      <link>https://wolf1e.web.app/posts/2020/10/using-fedora-linux/</link>
+      <link>https://wolf1e.ga/posts/2020/10/using-fedora-linux/</link>
       <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.web.app/posts/2020/10/using-fedora-linux/</guid>
+      <guid>https://wolf1e.ga/posts/2020/10/using-fedora-linux/</guid>
       <description>Fedora Logo
 Awhile ago, I decided to try out Fedora. I really like GNOME&amp;rsquo;s workflow and Fedora seemed like the best option because it is based around GNOME.
 Initial Installation I installed it, which was pretty easy thanks to the Anaconda installer, and tried to get the proprietary NVIDIA drivers working, but my card, a NVIDIA GT 8800, is older so the drivers ended up making the experience not great. The background would be all corrupted after suspending.</description>
@@ -74,10 +74,10 @@ Initial Installation I installed it, which was pretty easy thanks to the Anacond
     
     <item>
       <title>Running Debian 10 On My Macbook</title>
-      <link>https://wolf1e.web.app/posts/2020/10/running-debian-10-on-my-macbook/</link>
+      <link>https://wolf1e.ga/posts/2020/10/running-debian-10-on-my-macbook/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.web.app/posts/2020/10/running-debian-10-on-my-macbook/</guid>
+      <guid>https://wolf1e.ga/posts/2020/10/running-debian-10-on-my-macbook/</guid>
       <description>My Macbook Running Debian 10
 Yes, I know that I have written quite a bit of OS reviews, but this one is really good. Two days ago, I decided it would be nice to give Debian a try on my 4,1, as it has an older kernel and the lid closing might work. At the time of this post, the latest Debian release is Debian 10 Buster.
 Installing Debian I downloaded the operating system on their website using the HTTP option (I found it to be the easiest).</description>
@@ -85,19 +85,19 @@ Installing Debian I downloaded the operating system on their website using the H
     
     <item>
       <title>Trying Cloudready On My Macbook</title>
-      <link>https://wolf1e.web.app/posts/2020/10/trying-cloudready-on-my-macbook/</link>
+      <link>https://wolf1e.ga/posts/2020/10/trying-cloudready-on-my-macbook/</link>
       <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.web.app/posts/2020/10/trying-cloudready-on-my-macbook/</guid>
+      <guid>https://wolf1e.ga/posts/2020/10/trying-cloudready-on-my-macbook/</guid>
       <description>Today, I thought it would be a good idea to revisit CloudReady on my Macbook 4,1. I created the USB using a tool in Linux called dd. It took some time, but it worked. I took out an old hard drive, that I originally got from the Macbook itself, and put it in the computer. CloudReady discontinued dual booting in 2018, so I couldn&amp;rsquo;t dual boot it with OS X Mountain Lion.</description>
     </item>
     
     <item>
       <title>Running Mountain Lion in 2020</title>
-      <link>https://wolf1e.web.app/posts/2020/10/running-mountain-lion-in-2020/</link>
+      <link>https://wolf1e.ga/posts/2020/10/running-mountain-lion-in-2020/</link>
       <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.web.app/posts/2020/10/running-mountain-lion-in-2020/</guid>
+      <guid>https://wolf1e.ga/posts/2020/10/running-mountain-lion-in-2020/</guid>
       <description>Mountain Lion Running On My Macbook 4,1
 This is a review on the state of OS X Mountain Lion in 2020 from my personal experience.
 OS X Mountain Lion was released on July 25, 2012. The OS received security updates until 2015. Most app developers decided to leave the platform. The major blow to older OS&amp;rsquo;s was Google unsupporting Chrome and not updating it anymore for OS X 10.9 and older.</description>

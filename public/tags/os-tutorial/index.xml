@@ -2,18 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OS Tutorial on Wolfie</title>
-    <link>https://wolf1e.web.app/tags/os-tutorial/</link>
+    <link>https://wolf1e.ga/tags/os-tutorial/</link>
     <description>Recent content in OS Tutorial on Wolfie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 10 Feb 2021 20:30:09 -0600</lastBuildDate><atom:link href="https://wolf1e.web.app/tags/os-tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021 23:07:06 -0600</lastBuildDate><atom:link href="https://wolf1e.ga/tags/os-tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Install Debian 10 On a Macbook (Early 2008)</title>
+      <link>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</link>
+      <pubDate>Fri, 12 Feb 2021 23:07:06 -0600</pubDate>
+      
+      <guid>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</guid>
+      <description>Debian Logo
+After reinstalling Debian 10 on my Macbook 4,1, I realized that I made a few mistakes in my guide. This post is a tutorial on how to properly install Debian 10 on a Macbook 4,1.
+Installation When you go through the installation process, choose graphical install. You need to have a secondary mouse, as the trackpad won&amp;rsquo;t work during the install, and it won&amp;rsquo;t work very well after the install.</description>
+    </item>
+    
     <item>
       <title>How to Run Newer Versions of macOS on Unsupported Macs</title>
-      <link>https://wolf1e.web.app/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
+      <link>https://wolf1e.ga/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
       <pubDate>Wed, 10 Feb 2021 20:30:09 -0600</pubDate>
       
-      <guid>https://wolf1e.web.app/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
+      <guid>https://wolf1e.ga/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
       <description>Hello guys! This post is a guide on what macOS versions you can run on a Unsupported Mac and what patcher to use. If you have any issues with the patchers in this post, feel free to join this discord server, and they will help you out. Anyways, enjoy the post!
 Mountain Lion (10.8) Mountain Lion Banner
 Supported Macs (Macs that can run it natively) MacBook Pro – 13″ from mid 2009 or later, 15″ from late 2007 and newer, 17″ from late 2007 and newer MacBook Air – late 2008 and newer iMac – models from mid 2007 and newer MacBook – 13″ aluminum from 2008, 13″ from 2009 and newer Mac Mini – early 2009 and newer Mac Pro – early 2008 models and newer XServe – early 2009 models and newer Unsupported Macs (Macs that can run it using a patcher) iMac4,1* 4,2 (CPU upgraded) iMac5,1* 5,2 6,1 MacBook2,1 3,1 4,1 MacBookAir1,1 MacBookPro2,1* 2,2* Macmini1,1 (CPU upgraded) Macmini2,1 MacPro1,1* 2,1* Xserve1,1* 2,1* Available Patchers NexPostFacto (32 bit) If your mac is equipped with ONLY an ATI X1300/1600/1900 GPU, it is highly recommended to use the f You can tell by seeing if your model has a *.</description>

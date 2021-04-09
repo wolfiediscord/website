@@ -1,34 +1,98 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Wolfie</title>
-        <link>https://wolf1e.web.app/posts/</link>
+        <link>https://wolf1e.ga/posts/</link>
         <description>Recent content in Posts on Wolfie</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Thu, 11 Feb 2021 18:22:17 -0600</lastBuildDate>
-        <atom:link href="https://wolf1e.web.app/posts/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Fri, 09 Apr 2021 17:52:39 -0500</lastBuildDate>
+        <atom:link href="https://wolf1e.ga/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>New Domain</title>
+            <link>https://wolf1e.ga/posts/2021/04/new-domain/</link>
+            <pubDate>Fri, 09 Apr 2021 17:52:39 -0500</pubDate>
+            
+            <guid>https://wolf1e.ga/posts/2021/04/new-domain/</guid>
+            <description>Hey guys! I just wanted to let you know that I got a new domain! The existing one will still work, but from now on, I suggest using the new domain: https://wolf1e.ga.</description>
+            <content type="html"><![CDATA[<p>Hey guys! I just wanted to let you know that I got a new domain! The existing one will still work, but from now on, I suggest using the new domain: <code>https://wolf1e.ga</code>.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>How to Install Debian 10 On a Macbook (Early 2008)</title>
+            <link>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</link>
+            <pubDate>Fri, 12 Feb 2021 23:07:06 -0600</pubDate>
+            
+            <guid>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</guid>
+            <description>Debian Logo
+After reinstalling Debian 10 on my Macbook 4,1, I realized that I made a few mistakes in my guide. This post is a tutorial on how to properly install Debian 10 on a Macbook 4,1.
+Installation When you go through the installation process, choose graphical install. You need to have a secondary mouse, as the trackpad won&amp;rsquo;t work during the install, and it won&amp;rsquo;t work very well after the install.</description>
+            <content type="html"><![CDATA[<p><img src="/post-photos/debian_logo.jpg" alt="Debian Logo">
+<em>Debian Logo</em></p>
+<p>After reinstalling Debian 10 on my Macbook 4,1, I realized that I made a few mistakes in my guide. This post is a tutorial on how to properly install Debian 10 on a Macbook 4,1.</p>
+<h2 id="installation">Installation</h2>
+<p>When you go through the installation process, choose graphical install. You need to have a secondary mouse, as the trackpad won&rsquo;t work during the install, and it won&rsquo;t work very well after the install. Networking won&rsquo;t work either, so you need a full installation image unless you have an ethernet connection. Once you have completed the installation, continue with this tutorial.</p>
+<h2 id="post-installation">Post Installation</h2>
+<p>There are several things we need to address after post installation: networking, the trackpad, the iSight camera, and an issue with the bootloader. Let&rsquo;s begin fixing those things.</p>
+<h3 id="networking">Networking</h3>
+<p>If you do not have a working internet connection that isn&rsquo;t Wi-Fi, you need to get one in order to follow the next steps. Once you have a working internet connection via ethernet or other means, you need to make sure you have the right wireless card. I have a model that is compatible with Debian. You can follow the wiki page <a href="https://wiki.debian.org/bcm43xx">here</a> to check if you have a Broadcom 43xx wireless card. Once you have verified that you have the right card, install the <code>b43-firmware-installer</code> package. After you have installed it, reboot the machine. Hopefully, you will have networking working, and you will be able to proceed with this tutorial. If not, there are various amounts of resources available on the internet.</p>
+<h3 id="trackpad">Trackpad</h3>
+<p>The first thing you want to do to fix the trackpad is to install the following packages. The command is below.</p>
+<pre><code>sudo apt install xserver-xorg-input-libinput xserver-xorg-input-evdev xserver-xorg-input-mouse
+</code></pre><p>If your system has the <code>xserver-xorg-input-synaptics</code> package installed, remove it. It will interfere with the libinput driver we are going to proceed with. Once you have made sure that the package isn&rsquo;t on your system, type the following commands below.</p>
+<pre><code>sudo su
+mkdir -p /etc/X11/xorg.conf.d
+echo 'Section &quot;InputClass&quot;
+        Identifier &quot;libinput touchpad catchall&quot;
+        MatchIsTouchpad &quot;on&quot;
+        MatchDevicePath &quot;/dev/input/event*&quot;
+        Driver &quot;libinput&quot;
+        Option &quot;Tapping&quot; &quot;on&quot;
+EndSection' &gt; /etc/X11/xorg.conf.d/40-libinput.conf
+systemctl restart lightdm
+</code></pre><p>The last command will send you back to the login screen, so make sure you have everything saved. If you have a different login manager than lightdm, replace lightdm with your login manager&rsquo;s name. Some examples would be <code>gdm3</code>, <code>sddm</code>, etc.</p>
+<p>Once you have done that, you should have a functioning touchpad that you can use tap to click with. The Macbook 4,1 doesn&rsquo;t have a right click button, so you have to press with two fingers on the touchpad in order to get it to right click.</p>
+<h3 id="isight-camera">iSight Camera</h3>
+<p>In order to get the iSight camera to work, you are going to need to find the firmware on the internet. If you have a dualboot of Debian and OS X, you can get the location of the firmware by typing the following commands:</p>
+<pre><code>sudo su
+mkdir -p /MacOSX
+mount -t hfsplus /dev/sdaXX /MacOSX
+ls /MacOSX/System/Library/Extensions/IOUSBFamily.kext/Contents/PlugIns/AppleUSBVideoSupport.kext/Contents/MacOS/AppleUSBVideoSupport
+exit
+</code></pre><p>Make sure to replace the XX&rsquo;s with the valid drive. You don&rsquo;t want to mount your Linux drive to the folder! You can find out what drive your OS X installation is on by typing <code>sudo fdisk -l</code>.</p>
+<p>Once you have the location of the iSight Camera firmware, you can type in <code>sudo apt install isight-firmware-tools</code> into your terminal. It will ask you where the firmware is located. You need to type in the location of the firmware, which we did above. If you downloaded it, put the path to the file you downloaded. If everything goes right, it should work just fine.</p>
+<h3 id="the-bootloader">The Bootloader</h3>
+<p>There is an issue with the Debian 10 bootloader that happens upon post installation. This fix is a workaround, so don&rsquo;t expect it to work forever. The error you get is an error saying <code>flipdone timeout</code> or something along those lines. In order to fix it, you need to change one of the values of the <code>/etc/grub/default</code> file. From your terminal, you need to run these commands:</p>
+<pre><code>sudo nano /etc/default/grub
+</code></pre><p>Once you are in the file, change the value of the <code>GRUB_CMDLINE_LINUX_DEFAULT</code> to the following:</p>
+<pre><code>GRUB_CMD_LINUX_DEFAULT=&quot;quiet splash video=SVIDEO-1:d&quot;
+</code></pre><p>Once you are done, press <code>Ctrl</code> + <code>X</code> to exit out of the nano text editor. If it asks you to save, say yes. Once you are back into your terminal, type in the following commands:</p>
+<pre><code>sudo upgrade-grub
+sudo reboot
+</code></pre><p>Once you have done that, the bootloader should be fine, and your Debian 10 installation should boot much faster.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>After you have done all of these things, you should have a fully functioning Debian 10 installation on your Macbook 4,1. If you have any issues, please let me know on the <a href="https://discord.gg/XbbWAsE">Unsupported Macs Discord Server</a> in the #linux channel. Thank you for reading my article. The sources of this information are listed below.</p>
+<h3 id="sources">Sources</h3>
+<ul>
+<li><a href="https://wiki.debian.org/bcm43xx">Debian Wiki: bcm43xx</a></li>
+<li><a href="https://wiki.debian.org/SynapticsTouchpad">Debian Wiki: SynapticTouchpad</a></li>
+<li><a href="https://wiki.debian.org/MacBook#iSight">Debian Wiki: Macbook#iSight</a></li>
+<li><a href="https://elementaryos.stackexchange.com/questions/18783/how-to-overcome-flip-done-timed-out-errors">ElementaryOS StackExchange: How to overcome “flip_done” timed out errors</a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Airpods 1st Generation First Impressions</title>
-            <link>https://wolf1e.web.app/posts/2021/02/airpods-1st-generation-first-impressions/</link>
+            <link>https://wolf1e.ga/posts/2021/02/airpods-1st-generation-first-impressions/</link>
             <pubDate>Thu, 11 Feb 2021 18:22:17 -0600</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2021/02/airpods-1st-generation-first-impressions/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/apple/airpods.jpg&#34; alt=&#34;Airpods&#34;&gt;
-&lt;em&gt;Airpods (Photo by PCMag)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Hello guys! I have been trying out the Airpods 1st generation for around a week now, and I have a few things to say. Let&amp;rsquo;s get right into it!&lt;/p&gt;
-&lt;h2 id=&#34;the-good&#34;&gt;The Good&lt;/h2&gt;
-&lt;p&gt;The Airpods are really nice. The integration with my iPhone 7 is great because I get to use the battery widget. I also like the popup that appears that tells me the case battery percentage and the Airpods themselves. I also like how the double tap is changeable, as I don&amp;rsquo;t really use Siri or ever go back to a previous track with my regular earbuds.&lt;/p&gt;
-&lt;p&gt;I also like some of the other features of Airpods, such as the ear detection. I love being able to just take out one Airpod, and it pauses my music. I don&amp;rsquo;t get why other wireless earbud manufactures haven&amp;rsquo;t thought of this already. It&amp;rsquo;s also nice that it pauses my music when I put the Airpods in the case.&lt;/p&gt;
-&lt;h2 id=&#34;the-bad&#34;&gt;The Bad&lt;/h2&gt;
-&lt;p&gt;The Airpods were kind of a disappointment to me. I thought they were going to be super good, especially considering how they were $160 USD before the 2nd generation came out. However, they are not as good as I thought. Since the Airpods don&amp;rsquo;t have any sealing, noise leaks into my ears constantly. I have to adjust the volume to the point where I get a headache if I want to hear my music on the bus. My other earbuds, the Skullcandy Sesh Evos have the tip, which seals my ears and makes the listening experience much better.&lt;/p&gt;
-&lt;p&gt;I also don&amp;rsquo;t like the fact that the Airpods only support double tapping. This might change in the future with a firmware update, but I think that is unlikely as the Airpods 2nd generation have support for more than just double tapping. I feel like Apple could have done better. It gets really annoying having to change the volume with my phone&amp;rsquo;s buttons instead of just using the taps on my Airpods. That is a feature I had on my Skullcandy earbuds for a long time.&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;If you are looking to pick up a pair of Airpods, consider other options. If you are heavily invested in the Apple ecosystem, go for it. However, if you are not heavily invested, try looking for other options.&lt;/p&gt;
-&lt;p&gt;If you want good wireless earbuds for a third of the price of Airpods, the Skullcandy Sesh Evos are the earbuds to get. They do have some annoyances, such as not having touch controls, but they have many more features than the Airpods. They also charge using USB Type-C, so if you have an Android phone made in the past few years, your phone charger will work with them.&lt;/p&gt;
-&lt;p&gt;Overall, if you are heavily invested in the Apple ecosystem and you don&amp;rsquo;t want to spend more money on the Airpods Pro, go for the Airpods; however, the Airpods Pro are probably much better than the regular Airpods, as they have the sealing that regular Airpods lack. If you are not heavily invested in the Apple ecosystem, go for the Skullcandy Sesh Evos or explore other options. Thank you for reading my article.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2021/02/airpods-1st-generation-first-impressions/</guid>
+            <description>Airpods (Photo by PCMag)
+Hello guys! I have been trying out the Airpods 1st generation for around a week now, and I have a few things to say. Let&amp;rsquo;s get right into it!
+The Good The Airpods are really nice. The integration with my iPhone 7 is great because I get to use the battery widget. I also like the popup that appears that tells me the case battery percentage and the Airpods themselves.</description>
             <content type="html"><![CDATA[<p><img src="/post-photos/apple/airpods.jpg" alt="Airpods">
 <em>Airpods (Photo by PCMag)</em></p>
 <p>Hello guys! I have been trying out the Airpods 1st generation for around a week now, and I have a few things to say. Let&rsquo;s get right into it!</p>
@@ -47,238 +111,13 @@
         
         <item>
             <title>How to Run Newer Versions of macOS on Unsupported Macs</title>
-            <link>https://wolf1e.web.app/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
+            <link>https://wolf1e.ga/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
             <pubDate>Wed, 10 Feb 2021 20:30:09 -0600</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
-            <description>&lt;p&gt;Hello guys! This post is a guide on what macOS versions you can run on a Unsupported Mac and what patcher to use. If you have any issues with the patchers in this post, feel free to join &lt;a href=&#34;https://discord.gg/XbbWAsE&#34;&gt;this discord server&lt;/a&gt;, and they will help you out. Anyways, enjoy the post!&lt;/p&gt;
-&lt;h2 id=&#34;mountain-lion-108&#34;&gt;Mountain Lion (10.8)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macOS/mountain-lion.png&#34; alt=&#34;Mountain Lion Banner&#34;&gt;
-&lt;em&gt;Mountain Lion Banner&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;supported-macs-macs-that-can-run-it-natively&#34;&gt;Supported Macs (Macs that can run it natively)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;MacBook Pro – 13″ from mid 2009 or later, 15″ from late 2007 and newer, 17″ from late 2007 and newer
-MacBook Air – late 2008 and newer
-iMac – models from mid 2007 and newer
-MacBook – 13″ aluminum from 2008, 13″ from 2009 and newer
-Mac Mini – early 2009 and newer
-Mac Pro – early 2008 models and newer
-XServe – early 2009 models and newer
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;unsupported-macs-macs-that-can-run-it-using-a-patcher&#34;&gt;Unsupported Macs (Macs that can run it using a patcher)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;iMac4,1* 4,2 (CPU upgraded)
-iMac5,1* 5,2 6,1
-MacBook2,1 3,1 4,1
-MacBookAir1,1
-MacBookPro2,1* 2,2*
-Macmini1,1 (CPU upgraded)
-Macmini2,1
-MacPro1,1* 2,1*
-Xserve1,1* 2,1*
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;available-patchers&#34;&gt;Available Patchers&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://parrotgeek.com/npf/10.8_32.html&#34;&gt;&lt;strong&gt;NexPostFacto (32 bit)&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;If your mac is equipped with ONLY an ATI X1300/1600/1900 GPU, it is highly recommended to use the f
-You can tell by seeing if your model has a *.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://parrotgeek.com/npf/10.8_64.html&#34;&gt;&lt;strong&gt;NexPostFacto (64 bit) (ATI GPU ONLY)&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/rmc-team/osx-patcher&#34;&gt;&lt;strong&gt;RMC OS X Patcher&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;You will not have graphics acceleration using this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;mavericks-109&#34;&gt;Mavericks (10.9)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macOS/mavericks.png&#34; alt=&#34;Mavericks Banner&#34;&gt;
-&lt;em&gt;Mavericks Banner&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;supported-macs-macs-that-can-run-it-natively-1&#34;&gt;Supported Macs (Macs that can run it natively)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;iMac (Mid-2007 to Mid-2014)
-MacBook (13&amp;quot; Late 2008 Aluminum, Early 2009 to Mid-2010)
-MacBook Pro (13&amp;quot; Mid-2009 to Mid-2014)
-MacBook Pro (15&amp;quot; Mid/Late 2007 to Mid-2014)
-MacBook Pro (17&amp;quot; Late 2007 to Late 2011)
-MacBook Air (Late 2008 to Early 2014)
-Mac mini (Early 2009 to Late 2012)
-Mac Pro (Early 2008 to Late 2013)
-Xserve (Early 2009)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;unsupported-macs-macs-that-can-run-it-using-a-patcher-1&#34;&gt;Unsupported Macs (Macs that can run it using a patcher)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Macbook 2,1 3,1 4,1
-MacBookAir 1,1
-iMac4,1*(if CPU upgraded to Core 2 Duo) 4,2 5,1* 5,2
-Macmini1,1 2,1
-MacBookPro2,1* 2,2*
-MacPro1,1* 2,1 2,2* (with X1900 XT)
-Xserve1,1* 2,1*
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;available-patchers-1&#34;&gt;Available Patchers&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://parrotgeek.com/npf/10.9.html&#34;&gt;&lt;strong&gt;NexPostFacto (64 bit) (ATI GPU ONLY)&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;If your mac is equipped with ONLY an ATI X1300/1600/1900 GPU, you can run this patcher. You can tell if your model has a *.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/rmc-team/osx-patcher&#34;&gt;&lt;strong&gt;RMC OS X Patcher&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;You will not have graphics acceleration using this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;yosemite-1010&#34;&gt;Yosemite (10.10)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macOS/yosemite.png&#34; alt=&#34;Yosemite Banner&#34;&gt;
-&lt;em&gt;Yosemite Banner&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;supported-macs-macs-that-can-run-it-natively-2&#34;&gt;Supported Macs (Macs that can run it natively)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;iMac (Mid-2007 or later)
-MacBook (13&amp;quot; Late 2008 Aluminum, Early 2009 or later)
-MacBook Pro (13&amp;quot; Mid-2009 or later)
-MacBook Pro (15&amp;quot; Mid/Late 2007 or later)
-MacBook Pro (17&amp;quot; Late 2007 or later)
-MacBook Air (Late 2008 or later)
-Mac mini (Early 2009 or later)
-Mac Pro (Early 2008 or later)
-Xserve (Early 2009)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;unsupported-macs-macs-that-can-run-it-using-a-patcher-2&#34;&gt;Unsupported Macs (Macs that can run it using a patcher)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;MacBook2,1 3,1 4,1
-MacBookAir1,1
-MacBookPro2,1 2,2
-iMac4,1 4,2 5,1 5,2
-Macmini 1,1 2,1
-MacPro1,1 2,1
-Xserve1,1 2,1
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;available-patchers-2&#34;&gt;Available Patchers&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/rmc-team/osx-patcher&#34;&gt;&lt;strong&gt;RMC OS X Patcher&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;You will not have graphics acceleration using this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id=&#34;el-capitan-1011&#34;&gt;El Capitan (10.11)&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macOS/el-capitan.png&#34; alt=&#34;El Capitan Banner&#34;&gt;
-&lt;em&gt;El Capitan Banner&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;supported-macs-macs-that-can-run-it-natively-3&#34;&gt;Supported Macs (Macs that can run it natively)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;iMac (Mid-2007 or newer)
-MacBook (Late 2008 Aluminum, Early 2009 or newer)
-MacBook Air (Late 2008 or newer)
-MacBook Pro (Mid/Late 2007 or newer)
-Mac mini (Early 2009 or newer)
-Mac Pro (Early 2008 or newer)
-Xserve (Early 2009)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;unsupported-macs-macs-that-can-run-it-using-a-patcher-3&#34;&gt;Unsupported Macs (Macs that can run it using a patcher)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;MacBook2,1 3,1 4,1
-MacBookAir1,1
-MacBookPro2,1 2,2
-iMac4,1 4,2 5,1 5,2
-Macmini 1,1 2,1
-MacPro1,1 2,1
-Xserve1,1 2,1
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;available-patchers-3&#34;&gt;Available Patchers&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/rmc-team/osx-patcher&#34;&gt;&lt;strong&gt;RMC OS X Patcher&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;You will not have graphics acceleration using this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id=&#34;sierra-1012&#34;&gt;Sierra (10.12)&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macOS/sierra.png&#34; alt=&#34;Sierra Banner&#34;&gt;
-&lt;em&gt;Sierra Banner&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;supported-macs-macs-that-can-run-it-natively-4&#34;&gt;Supported Macs (Macs that can run it natively)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;iMac (Late 2009 or later)
-MacBook (Late 2009 or later)
-MacBook Air (Late 2010 or later)
-MacBook Pro (Mid-2010 or later)
-Mac mini (Mid-2010 or later)
-Mac Pro (Mid-2010 or later)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;unsupported-macs-macs-that-can-run-it-using-a-patcher-4&#34;&gt;Unsupported Macs (Macs that can run it using a patcher)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Macbook4,1 5,1* 5,2*
-MacBookAir2,1*
-MacBookPro4,1* 5,1* 5,2* 5,3* 5,4* 5,5*
-iMac7,1 8,1* 9,1*
-Macmini3,1*
-MacPro3,1* 4,1*
-Xserve2,1* 3,1*
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;available-patchers-4&#34;&gt;Available Patchers&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;http://dosdude1.com/sierrapatch.html&#34;&gt;&lt;strong&gt;dosdude1&amp;rsquo;s macOS Sierra Patch Tool&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;If you see a * next to your model, you are recommended to use this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/rmc-team/macos-patcher&#34;&gt;&lt;strong&gt;RMC macOS Patcher&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;You will not have graphics acceleration using this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id=&#34;high-sierra-1013&#34;&gt;High Sierra (10.13)&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macOS/high-sierra.png&#34; alt=&#34;High Sierra Banner&#34;&gt;
-&lt;em&gt;High Sierra Banner&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;supported-macs-macs-that-can-run-it-natively-5&#34;&gt;Supported Macs (Macs that can run it natively)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;iMac (Late 2009 or later)
-MacBook (Late 2009 or later)
-MacBook Air (Late 2010 or later)
-MacBook Pro (Mid-2010 or later)
-Mac mini (Mid-2010 or later)
-Mac Pro (Mid-2010 or later)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;unsupported-macs-macs-that-can-run-it-using-a-patcher-5&#34;&gt;Unsupported Macs (Macs that can run it using a patcher)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;MacBook4,1 5,1 5,2*
-MacBookAir2,1*
-MacBookPro4,1* 5,1* 5,2* 5,3* 5,4* 5,5*
-iMac7,1 8,1* 9,1*
-Macmini3,1*
-MacPro3,1* 4,1*
-XServe2,1* 3,1*
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;available-patchers-5&#34;&gt;Available Patchers&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://dosdude1.com/highsierra/&#34;&gt;&lt;strong&gt;dosdude1&amp;rsquo;s macOS High Sierra Patch Tool&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;If you see a * next to your model, you are recommended to use this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/rmc-team/macos-patcher&#34;&gt;&lt;strong&gt;RMC macOS Patcher&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;You will not have graphics acceleration using this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;mojave-1014&#34;&gt;Mojave (10.14)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macOS/mojave.png&#34; alt=&#34;Mojave Banner&#34;&gt;
-&lt;em&gt;Mojave Banner&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;supported-macs-macs-that-can-run-it-natively-6&#34;&gt;Supported Macs (Macs that can run it natively)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;MacBook (Early 2015 or later)
-MacBook Air (Mid-2012 or later)
-MacBook Pro (Mid-2012 or later)
-iMac Pro
-iMac (Late 2012 or later)
-Mac mini (Late 2012 or later)
-Mac Pro (Mid-2010 or later*) (only with a compatible Metal card)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;unsupported-macs-macs-that-can-run-it-using-a-patcher-6&#34;&gt;Unsupported Macs (Macs that can run it using a patcher)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Macbook4,1 5,1* 5,2* 6,1* 7,1*
-MacBookAir2,1* 3,1* 3,2* 4,1* 4,2*
-MacBookPro4,1* 5,1* 5,2* 5,3* 5,4* 5,5* 6,1* 6,2* 7,1* 8,1* 8,2* 8,3*
-iMac7,1 8,1* 9,1* 10,1* 10,2* 11,1*^ 11,2*^ 11,3*^ 12,1*^ 12,2*^
-Macmini3,1* 4,1* 5,1* 5,2* 5,3*
-MacPro3,1* 4,1*
-Xserve2,1* 3,1*
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;If there is a ^ next to your mac model, and you have a AMD Radeon HD 5xxx or 6xxx GPU, Mojave will be unusable.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;available-patchers-6&#34;&gt;Available Patchers&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;http://dosdude1.com/mojave/&#34;&gt;&lt;strong&gt;dosdude1&amp;rsquo;s macOS Mojave Patcher Tool&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;If you see a * next to your model, you are recommended to use this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/rmc-team/macos-patcher&#34;&gt;&lt;strong&gt;RMC macOS Patcher&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;You will not have graphics acceleration using this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id=&#34;catalina-1015&#34;&gt;Catalina (10.15)&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macOS/catalina.png&#34; alt=&#34;Catalina Banner&#34;&gt;
-&lt;em&gt;Catalina Banner&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;supported-macs-macs-that-can-run-it-natively-7&#34;&gt;Supported Macs (Macs that can run it natively)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;MacBook (2015 and later)
-MacBook Air (2012 and later)
-MacBook Pro (2012 and later)
-iMac Pro (2017 and later)
-iMac (2012 and later)
-Mac mini (2012 and later)
-Mac Pro (2013 and later)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;unsupported-macs-macs-that-can-run-it-using-a-patcher-7&#34;&gt;Unsupported Macs (Macs that can run it using a patcher)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Macbook4,1 5,1* 5,2* 6,1* 7,1*
-MacBookAir2,1* 3,1* 3,2* 4,1* 4,2*
-MacBookPro4,1* 5,1* 5,2* 5,3* 5,4* 5,5* 6,1* 6,2* 7,1* 8,1* 8,2* 8,3*
-iMac7,1 8,1* 9,1* 10,1* 10,2* 11,1*^ 11,2*^ 11,3*^ 12,1*^ 12,2*^
-Macmini3,1* 4,1* 5,1*^ 5,2*^ 5,3*^
-MacPro3,1* 4,1*
-Xserve2,1* 3,1*
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;If there is a ^ next to your mac model, and you have a AMD Radeon HD 5xxx or 6xxx GPU, Catalina will be unusable.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;available-patchers-7&#34;&gt;Available Patchers&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;http://dosdude1.com/catalina/&#34;&gt;&lt;strong&gt;dosdude1&amp;rsquo;s macOS Catalina Patcher&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;If you see a * next to your model, you are recommended to use this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/rmc-team/macos-patcher&#34;&gt;&lt;strong&gt;RMC macOS Patcher&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;You will not have graphics acceleration using this patcher.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;big-sur-110&#34;&gt;Big Sur (11.0)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macOS/big-sur.png&#34; alt=&#34;Big Sur Banner&#34;&gt;
-&lt;em&gt;Big Sur Banner&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;supported-macs-macs-that-can-run-it-natively-8&#34;&gt;Supported Macs (Macs that can run it natively)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;MacBook (2015 and later)
-MacBook Air (2013 and later)
-MacBook Pro (Late 2013 and later)
-iMac Pro (2017 and later)
-iMac (2014 and later)
-Mac mini (2014 and later)
-Mac Pro (2013 and later)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;unsupported-macs-macs-that-can-run-it-using-a-patcher-8&#34;&gt;Unsupported Macs (Macs that can run it using a patcher)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Late 2012/2013 iMac
-Mac Pro 2008*, 2009*, 2010*, 2012*
-2011 Macs
-Mid 2010 white MacBook
-2010 13&amp;quot; MacBook Pro
-2010 MacBook Air
-Late 2009 white MacBook
-Late 2009 21.5&amp;quot; iMac
-2010 Mac Mini
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;For a full list of unsupported macs that can run it, &lt;a href=&#34;https://bensova.gitbook.io/big-sur/supported-macs&#34;&gt;click this link&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;available-patchers-8&#34;&gt;Available Patchers&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/barrykn/big-sur-micropatcher&#34;&gt;&lt;strong&gt;barrykn&amp;rsquo;s Big Sur Micropatcher&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/BenSova/Patched-Sur&#34;&gt;&lt;strong&gt;BenSova&amp;rsquo;s Patched Sur&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;This is the recommended patcher by me, as it is the most user friendly.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/moosethegoose2213/automator-for-barrykn-micropatcher&#34;&gt;&lt;strong&gt;ASentientHedgehog&amp;rsquo;s Automater for barrykn&amp;rsquo;s Micropatcher&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/StarPlayrX/bigmac&#34;&gt;&lt;strong&gt;StarPlayrX&amp;rsquo;s Big Mac Patcher&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;If you are using a Mac Pro, this patcher is recommended.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Thank you for reading this article! This was based off of the faq channel in the Unsupported Macs discord. The link to join the discord is &lt;a href=&#34;https://discord.gg/XbbWAsE&#34;&gt;here&lt;/a&gt;. The banners are created by myself.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
+            <description>Hello guys! This post is a guide on what macOS versions you can run on a Unsupported Mac and what patcher to use. If you have any issues with the patchers in this post, feel free to join this discord server, and they will help you out. Anyways, enjoy the post!
+Mountain Lion (10.8) Mountain Lion Banner
+Supported Macs (Macs that can run it natively) MacBook Pro – 13″ from mid 2009 or later, 15″ from late 2007 and newer, 17″ from late 2007 and newer MacBook Air – late 2008 and newer iMac – models from mid 2007 and newer MacBook – 13″ aluminum from 2008, 13″ from 2009 and newer Mac Mini – early 2009 and newer Mac Pro – early 2008 models and newer XServe – early 2009 models and newer Unsupported Macs (Macs that can run it using a patcher) iMac4,1* 4,2 (CPU upgraded) iMac5,1* 5,2 6,1 MacBook2,1 3,1 4,1 MacBookAir1,1 MacBookPro2,1* 2,2* Macmini1,1 (CPU upgraded) Macmini2,1 MacPro1,1* 2,1* Xserve1,1* 2,1* Available Patchers NexPostFacto (32 bit) If your mac is equipped with ONLY an ATI X1300/1600/1900 GPU, it is highly recommended to use the f You can tell by seeing if your model has a *.</description>
             <content type="html"><![CDATA[<p>Hello guys! This post is a guide on what macOS versions you can run on a Unsupported Mac and what patcher to use. If you have any issues with the patchers in this post, feel free to join <a href="https://discord.gg/XbbWAsE">this discord server</a>, and they will help you out. Anyways, enjoy the post!</p>
 <h2 id="mountain-lion-108">Mountain Lion (10.8)</h2>
 <p><img src="/post-photos/macOS/mountain-lion.png" alt="Mountain Lion Banner">
@@ -511,13 +350,12 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>[UPDATE] Transitioning Blog</title>
-            <link>https://wolf1e.web.app/posts/2021/02/update-transitioning-blog/</link>
+            <link>https://wolf1e.ga/posts/2021/02/update-transitioning-blog/</link>
             <pubDate>Sat, 06 Feb 2021 11:38:21 -0600</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2021/02/update-transitioning-blog/</guid>
-            <description>&lt;p&gt;Since I now have this new website where I can blog, I will gradually transition my current blog to this website. If you didn&amp;rsquo;t already know, my blog is &lt;a href=&#34;https://wolfiestech.blogspot.com&#34;&gt;wolfiestech.blogspot.com&lt;/a&gt;. I will be uploading posts from that blog to here.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: I have finished uploading the posts from my old blog to here. Now, you don&amp;rsquo;t need to visit that site again.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2021/02/update-transitioning-blog/</guid>
+            <description>Since I now have this new website where I can blog, I will gradually transition my current blog to this website. If you didn&amp;rsquo;t already know, my blog is wolfiestech.blogspot.com. I will be uploading posts from that blog to here.
+UPDATE: I have finished uploading the posts from my old blog to here. Now, you don&amp;rsquo;t need to visit that site again.</description>
             <content type="html"><![CDATA[<p>Since I now have this new website where I can blog, I will gradually transition my current blog to this website. If you didn&rsquo;t already know, my blog is <a href="https://wolfiestech.blogspot.com">wolfiestech.blogspot.com</a>. I will be uploading posts from that blog to here.</p>
 <p><strong>UPDATE</strong>: I have finished uploading the posts from my old blog to here. Now, you don&rsquo;t need to visit that site again.</p>
 ]]></content>
@@ -525,13 +363,11 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>First Post</title>
-            <link>https://wolf1e.web.app/posts/2021/02/first-post/</link>
+            <link>https://wolf1e.ga/posts/2021/02/first-post/</link>
             <pubDate>Sat, 06 Feb 2021 09:59:26 -0600</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2021/02/first-post/</guid>
-            <description>&lt;h2 id=&#34;hello-world&#34;&gt;Hello world!&lt;/h2&gt;
-&lt;p&gt;This is my first post! Pretty cool!&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2021/02/first-post/</guid>
+            <description>Hello world! This is my first post! Pretty cool!</description>
             <content type="html"><![CDATA[<h2 id="hello-world">Hello world!</h2>
 <p>This is my first post! Pretty cool!</p>
 ]]></content>
@@ -539,21 +375,13 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>My Experience with Ubuntu On My Surface Pro 2</title>
-            <link>https://wolf1e.web.app/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</link>
+            <link>https://wolf1e.ga/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</link>
             <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/ubuntu-20.04-desktop-screenshot.jpg&#34; alt=&#34;Ubuntu 20.04 Desktop (Screenshot by OMG! Ubuntu!)&#34;&gt;
-&lt;em&gt;Ubuntu 20.04 Desktop (Screenshot by OMG! Ubuntu!)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;A while ago, I decided to try out Ubuntu on my Surface Pro 2. I thought that since my sister&amp;rsquo;s laptop ran Kubuntu so well, I figured that I should give Ubuntu a try on my Surface Pro 2. I also run Debian on my main machine, so I figured that Ubuntu wouldn&amp;rsquo;t be too bad to try.&lt;/p&gt;
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-&lt;p&gt;Installation wasn&amp;rsquo;t hard. I booted into the USB drive after repeatedly trying to boot from it. I went through the installation process of Ubuntu 20.04. It was all fine and everything worked. I decided to erase Windows 8.1, since my Surface Pro 2 only has 128GB of internal storage, (which I would later regret).&lt;/p&gt;
-&lt;h2 id=&#34;my-experience&#34;&gt;My Experience&lt;/h2&gt;
-&lt;p&gt;When I booted it up initially, it wouldn&amp;rsquo;t boot. I had to disable Secure boot, which made a bright red background before booting into Ubuntu. I thought this was weird, since I had heard that Ubuntu would just work with Secure Boot. After booting and inserting my password, I was greeted with the desktop. Ubuntu made the screen resolution really small, so I couldn&amp;rsquo;t touch stuff as easily. I fixed this by using fractional scaling, a new feature with Ubuntu 20.04.&lt;/p&gt;
-&lt;p&gt;After updating the system, I found many issues with Ubuntu. Touch wouldn&amp;rsquo;t work and the TypeCover wouldn&amp;rsquo;t work in certain apps. A reboot fixed this issue though. After having these issues, I decided to try the surface-linux kernel, as I heard it made the experience much better.&lt;/p&gt;
-&lt;p&gt;After installing the kernel, I decided to try and take my Surface Pro 2 to school. I faced a number of headaches with Ubuntu at school. It wouldn&amp;rsquo;t suspend properly, so the tablet would heat up in my bag. Sometimes, it wouldn&amp;rsquo;t even wake up. I had frequent crashes that would force me to restart the operating system. Touch wouldn&amp;rsquo;t work with certain apps, and it was overall a horrible experience.&lt;/p&gt;
-&lt;p&gt;I would not recommend installing Ubuntu on a Surface Pro 2. I admire the work of the linux-surface team, but I feel like the Surface Pro 2 is just not meant for Linux. If you want to have a Linux laptop, consider a ThinkPad device, as I have heard they are much better for Linux. Overall, I did not like my experience using Ubuntu on my Surface Pro 2, and I reinstalled Windows 8.1 shortly after using it. If you have any solutions to the problems I faced, let me know via one of my social medias. Thank you for reading my article.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</guid>
+            <description>Ubuntu 20.04 Desktop (Screenshot by OMG! Ubuntu!)
+A while ago, I decided to try out Ubuntu on my Surface Pro 2. I thought that since my sister&amp;rsquo;s laptop ran Kubuntu so well, I figured that I should give Ubuntu a try on my Surface Pro 2. I also run Debian on my main machine, so I figured that Ubuntu wouldn&amp;rsquo;t be too bad to try.
+Installation Installation wasn&amp;rsquo;t hard. I booted into the USB drive after repeatedly trying to boot from it.</description>
             <content type="html"><![CDATA[<p><img src="/post-photos/ubuntu-20.04-desktop-screenshot.jpg" alt="Ubuntu 20.04 Desktop (Screenshot by OMG! Ubuntu!)">
 <em>Ubuntu 20.04 Desktop (Screenshot by OMG! Ubuntu!)</em></p>
 <p>A while ago, I decided to try out Ubuntu on my Surface Pro 2. I thought that since my sister&rsquo;s laptop ran Kubuntu so well, I figured that I should give Ubuntu a try on my Surface Pro 2. I also run Debian on my main machine, so I figured that Ubuntu wouldn&rsquo;t be too bad to try.</p>
@@ -569,24 +397,13 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>Why I Downgraded From Windows 10 to 8.1</title>
-            <link>https://wolf1e.web.app/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</link>
+            <link>https://wolf1e.ga/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</link>
             <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/screenshot-windows-8-1-the-start-1.png&#34; alt=&#34;Windows 8.1 Start Menu (Photo by Confidential Files!)&#34;&gt;
-&lt;em&gt;Windows 8.1 Start Menu (Photo by Confidential Files!)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;A while ago, I decided to try out Windows 8.1 on my Surface Pro 2. I thought that it might be faster, or I might get better battery life out of it. I downgraded from Windows 10 using a recovery image, and booted into Windows 8.1. I had no idea how much I would love Windows 8.1.&lt;/p&gt;
-&lt;p&gt;Once I finished the setup and installed all of the updates, I figured I would get my regular applications. I got Firefox set up and everything. I also managed to get the Windows Store working just fine. After a while, I got bored of Windows 8.1 and decided to try a different operating system (coming in another post later). After trying that operating system out, I decided to go back to Windows 8.1.&lt;/p&gt;
-&lt;h2 id=&#34;what-i-love-about-windows-81&#34;&gt;What I Love About Windows 8.1&lt;/h2&gt;
-&lt;p&gt;Windows 8.1 has many features that I love about it. First of all, it is really fast. I never knew how fast my system could be, as I used Windows 10 on it which slowed the device down. Windows 8.1 made my machine much faster than Windows 10. Second, I got better battery life out of Windows 8.1. I was able to get through a whole school day without it getting below 60%. With Windows 10, most of the time I would be around 40% at the end of the school day. This was probably due to the fact that Windows 8.1 typically has around 50-60 processes running in the background compared to Windows 10&amp;rsquo;s 150.&lt;/p&gt;
-&lt;p&gt;There are many other things I love about 8.1. Windows 7 applications weren&amp;rsquo;t fully removed or replaced like they are with Windows 10, so I could use the control panel to update Windows again. Windows 8.1 also has the UWP (Universal Windows Program) Platform, so I could play many games such as Flow and Crossy Road.&lt;/p&gt;
-&lt;p&gt;Another great thing about Windows 8.1 is the way that multitasking works. You can split UWPs to the side of your display while also having the desktop open. This opens up much more workflows, like having a PDF on one side in full screen while having LibreOffice Writer on the other. The gestures also feel really nice, as you swipe from the left to split or close an app, and you swipe from the right to open the control center, where you can adjust brightness and network connectivity.&lt;/p&gt;
-&lt;p&gt;I also set up Windows 8.1 with Brave, a Chromium based web browser, and its SSBs (Single Site Browsers). SSBs are like iOS apps, since you only have one website you can visit in a window. I found that Brave&amp;rsquo;s SSBs are better than Firefox&amp;rsquo;s SSBs, since Brave&amp;rsquo;s SSBs have extension support while Firefox&amp;rsquo;s SSBs do not. These Single Site Browsers help make my Surface Pro 2 feel more like a tablet while also providing me with an easier way of managing apps.&lt;/p&gt;
-&lt;h2 id=&#34;what-i-miss-from-windows-10&#34;&gt;What I Miss From Windows 10&lt;/h2&gt;
-&lt;p&gt;Windows 10 was an alright operating system. Certain Windows 8.1 UWPs do not work anymore or do not exist for 8.1. Windows 10 also included a more touchscreen friendly Mail and Calendar app, which support Google OAuth2 login. I also couldn&amp;rsquo;t get the Music app to work after reinstalling Windows 8.1, while on Windows 10 the Groove Music player would work out of the box.&lt;/p&gt;
-&lt;h2 id=&#34;will-i-switch-back-to-windows-10&#34;&gt;Will I Switch Back to Windows 10?&lt;/h2&gt;
-&lt;p&gt;I have decided that Windows 8.1 is just too great to give up. Eventually, when Windows 8.1 support ends, I might switch to Windows 10, or I might just stay on 8.1 until the end of the device. Windows 8.1 is faster, more touch friendly, and overall just a better operating system than Windows 10 in my opinion. Thank you for reading my article.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</guid>
+            <description>Windows 8.1 Start Menu (Photo by Confidential Files!)
+A while ago, I decided to try out Windows 8.1 on my Surface Pro 2. I thought that it might be faster, or I might get better battery life out of it. I downgraded from Windows 10 using a recovery image, and booted into Windows 8.1. I had no idea how much I would love Windows 8.1.
+Once I finished the setup and installed all of the updates, I figured I would get my regular applications.</description>
             <content type="html"><![CDATA[<p><img src="/post-photos/screenshot-windows-8-1-the-start-1.png" alt="Windows 8.1 Start Menu (Photo by Confidential Files!)">
 <em>Windows 8.1 Start Menu (Photo by Confidential Files!)</em></p>
 <p>A while ago, I decided to try out Windows 8.1 on my Surface Pro 2. I thought that it might be faster, or I might get better battery life out of it. I downgraded from Windows 10 using a recovery image, and booted into Windows 8.1. I had no idea how much I would love Windows 8.1.</p>
@@ -605,26 +422,13 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>Debian Troubles and Why I Switched Back</title>
-            <link>https://wolf1e.web.app/posts/2020/12/debian-troubles-and-why-i-switched-back/</link>
+            <link>https://wolf1e.ga/posts/2020/12/debian-troubles-and-why-i-switched-back/</link>
             <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2020/12/debian-troubles-and-why-i-switched-back/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/debian_logo.jpg&#34; alt=&#34;Debian Logo&#34;&gt;
-&lt;em&gt;Debian Logo&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I have been using Debian again for the past two weeks. I think that the experience is great, even though I have had a few issues (mostly KDE related).&lt;/p&gt;
-&lt;h2 id=&#34;the-fedora-story&#34;&gt;The Fedora Story&lt;/h2&gt;
-&lt;p&gt;I switched back to Debian for one major issue. My old NVIDIA graphics card was acting up on Fedora and causing it to slow down immensely and freeze the system, forcing me to reboot. I also switched back because I know how Debian functions compared to not knowing much in Fedora. Fedora is great on newer hardware, but my older hardware was not very well suited for it.&lt;/p&gt;
-&lt;h2 id=&#34;trying-arch-again&#34;&gt;Trying Arch Again&lt;/h2&gt;
-&lt;p&gt;Before I switched back to Debian, I tried Arch Linux again. It was okay. I got my setup the way I like it with dwm, a tiling window manager, and some more suckless utilites, but there was one major issue that prevented me from staying on Arch. That issue was suspending; no matter what I did, the system would not suspend. It would keep the light on and the fans wouldn&amp;rsquo;t shut down either. It wouldn&amp;rsquo;t wake up from this state at all. I looked around and found out it was an issue with my CPU, but I could not find a fix for it online.&lt;/p&gt;
-&lt;h2 id=&#34;going-back-to-debian-with-some-mishaps&#34;&gt;Going Back to Debian with Some Mishaps&lt;/h2&gt;
-&lt;p&gt;I decided to give up on Arch Linux and go back to Debian. I went through the install process and got my system set up pretty nicely. However, when I went to update, I saw i386 instead of amd64. &amp;ldquo;Oh no!&amp;rdquo; I realized at the time. I managed to install a 32 bit version of Debian instead of a 64 bit version. The entire reason why this happened was because I thought that a 32 bit version would work well on my Macbook 4,1. I went and downloaded the 64 bit version and reinstalled with the KDE Desktop.&lt;/p&gt;
-&lt;h2 id=&#34;the-kde-experience&#34;&gt;The KDE Experience&lt;/h2&gt;
-&lt;p&gt;After reinstalling Debian and choosing the KDE desktop, I decided to debloat the system quite a bit. I removed some of the unnecessary packages (at least for me) such as the screen reader and other stuff. Overall, Debian with KDE is really good, and I would consider it one of the more modern desktops for Debian. It was great for me for about seven days or so, until disaster struck. Every time I would lock the system, there would be no prompt for my password. I would have to go into a tty and unlock the session using loginctl. I decided to switch to a more reliable desktop environment and go to XFCE.&lt;/p&gt;
-&lt;h2 id=&#34;the-xfce-experience&#34;&gt;The XFCE Experience&lt;/h2&gt;
-&lt;p&gt;Immediately after installing XFCE, I noticed one thing. It was very ugly. I decided to try and rice it a bit using the arc theme and papirus icon theme. It looks alright now, but I really liked my KDE setup better. Overall, XFCE has been super reliable for me so far, and it is faster than KDE. There are a few things I miss that I had in KDE, such as KWin Scripts (to emulate a dwm-like experience), easy theming, and fancy graphics. I think that in the future I will go back to using dwm instead of any desktop environment, but for now I am fine using XFCE.&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Debian has been great so far for me. Other than a few issues that have to deal with the KDE desktop environment, it has been a good experience. Debian is fast, reliable, and I love how packages are not up to date even on my desktop. I don&amp;rsquo;t use my desktop for things that would require the latest and greatest, and I think that stability is more important than new features. That is why I am sticking to Debian for the time being.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2020/12/debian-troubles-and-why-i-switched-back/</guid>
+            <description>Debian Logo
+I have been using Debian again for the past two weeks. I think that the experience is great, even though I have had a few issues (mostly KDE related).
+The Fedora Story I switched back to Debian for one major issue. My old NVIDIA graphics card was acting up on Fedora and causing it to slow down immensely and freeze the system, forcing me to reboot. I also switched back because I know how Debian functions compared to not knowing much in Fedora.</description>
             <content type="html"><![CDATA[<p><img src="/post-photos/debian_logo.jpg" alt="Debian Logo">
 <em>Debian Logo</em></p>
 <p>I have been using Debian again for the past two weeks. I think that the experience is great, even though I have had a few issues (mostly KDE related).</p>
@@ -645,20 +449,13 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>Debian vs OS X Mountain Lion | Why I Switched Back to OS X</title>
-            <link>https://wolf1e.web.app/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</link>
+            <link>https://wolf1e.ga/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</link>
             <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/mountain-lion-screenshot.jpg&#34; alt=&#34;Mountain Lion Installer&#34;&gt;
-&lt;em&gt;Mountain Lion Installer&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I have recently started to use my Macbook 4,1 again, even after getting my Surface Pro 2. There are a variety of reasons why, but that is for another time. I decided to try Debian and Mountain Lion, and I have found out which OS is for me.&lt;/p&gt;
-&lt;h2 id=&#34;debian&#34;&gt;Debian&lt;/h2&gt;
-&lt;p&gt;Debian is a great operating system. It is free and open source, and it is very stable and secure. Getting it to work on my Macbook was a bit tricky, but I managed to do it a while ago. It was great for the time I was using my Macbook as my main laptop, except for a few problems. The trackpad was very broken using Debian, as it would spazz out and would often click things I didn&amp;rsquo;t want to click. It also deleted my text while typing very frequently, which would leave me frustrated as I had to retype whatever I was typing. Overall, Debian was good for getting newer software to run on my Macbook, but it wasn&amp;rsquo;t the best experience.&lt;/p&gt;
-&lt;h2 id=&#34;mountain-lion&#34;&gt;Mountain Lion&lt;/h2&gt;
-&lt;p&gt;OS X Mountain Lion has been unsupported by Apple for a long time now. It was released in 2012 and stopped receiving updates in 2015. I managed to get it to run using &lt;a href=&#34;https://parrotgeek.com/npf&#34;&gt;NexPostFacto&lt;/a&gt;, a patcher that allows older Macs to run Mountain Lion with graphics acceleration. I use my Macbook mostly for online tasks nowadays. However I did do a bit of GIMP work on it too. Although iMessage and FaceTime don&amp;rsquo;t work, I really like Mountain Lion, since it doesn&amp;rsquo;t have the same issues I have on Debian. The keyboard doesn&amp;rsquo;t randomly try and delete text and the trackpad works really nicely. I also prefer the older look of Mountain Lion than the newer flat design of newer operating systems. Overall, Mountain Lion has been great and reliable for me on my Macbook.&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;If you are looking to run modern applications on your older Macbook, Debian is the right operating system for you. If you are looking for stability and reliability with older versions of applications, Mountain Lion is good for you. I have really taken an enjoyment to Mountain Lion compared to Debian on my Macbook. I hope to be able to get more life out of it, even though I have moved on from the device.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</guid>
+            <description>Mountain Lion Installer
+I have recently started to use my Macbook 4,1 again, even after getting my Surface Pro 2. There are a variety of reasons why, but that is for another time. I decided to try Debian and Mountain Lion, and I have found out which OS is for me.
+Debian Debian is a great operating system. It is free and open source, and it is very stable and secure.</description>
             <content type="html"><![CDATA[<p><img src="/post-photos/mountain-lion-screenshot.jpg" alt="Mountain Lion Installer">
 <em>Mountain Lion Installer</em></p>
 <p>I have recently started to use my Macbook 4,1 again, even after getting my Surface Pro 2. There are a variety of reasons why, but that is for another time. I decided to try Debian and Mountain Lion, and I have found out which OS is for me.</p>
@@ -673,40 +470,11 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>My Personal Top 5 Linux Distros of 2020</title>
-            <link>https://wolf1e.web.app/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</link>
+            <link>https://wolf1e.ga/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</link>
             <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</guid>
-            <description>&lt;p&gt;Hey guys, I am going to review my personal top five Linux distributions for this year. These distros, (distributions), are ones that I have personally used in the year of 2020. You may not agree with what I say, but that is alright. We are all human beings and we have our own opinions. These distros are just the ones that I selected because I thought they were the best.&lt;/p&gt;
-&lt;h2 id=&#34;5-ubuntu&#34;&gt;5. Ubuntu&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/ubuntu-logo.jpg&#34; alt=&#34;Ubuntu Logo&#34;&gt;
-&lt;em&gt;Ubuntu Logo&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Ubuntu is a great distro for beginners and more advanced Linux users looking for a stable option. I put this at number five because I have not had the best experience with Ubuntu. I had issues with the proprietary drivers, and I hated the experience. It is still a great distro, as I ran it on my Macbook for a long time using the Unity desktop. If you have to use Ubuntu, you should definitely install the Unity Desktop Environment. It makes the experience much better, even if it is outdated. You can download it by typing &lt;code&gt;sudo apt install ubuntu-unity-desktop&lt;/code&gt;. Ubuntu is a great distro for beginners coming from Windows and more advanced Linux users looking for a more stable experience.&lt;/p&gt;
-&lt;h2 id=&#34;4-arch-linux&#34;&gt;4. Arch Linux&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/archlinux.png&#34; alt=&#34;Arch Linux Logo&#34;&gt;
-&lt;em&gt;Arch Linux Logo&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Arch Linux is a great distro of Linux for those who want a bleeding edge experience. I used it for a month or so, and it was great. I could install very little packages and still have an amazing Linux experience bloat free. However, I did have some issues with Arch. For example, I could not get the NVIDIA drivers working for me whatsoever apart from the Open Source drivers. I have a very old NVIDIA card, a GT 8800, and the latest drivers do not support it anymore. Trying to get proprietary drivers working was a nightmare, and it ultimately caused my install to break. That is one of the things with Arch Linux; things can and will break, and you have to fix them. If you are a more advanced Linux user or are curious as to how Linux works its magic, try Arch Linux.&lt;/p&gt;
-&lt;h2 id=&#34;3-manjaro-linux&#34;&gt;3. Manjaro Linux&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/manjaro-linux.jpg&#34; alt=&#34;Manjaro Linux Logo&#34;&gt;
-&lt;em&gt;Manjaro Linux Logo&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Manjaro is a great distro for gaming and stability. It is based on Arch Linux, but it is more stable than Arch, as it has its own repositories and package system. They hold packages from Arch Linux for about two weeks in their testing branch, then they put the package into their stable repositories. This makes Manjaro a pretty stable distro. I really liked the XFCE version of Manjaro, as it was fast and fluid. I did not have any problems with it, although a Discord user linked me to a GitHub repository that told me how Manjaro is not great, so I switched to Arch Linux. Overall, Manjaro is great if you want to game on Linux and have a stable system.&lt;/p&gt;
-&lt;h2 id=&#34;2-debian-gnulinux&#34;&gt;2. Debian GNU/Linux&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/debian_logo.jpg&#34; alt=&#34;Debian Logo&#34;&gt;
-&lt;em&gt;Debian Logo&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Debian is a great distro for those who want just plain and simple stability. Debian runs on many servers, but it is a great option on the desktop as well. I used to use it with GNOME, XFCE, awesomewm, and even dwm. Debian could handle it all, and it never broke apart from the time that I broke the bootloader. The only downside is that the software in the repositories tends to be old; however, you can use the testing or even the unstable branch of Debian for the latest software. If you want new software without compromising Debian&amp;rsquo;s amazing stability and security, you can use flatpaks or AppImages. Both are great methods of software delivery without compromising Debian in any way. If you are looking for a stable experience that you can rely on, you should use Debian.&lt;/p&gt;
-&lt;h2 id=&#34;1-fedora-linux&#34;&gt;1. Fedora Linux&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/fedora-logo.jpg&#34; alt=&#34;Fedora Logo&#34;&gt;
-&lt;em&gt;Fedora Logo&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Fedora is great for developers and those looking to get into GNOME. I am a developer, as I made my own Discord bot and host it too. I also love the GNOME workflow more than any other workflow, and that includes window managers too. Fedora ships with a stock GNOME experience, and it is one of the best distros for it. I love the dnf package manager because it is more legible than apt or pacman to me. It comes with no proprietary software out of the box, and it is one of the best distros I have tried when it comes to NVIDIA. Fedora is also really stable, and it stores two additional kernels in case something breaks. The only disadvantages is that you need to enable the RPMFusion repositories in order to get things like multimedia codecs and proprietary graphics drivers. Other than that, Fedora is just a great distro, and I have been using it for a while now. That is why I placed it at number one on my top five list of distributions.&lt;/p&gt;
-&lt;p&gt;Thank you for reading. There are links below to each respective distribution.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://getfedora.org/&#34;&gt;Fedora Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.debian.org/&#34;&gt;Debian GNU/Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://manjaro.org/&#34;&gt;Manjaro Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.archlinux.org/&#34;&gt;Arch Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ubuntu.com/&#34;&gt;Ubuntu&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</guid>
+            <description>Hey guys, I am going to review my personal top five Linux distributions for this year. These distros, (distributions), are ones that I have personally used in the year of 2020. You may not agree with what I say, but that is alright. We are all human beings and we have our own opinions. These distros are just the ones that I selected because I thought they were the best.</description>
             <content type="html"><![CDATA[<p>Hey guys, I am going to review my personal top five Linux distributions for this year. These distros, (distributions), are ones that I have personally used in the year of 2020. You may not agree with what I say, but that is alright. We are all human beings and we have our own opinions. These distros are just the ones that I selected because I thought they were the best.</p>
 <h2 id="5-ubuntu">5. Ubuntu</h2>
 <p><img src="/post-photos/ubuntu-logo.jpg" alt="Ubuntu Logo">
@@ -741,22 +509,13 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>Using Fedora Linux</title>
-            <link>https://wolf1e.web.app/posts/2020/10/using-fedora-linux/</link>
+            <link>https://wolf1e.ga/posts/2020/10/using-fedora-linux/</link>
             <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2020/10/using-fedora-linux/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/fedora-logo.jpg&#34; alt=&#34;Fedora Logo&#34;&gt;
-&lt;em&gt;Fedora Logo&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Awhile ago, I decided to try out Fedora. I really like GNOME&amp;rsquo;s workflow and Fedora seemed like the best option because it is based around GNOME.&lt;/p&gt;
-&lt;h2 id=&#34;initial-installation&#34;&gt;Initial Installation&lt;/h2&gt;
-&lt;p&gt;I installed it, which was pretty easy thanks to the Anaconda installer, and tried to get the proprietary NVIDIA drivers working, but my card, a NVIDIA GT 8800, is older so the drivers ended up making the experience not great. The background would be all corrupted after suspending. I tried my hardest to fix it using systemd and scripting, but I couldn&amp;rsquo;t fix that issue. I ended up deleting the partition and switching back to Debian.&lt;/p&gt;
-&lt;h2 id=&#34;second-try&#34;&gt;Second Try&lt;/h2&gt;
-&lt;p&gt;Today, I decided to give Fedora another chance. I didn&amp;rsquo;t use the NVIDIA proprietary drivers and instead opted for the open source drivers. So far, the experience is great. I got all my keybinds set up, and I customized it so it uses the Adwaita-Dark theme. It looks great and I love it. I had to initially upgrade from Fedora 32 to Fedora 33, but it wasn&amp;rsquo;t hard. It just took a bit of time due to it having to upgrade all the packages. Installation of my programs wasn&amp;rsquo;t hard either because I don&amp;rsquo;t use heavy IDEs like Visual Studio Code, and I generally only need my web browser to function on my computer.&lt;/p&gt;
-&lt;h2 id=&#34;the-gnome-experience&#34;&gt;The GNOME Experience&lt;/h2&gt;
-&lt;p&gt;GNOME 3.38 is really great and fixed some of the annoyances I had with GNOME. It moved the buttons to power off, suspend, and restart all into one menu instead of a prompt that would take up the whole screen. So far, the experience has been speedy, and I really love the workflow. I like the overview menu, as it makes it easy to see all the applications I have open. I also love the dynamic workspaces of GNOME. So far, I have been using GNOME without any extensions, and it has been great.&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;So far, Fedora has been an excellent distro for GNOME 3. I like the workflow, and I like the dnf package manager. If you want a stock GNOME experience, Fedora is the distribution for you. It only comes with one plugin enabled out of the box, and it is super speedy. Programs are up to date, unlike Debian, and it is just so good. This has been my experience using Fedora so far. I might write a followup to this article after I use the distro more.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2020/10/using-fedora-linux/</guid>
+            <description>Fedora Logo
+Awhile ago, I decided to try out Fedora. I really like GNOME&amp;rsquo;s workflow and Fedora seemed like the best option because it is based around GNOME.
+Initial Installation I installed it, which was pretty easy thanks to the Anaconda installer, and tried to get the proprietary NVIDIA drivers working, but my card, a NVIDIA GT 8800, is older so the drivers ended up making the experience not great. The background would be all corrupted after suspending.</description>
             <content type="html"><![CDATA[<p><img src="/post-photos/fedora-logo.jpg" alt="Fedora Logo">
 <em>Fedora Logo</em></p>
 <p>Awhile ago, I decided to try out Fedora. I really like GNOME&rsquo;s workflow and Fedora seemed like the best option because it is based around GNOME.</p>
@@ -773,18 +532,12 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>Using the Galaxy S5 in 2020</title>
-            <link>https://wolf1e.web.app/posts/2020/10/using-the-galaxy-s5-in-2020/</link>
+            <link>https://wolf1e.ga/posts/2020/10/using-the-galaxy-s5-in-2020/</link>
             <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2020/10/using-the-galaxy-s5-in-2020/</guid>
-            <description>&lt;p&gt;I tend to switch phones somewhat often, just to rediscover what made these devices great. Today, I decided to switch to the Samsung Galaxy S5 for one day. The experience was pretty good, as I will write later in this post. I managed to get Android 10 to run on it using a custom ROM called Resurrection Remix.&lt;/p&gt;
-&lt;h2 id=&#34;the-good&#34;&gt;The Good&lt;/h2&gt;
-&lt;p&gt;The phone experience was pretty good. It was even better than some low budget phones that I have tried in the past. Android 10&amp;rsquo;s design really helped to modernize the device. I felt like it was a brand new phone, as it uses the stock android design. The phone itself has some pretty cool features such as a headphone jack (yes that&amp;rsquo;s a feature nowadays), a IR Blaster, a removable battery, a fingerprint sensor (which isn&amp;rsquo;t that great), a fast charging port, and Micro SD expansion. The phone also has IP67 water and dust resistance, so it can withstand a downpour, which is great where I live. Android also has some apps that iOS doesn&amp;rsquo;t, such as an official Blogger app.&lt;/p&gt;
-&lt;h2 id=&#34;the-bad&#34;&gt;The Bad&lt;/h2&gt;
-&lt;p&gt;The software was not very fast at all. Apps took a while to load and the animations are slow. There are also some software issues too. When I updated from Android 9 to Android 10, I had to reinstall the Google Apps using OpenGApps because it would keep on saying &amp;ldquo;Google Play Services keeps on crashing&amp;rdquo; or something along those lines. After that, the experience was alright. Bluetooth was not great, as it would crash sometimes. YouTube Vanced was a bit laggy on the device, and it is not very fast to reboot. I also had an issue where I would try to put in the Pattern, but it would be stuck on the pattern screen until the phone timed out. Also, the fingerprint sensor is not like a normal fingerprint sensor. Now I will cut it some slack, as it was the first attempt by Samsung at a fingerprint sensor. The sensor makes you swipe your finger down vertically instead of resting it on the sensor. While it sounds good in concept, it is not great in reality.&lt;/p&gt;
-&lt;h2 id=&#34;my-overall-thoughts&#34;&gt;My Overall Thoughts&lt;/h2&gt;
-&lt;p&gt;The phone is great in 2020, as long as you Custom ROM it. I never tried the original Android 6.0 ROM, but I would think that it was slow because TouchWiz is very bloated. App support is great, as most if not all apps will run on the device. I would even go as far as saying to pick up a Galaxy S5 and Custom ROM it as a budget device. It is a great flagship, even in 2020 with some features that modern phones simply don&amp;rsquo;t have. I will not be staying on the device, but it was nice to revisit it in 2020 and see what features we miss out on by using modern smartphones.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2020/10/using-the-galaxy-s5-in-2020/</guid>
+            <description>I tend to switch phones somewhat often, just to rediscover what made these devices great. Today, I decided to switch to the Samsung Galaxy S5 for one day. The experience was pretty good, as I will write later in this post. I managed to get Android 10 to run on it using a custom ROM called Resurrection Remix.
+The Good The phone experience was pretty good. It was even better than some low budget phones that I have tried in the past.</description>
             <content type="html"><![CDATA[<p>I tend to switch phones somewhat often, just to rediscover what made these devices great. Today, I decided to switch to the Samsung Galaxy S5 for one day. The experience was pretty good, as I will write later in this post. I managed to get Android 10 to run on it using a custom ROM called Resurrection Remix.</p>
 <h2 id="the-good">The Good</h2>
 <p>The phone experience was pretty good. It was even better than some low budget phones that I have tried in the past. Android 10&rsquo;s design really helped to modernize the device. I felt like it was a brand new phone, as it uses the stock android design. The phone itself has some pretty cool features such as a headphone jack (yes that&rsquo;s a feature nowadays), a IR Blaster, a removable battery, a fingerprint sensor (which isn&rsquo;t that great), a fast charging port, and Micro SD expansion. The phone also has IP67 water and dust resistance, so it can withstand a downpour, which is great where I live. Android also has some apps that iOS doesn&rsquo;t, such as an official Blogger app.</p>
@@ -797,38 +550,13 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>Running Debian 10 On My Macbook</title>
-            <link>https://wolf1e.web.app/posts/2020/10/running-debian-10-on-my-macbook/</link>
+            <link>https://wolf1e.ga/posts/2020/10/running-debian-10-on-my-macbook/</link>
             <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2020/10/running-debian-10-on-my-macbook/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macbook.HEIC&#34; alt=&#34;My Macbook Running Debian&#34;&gt;
-&lt;em&gt;My Macbook Running Debian 10&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Yes, I know that I have written quite a bit of OS reviews, but this one is really good. Two days ago, I decided it would be nice to give Debian a try on my 4,1, as it has an older kernel and the lid closing might work. At the time of this post, the latest Debian release is Debian 10 Buster.&lt;/p&gt;
-&lt;h2 id=&#34;installing-debian&#34;&gt;Installing Debian&lt;/h2&gt;
-&lt;p&gt;I downloaded the operating system on their website using the HTTP option (I found it to be the easiest). I used dd in order to flash it onto the USB flash drive I had on hand. I booted to it, and chose the Graphical Installer. When it booted into the installer, the trackpad did not work. I navigated all the way to selecting the Desktop Environment before I had to get a actual mouse. Luckily, there was one where I was staying (I was not at my house), and when I plugged it in, it worked and I selected Continue.&lt;/p&gt;
-&lt;p&gt;After the install, I booted into XFCE, which is the Desktop Environment I chose. There were some pretty major issues straight off the bat. The trackpad had no way of right clicking,the panel was not great, the WiFi card did not work, and the fans weren&amp;rsquo;t turning on when they should. I managed to fix them and I am going to list the steps below.&lt;/p&gt;
-&lt;h2 id=&#34;fixing-networking&#34;&gt;Fixing Networking&lt;/h2&gt;
-&lt;p&gt;The most important thing I needed to get working was networking. Luckily, it was pretty easy. I had the Broadcom BCM4321. You might have a different card, so be sure to check the instructions on the Debian wiki page for your card. You need to have a Ethernet connection, so be sure to connect to the internet, otherwise you won&amp;rsquo;t be able to install the necessary firmware. I installed the &lt;code&gt;firmware-b43-installer&lt;/code&gt; package from the Debian repositories. Since I installed from a USB, the repositories were screwed up. In order to fix this, I nanoed into the &lt;code&gt;/etc/apt/sources.list&lt;/code&gt; file and changed my repositories to match the Debian Wiki&amp;rsquo;s sources.list example file. This fixed the repositories after I updated it using &lt;code&gt;sudo apt update&lt;/code&gt;. Once I installed the firmware package, it seemed to go alright from there.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://wiki.debian.org/bcm43xx&#34;&gt;Debian Wiki: bcm43xx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://wiki.debian.org/SourcesList&#34;&gt;Debian Wiki: SourcesList&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;fixing-the-trackpad&#34;&gt;Fixing the Trackpad&lt;/h2&gt;
-&lt;p&gt;In order to fix the trackpad, I needed to add a configuration file and install a package. I used the instructions from a blog called the Rambling Moose, where they explained how to fix the issue. I installed the &lt;code&gt;xserver-xorg-input-synaptics&lt;/code&gt; package after updating my xorg config files. After a reboot, it seemed to work just fine.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.ramblingmoose.com/2017/07/how-to-get-tap-to-click-back-on-your.html&#34;&gt;Rambling Moose: How to get Tap To Click back on your Debian 9 XFCE Linux install&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;fixing-the-panel&#34;&gt;Fixing the Panel&lt;/h2&gt;
-&lt;p&gt;After I did that, I wanted to get the panel out of the way. I originally tried adding it to the autostart, but that ended up doing nothing. I finally figured out what the issue was. Make sure that when you log out, the checkbox saying &amp;ldquo;Save Session after Logout&amp;rdquo; or something similar is not checked. After doing this, the panel seemed to autostart just fine.&lt;/p&gt;
-&lt;h2 id=&#34;fixing-the-fans&#34;&gt;Fixing the Fans&lt;/h2&gt;
-&lt;p&gt;Originally I tried a utility made by datcuandrei called MacLinuxUtils. It is a nice Java program that I would highly recommend. I had a small issue initially with the program, as the xfce-terminal would kill the Java process after exiting, but the author fixed the issue and updated the release. In the end, I decided not to use the program for the time being. The author of the program told me that they would be adding features such as a system tray icon and a more customizable manual mode for the fans. Once these features are added, I will gladly switch to the application again. In the meantime, I decided to try macfanctld. The program runs as a systemd daemon and has a config file located in /etc. It made the laptop much cooler and is my second recommendation if you don&amp;rsquo;t want to use MacLinuxUtils.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/datcuandrei/MacLinuxUtils&#34;&gt;MacLinuxUtils&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://manpages.ubuntu.com/manpages/bionic/man1/macfanctld.1.html&#34;&gt;Ubuntu Manpage: macfanctld&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;overall-thoughts&#34;&gt;Overall Thoughts&lt;/h2&gt;
-&lt;p&gt;Debian 10 has been great. I have been able to use suspend like normal, and I have been able to use my favorite web browser Brave with it. It feels more up to date than my old OS X Mountain Lion install. I am dualbooting both however, so if I need OS X I have it available. After fixing all of the issues mentioned above, it runs great. It even runs quite a bit cooler than OS X. It stays around 90-130°F. The RAM usage is also much better. It idles around 300-500MB. Debian 10 is a great option for those who have old macs and don&amp;rsquo;t want to use an OS like Chrome OS on it. It is much better than Ubuntu in my opinion, which has its fair share of issues on this old machine. If you need a user friendly installer, I would recommend checking out the Debian Live ISOs, as it uses the Calemares installer.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2020/10/running-debian-10-on-my-macbook/</guid>
+            <description>My Macbook Running Debian 10
+Yes, I know that I have written quite a bit of OS reviews, but this one is really good. Two days ago, I decided it would be nice to give Debian a try on my 4,1, as it has an older kernel and the lid closing might work. At the time of this post, the latest Debian release is Debian 10 Buster.
+Installing Debian I downloaded the operating system on their website using the HTTP option (I found it to be the easiest).</description>
             <content type="html"><![CDATA[<p><img src="/post-photos/macbook.HEIC" alt="My Macbook Running Debian">
 <em>My Macbook Running Debian 10</em></p>
 <p>Yes, I know that I have written quite a bit of OS reviews, but this one is really good. Two days ago, I decided it would be nice to give Debian a try on my 4,1, as it has an older kernel and the lid closing might work. At the time of this post, the latest Debian release is Debian 10 Buster.</p>
@@ -861,19 +589,11 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>Trying Cloudready On My Macbook</title>
-            <link>https://wolf1e.web.app/posts/2020/10/trying-cloudready-on-my-macbook/</link>
+            <link>https://wolf1e.ga/posts/2020/10/trying-cloudready-on-my-macbook/</link>
             <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2020/10/trying-cloudready-on-my-macbook/</guid>
-            <description>&lt;p&gt;Today, I thought it would be a good idea to revisit CloudReady on my Macbook 4,1. I created the USB using a tool in Linux called dd. It took some time, but it worked. I took out an old hard drive, that I originally got from the Macbook itself, and put it in the computer. CloudReady discontinued dual booting in 2018, so I couldn&amp;rsquo;t dual boot it with OS X Mountain Lion.&lt;/p&gt;
-&lt;p&gt;I booted into the hard drive, so I could see what was on it before I wiped it. It turns out that there was macOS Catalina 10.15.3 on there. I checked out what was on there, and it was just a bunch of hackintosh kexts and such, some dmgs of programs I installed, and some of my music library. I figured that the Catalina partition wasn&amp;rsquo;t very important, so I decided to go through with my install of CloudReady.&lt;/p&gt;
-&lt;p&gt;I booted into the USB, which took a while, but I wasn&amp;rsquo;t there to see how long it took as I had other matters to attend to. It booted fine and I connected to my WiFi before installing. I installed the OS, which took a bit of time, and booted into the hard drive. It first showed a flashing folder with a question mark in the middle, but it went to the CloudReady logo a bit after that.&lt;/p&gt;
-&lt;p&gt;It booted into the setup screen, and I set up my Google account and connected to WiFi. One of the things I noticed in the setup was that the touchpad sensitivity was very high. When I finished the setup, I went into the settings and changed it to the slowest option so it was actually usable. After that, I went into the Chrome browser and accepted some permissions for extensions, since I use Brave and not Chrome anymore, I had to accept them.&lt;/p&gt;
-&lt;p&gt;The next problem I noticed was that the WiFi kept going out after ten or so minutes of use. I knew about the problem because I used Linux on the machine before (maybe another post soon about that experience) but I couldn&amp;rsquo;t do anything about it since CloudReady did not have an option to switch to a proprietary driver.&lt;/p&gt;
-&lt;p&gt;The final straw and what drove me to put my Mountain Lion hard drive back into the laptop was the Macbook kept on getting super hot. CloudReady would not ramp up the fans like it should, so it kept on getting extremely hot. I didn&amp;rsquo;t like this, as when I am in a classroom, I don&amp;rsquo;t want my fans spinning up super loudly because the OS can&amp;rsquo;t handle cooling very well.&lt;/p&gt;
-&lt;p&gt;Although I had a fairly negative experience, I noticed some of the stuff was fixed that was an issue in a Previous release of CloudReady. The headphone jack no longer lit up red, which was really good because I don&amp;rsquo;t want a distracting red light in my headphone jack when I take the Macbook places. Suspend was working properly, which is good. I figured out that you can use a PIN in Chrome OS, which is super convenient because I have a long password.&lt;/p&gt;
-&lt;p&gt;Overall, I would not recommend CloudReady for anyone using a Macbook 4,1 or older in 2020. The experience is not very good, and CloudReady&amp;rsquo;s certification for the machine ended a couple of months ago. If you want a more modern operating system, I would recommend Mountain Lion, as that is what runs best on these old machines. You can use Firefox Legacy and some other software, which I discuss in my other article about Mountain Lion in 2020. That is all for now, thank you for reading.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2020/10/trying-cloudready-on-my-macbook/</guid>
+            <description>Today, I thought it would be a good idea to revisit CloudReady on my Macbook 4,1. I created the USB using a tool in Linux called dd. It took some time, but it worked. I took out an old hard drive, that I originally got from the Macbook itself, and put it in the computer. CloudReady discontinued dual booting in 2018, so I couldn&amp;rsquo;t dual boot it with OS X Mountain Lion.</description>
             <content type="html"><![CDATA[<p>Today, I thought it would be a good idea to revisit CloudReady on my Macbook 4,1. I created the USB using a tool in Linux called dd. It took some time, but it worked. I took out an old hard drive, that I originally got from the Macbook itself, and put it in the computer. CloudReady discontinued dual booting in 2018, so I couldn&rsquo;t dual boot it with OS X Mountain Lion.</p>
 <p>I booted into the hard drive, so I could see what was on it before I wiped it. It turns out that there was macOS Catalina 10.15.3 on there. I checked out what was on there, and it was just a bunch of hackintosh kexts and such, some dmgs of programs I installed, and some of my music library. I figured that the Catalina partition wasn&rsquo;t very important, so I decided to go through with my install of CloudReady.</p>
 <p>I booted into the USB, which took a while, but I wasn&rsquo;t there to see how long it took as I had other matters to attend to. It booted fine and I connected to my WiFi before installing. I installed the OS, which took a bit of time, and booted into the hard drive. It first showed a flashing folder with a question mark in the middle, but it went to the CloudReady logo a bit after that.</p>
@@ -887,20 +607,13 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>Running Mountain Lion in 2020</title>
-            <link>https://wolf1e.web.app/posts/2020/10/running-mountain-lion-in-2020/</link>
+            <link>https://wolf1e.ga/posts/2020/10/running-mountain-lion-in-2020/</link>
             <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2020/10/running-mountain-lion-in-2020/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/macbook-osx.HEIC&#34; alt=&#34;Mountain Lion running on my Macbook 4,1&#34;&gt;
-&lt;em&gt;Mountain Lion Running On My Macbook 4,1&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;This is a review on the state of OS X Mountain Lion in 2020 from my personal experience.&lt;/p&gt;
-&lt;p&gt;OS X Mountain Lion was released on July 25, 2012. The OS received security updates until 2015. Most app developers decided to leave the platform. The major blow to older OS&amp;rsquo;s was Google unsupporting Chrome and not updating it anymore for OS X 10.9 and older. However, there are alternatives to Google Chrome, which I will discuss later.&lt;/p&gt;
-&lt;p&gt;I run Mountain Lion on a Macbook 4,1. The Macbook 4,1, (also known as the Macbook Early 2008), does not officially support Mountain Lion. Apple supported the device up until 10.7 Lion. I managed to get Mountain Lion running using a patcher tool called NexPostFacto. The patcher was developed by a person named parrotgeek1. &lt;a href=&#34;https://parrotgeek.com&#34;&gt;You can visit his website here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Mountain Lion, by itself, is not a great operating system to be running in 2020. Safari is outdated and does not work with the majority of websites. The mail application is not really great in my opinion, although I am a avid Thunderbird user. Although, there are ways you can run a modern web browser on Mountain Lion. Parrotgeek1 has also developed a browser called Firefox Legacy. This takes a more up to date version of Mozilla Firefox and ports it over to older operating systems like 10.7 and 10.8. You can even run a bit of an older version of Firefox on Snow Leopard! You can also find this web browser on his website, which I have linked above.&lt;/p&gt;
-&lt;p&gt;Firefox Legacy makes Mountain Lion more usable in 2020. Websites actually are decent on the machine, and you can get more modern extensions such as Multi Account Container, which I use for school, LastPass, and more. I was even able to get Google Meet to run!&lt;/p&gt;
-&lt;p&gt;Older applications tend to run pretty well. I was able to get a more modern version of git using &lt;a href=&#34;https://www.macports.org/&#34;&gt;MacPorts&lt;/a&gt;. I also used a code editor called TextMate to help fix small issues with my discord bot. Although, I really don&amp;rsquo;t need it because I have vim. I also got an older version of iTerm to run on it and replaced the bash shell with a zsh one. GIMP 2.8 also works pretty well on the device, although you do not want to be editing 4K images on it. Thunderbird also runs pretty well, but you need an older version. Specifically, you need version 45 of Thunderbird, which is outdated and doesn&amp;rsquo;t run the more modern Thunderbird extensions.&lt;/p&gt;
-&lt;p&gt;Overall, my experience with Mountain Lion has been positive. Sure, I could run Linux on my Macbook 4,1, and I have before. The only problem I have with Linux is that the kernel stops detecting the lid close after a while of use. Mountain Lion did not have the same issue. I also did not want to run Windows 7 or 10 on the devices, since both are not great for a Core 2 Duo machine and the drivers aren&amp;rsquo;t great either. I like Mountain Lion because you can still get by using it in 2020, even though some applications might not run or might be outdated. Most apps I actually use are web based, so I don&amp;rsquo;t even need to download anything. That has been my personal experience with OS X Mountain Lion on my Macbook 4,1.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2020/10/running-mountain-lion-in-2020/</guid>
+            <description>Mountain Lion Running On My Macbook 4,1
+This is a review on the state of OS X Mountain Lion in 2020 from my personal experience.
+OS X Mountain Lion was released on July 25, 2012. The OS received security updates until 2015. Most app developers decided to leave the platform. The major blow to older OS&amp;rsquo;s was Google unsupporting Chrome and not updating it anymore for OS X 10.9 and older.</description>
             <content type="html"><![CDATA[<p><img src="/post-photos/macbook-osx.HEIC" alt="Mountain Lion running on my Macbook 4,1">
 <em>Mountain Lion Running On My Macbook 4,1</em></p>
 <p>This is a review on the state of OS X Mountain Lion in 2020 from my personal experience.</p>
@@ -915,19 +628,13 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>Using the HTC First in 2020</title>
-            <link>https://wolf1e.web.app/posts/2020/10/using-the-htc-first-in-2020/</link>
+            <link>https://wolf1e.ga/posts/2020/10/using-the-htc-first-in-2020/</link>
             <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.web.app/posts/2020/10/using-the-htc-first-in-2020/</guid>
-            <description>&lt;p&gt;&lt;img src=&#34;https://wolf1e.web.app/post-photos/htc-first.HEIC&#34; alt=&#34;My HTC First&amp;rsquo;s Homescreen&#34;&gt;
-&lt;em&gt;My HTC First&amp;rsquo;s Homescreen&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Last night, I decided to try out the HTC First, (also known as the Facebook phone), in 2020. It runs Android 4.1.2. I got the idea from watching a Luke Smith video about how he did not use a phone at all apart from when he goes out to shoot in the forest.&lt;/p&gt;
-&lt;p&gt;I installed some apps on there, such as TickTick, a Flashlight app (Android didn&amp;rsquo;t have a flashlight toggle yet!), and AccuWeather (since MyRadar was not compatible). I already had a few apps on the device from playing around with it a year or two ago, such as Twilight (a blue light filter), Nova Launcher, and a few others. I decided to remove Nova Launcher, as I wanted the stock android experience. Also, I had turned off the Facebook Launcher a year or two ago because it was broken.&lt;/p&gt;
-&lt;p&gt;To my surprise, it was basically stock android apart from the Facebook logo when you start up the device. There were a few bloat apps, but I disabled those when playing around with it that one time. Other than that, it barely had any apps that I would consider bloat. I also updated it the night before using it, so it ran the latest Google apps and the latest Messenger app.&lt;/p&gt;
-&lt;p&gt;Sadly, most apps were not compatible, but that isn&amp;rsquo;t surprising when you are trying to run a OS made in 2012 in the year 2020. Although, for basic tasks such as texting, calling, viewing the calendar, light web browsing, and using TickTick, it was fine.&lt;/p&gt;
-&lt;p&gt;The device doesn&amp;rsquo;t have what I would call flagship specs, which is probably one of the reasons why the HTC First flopped in the market. It comes with 1GB of RAM, 16GB of internal storage with no microSD expansion, a 5MP camera and a 1.6MP selfie camera. It also came in a variety of colors. Mine is the red color, but it has a stain from a monster sticker that had been on the phone for too long.&lt;/p&gt;
-&lt;p&gt;Overall, this phone was pretty nice to use in 2020. It was nice to see what I had missed out on in 2012 with stock android. I am definitely going to switch back to my iPhone 7, but this phone helped me realize what I really needed from a smartphone. Sure, I like listening to music with my earbuds, using discord on the go without a laptop, watching YouTube at lunch, texting friends with iMessage, but it isn&amp;rsquo;t necessary on a smartphone. This phone helped me learn a valuable life lesson, and that is to appreciate what you have, as others may not be so lucky.&lt;/p&gt;
-</description>
+            <guid>https://wolf1e.ga/posts/2020/10/using-the-htc-first-in-2020/</guid>
+            <description>My HTC First&amp;rsquo;s Homescreen
+Last night, I decided to try out the HTC First, (also known as the Facebook phone), in 2020. It runs Android 4.1.2. I got the idea from watching a Luke Smith video about how he did not use a phone at all apart from when he goes out to shoot in the forest.
+I installed some apps on there, such as TickTick, a Flashlight app (Android didn&amp;rsquo;t have a flashlight toggle yet!</description>
             <content type="html"><![CDATA[<p><img src="/post-photos/htc-first.HEIC" alt="My HTC First&rsquo;s Homescreen">
 <em>My HTC First&rsquo;s Homescreen</em></p>
 <p>Last night, I decided to try out the HTC First, (also known as the Facebook phone), in 2020. It runs Android 4.1.2. I got the idea from watching a Luke Smith video about how he did not use a phone at all apart from when he goes out to shoot in the forest.</p>
