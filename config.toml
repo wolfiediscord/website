@@ -60,7 +60,7 @@ disableHugoGeneratorInject = false
   keywords = "wolfie"
   images = ["https://cdn.glitch.com/ac8acb68-7f8f-408a-9a2c-d1c5e7be3fc7%2Fwhitewolflogo.png?v=1584638378307"]
 
-  homeSubtitle = "Hi! I am Wolfie! I am a sophomore in high school, and I like to code, play my trumpet, mess around with technology, and more!"
+  homeSubtitle = "Hi! I am Wolfie! I am a junior in high school, and I like to code, play my trumpet, mess around with technology, and more!"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
