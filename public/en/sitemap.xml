@@ -3,18 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://wolf1e.ga/posts/2021/04/new-domain/</loc>
-    <lastmod>2021-04-09T17:52:39-05:00</lastmod>
+    <loc>https://wolf1e.ga/posts/2021/07/fedora-on-surface-pro-2/</loc>
+    <lastmod>2021-07-13T17:30:44-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.ga/tags/os-review/</loc>
+    <lastmod>2021-07-13T17:30:44-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://wolf1e.ga/posts/</loc>
-    <lastmod>2021-04-09T17:52:39-05:00</lastmod>
+    <lastmod>2021-07-13T17:30:44-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://wolf1e.ga/tags/</loc>
-    <lastmod>2021-04-09T17:52:39-05:00</lastmod>
+    <lastmod>2021-07-13T17:30:44-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -28,13 +33,8 @@
   </url>
   
   <url>
-    <loc>https://wolf1e.ga/tags/untagged/</loc>
-    <lastmod>2021-04-09T17:52:39-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wolf1e.ga/</loc>
-    <lastmod>2021-04-09T17:52:39-05:00</lastmod>
+    <lastmod>2021-07-13T17:30:44-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -45,6 +45,26 @@
                 hreflang="en"
                 href="https://wolf1e.ga/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.ga/tags/desktop-environment/</loc>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.ga/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</loc>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.ga/posts/2021/04/new-domain/</loc>
+    <lastmod>2021-04-09T17:52:39-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.ga/tags/untagged/</loc>
+    <lastmod>2021-04-09T17:52:39-05:00</lastmod>
   </url>
   
   <url>
@@ -73,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://wolf1e.ga/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</loc>
+    <loc>https://wolf1e.ga/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</loc>
     <lastmod>2021-02-10T20:30:09-06:00</lastmod>
   </url>
   
@@ -89,11 +109,6 @@
   
   <url>
     <loc>https://wolf1e.ga/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</loc>
-    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/tags/os-review/</loc>
     <lastmod>2021-02-04T00:00:00+00:00</lastmod>
   </url>
   

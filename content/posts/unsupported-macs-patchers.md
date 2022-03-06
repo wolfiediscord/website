@@ -1,5 +1,5 @@
 ---
-title: "How to Run Newer Versions of macOS on Unsupported Macs"
+title: "[OUTDATED] How to Run Newer Versions of macOS on Unsupported Macs"
 date: 2021-02-10T20:30:09-06:00
 draft: false
 toc: false
@@ -7,6 +7,8 @@ images:
 tags:
   - OS Tutorial
 ---
+**This post is outdated. See the [Github Gist](https://gist.github.com/wolfiediscord/d02d5d30898c8cacd6b5c1ab83af95b9) for an up to date guide.**
+
 Hello guys! This post is a guide on what macOS versions you can run on a Unsupported Mac and what patcher to use. If you have any issues with the patchers in this post, feel free to join [this discord server](https://discord.gg/XbbWAsE), and they will help you out. Anyways, enjoy the post!
 
 ## Mountain Lion (10.8)

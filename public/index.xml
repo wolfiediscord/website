@@ -7,10 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 09 Apr 2021 17:52:39 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 13 Jul 2021 17:30:44 -0500</lastBuildDate><atom:link href="https://wolf1e.ga/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fedora on Surface Pro 2</title>
+      <link>https://wolf1e.ga/posts/2021/07/fedora-on-surface-pro-2/</link>
+      <pubDate>Tue, 13 Jul 2021 17:30:44 -0500</pubDate>
+      
+      <guid>https://wolf1e.ga/posts/2021/07/fedora-on-surface-pro-2/</guid>
+      <description>Fedora Logo
+I decided to try Fedora 34 on my Surface Pro 2, and here is my experience.
+Installation Installation of Fedora was pretty easy. I just selected my disk, changed my timezone, and off it went. The Anaconda installer is really good, but I still think that certain installers are better. Everything went well, and it installed properly.
+Using Fedora Using Fedora on my Surface Pro 2 was pretty cool.</description>
+    </item>
     
-	<atom:link href="https://wolf1e.ga/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Ubuntu Unity in 2021. Is it actually usable?</title>
+      <link>https://wolf1e.ga/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wolf1e.ga/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</guid>
+      <description>Ubuntu Logo
+I used the Ubuntu Unity desktop for a few days. Here are my thoughts about the Unity desktop in 2021.
+The Good I love the Unity desktop. I used it back in 2014 and 2016 when I would try out Ubuntu from time to time. I never really dove into the power user features of it, but I liked the desktop. Around a few days ago, I decided to try it out again using Ubuntu 20.</description>
+    </item>
     
     <item>
       <title>New Domain</title>
@@ -44,14 +63,14 @@ The Good The Airpods are really nice. The integration with my iPhone 7 is great 
     </item>
     
     <item>
-      <title>How to Run Newer Versions of macOS on Unsupported Macs</title>
-      <link>https://wolf1e.ga/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
+      <title>[OUTDATED] How to Run Newer Versions of macOS on Unsupported Macs</title>
+      <link>https://wolf1e.ga/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
       <pubDate>Wed, 10 Feb 2021 20:30:09 -0600</pubDate>
       
-      <guid>https://wolf1e.ga/posts/2021/02/how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
-      <description>Hello guys! This post is a guide on what macOS versions you can run on a Unsupported Mac and what patcher to use. If you have any issues with the patchers in this post, feel free to join this discord server, and they will help you out. Anyways, enjoy the post!
-Mountain Lion (10.8) Mountain Lion Banner
-Supported Macs (Macs that can run it natively) MacBook Pro – 13″ from mid 2009 or later, 15″ from late 2007 and newer, 17″ from late 2007 and newer MacBook Air – late 2008 and newer iMac – models from mid 2007 and newer MacBook – 13″ aluminum from 2008, 13″ from 2009 and newer Mac Mini – early 2009 and newer Mac Pro – early 2008 models and newer XServe – early 2009 models and newer Unsupported Macs (Macs that can run it using a patcher) iMac4,1* 4,2 (CPU upgraded) iMac5,1* 5,2 6,1 MacBook2,1 3,1 4,1 MacBookAir1,1 MacBookPro2,1* 2,2* Macmini1,1 (CPU upgraded) Macmini2,1 MacPro1,1* 2,1* Xserve1,1* 2,1* Available Patchers NexPostFacto (32 bit) If your mac is equipped with ONLY an ATI X1300/1600/1900 GPU, it is highly recommended to use the f You can tell by seeing if your model has a *.</description>
+      <guid>https://wolf1e.ga/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
+      <description>This post is outdated. See the Github Gist for an up to date guide.
+Hello guys! This post is a guide on what macOS versions you can run on a Unsupported Mac and what patcher to use. If you have any issues with the patchers in this post, feel free to join this discord server, and they will help you out. Anyways, enjoy the post!
+Mountain Lion (10.8) Mountain Lion Banner</description>
     </item>
     
     <item>
@@ -93,28 +112,6 @@ Installation Installation wasn&amp;rsquo;t hard. I booted into the USB drive aft
       <description>Windows 8.1 Start Menu (Photo by Confidential Files!)
 A while ago, I decided to try out Windows 8.1 on my Surface Pro 2. I thought that it might be faster, or I might get better battery life out of it. I downgraded from Windows 10 using a recovery image, and booted into Windows 8.1. I had no idea how much I would love Windows 8.1.
 Once I finished the setup and installed all of the updates, I figured I would get my regular applications.</description>
-    </item>
-    
-    <item>
-      <title>Debian Troubles and Why I Switched Back</title>
-      <link>https://wolf1e.ga/posts/2020/12/debian-troubles-and-why-i-switched-back/</link>
-      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://wolf1e.ga/posts/2020/12/debian-troubles-and-why-i-switched-back/</guid>
-      <description>Debian Logo
-I have been using Debian again for the past two weeks. I think that the experience is great, even though I have had a few issues (mostly KDE related).
-The Fedora Story I switched back to Debian for one major issue. My old NVIDIA graphics card was acting up on Fedora and causing it to slow down immensely and freeze the system, forcing me to reboot. I also switched back because I know how Debian functions compared to not knowing much in Fedora.</description>
-    </item>
-    
-    <item>
-      <title>Debian vs OS X Mountain Lion | Why I Switched Back to OS X</title>
-      <link>https://wolf1e.ga/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</link>
-      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://wolf1e.ga/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</guid>
-      <description>Mountain Lion Installer
-I have recently started to use my Macbook 4,1 again, even after getting my Surface Pro 2. There are a variety of reasons why, but that is for another time. I decided to try Debian and Mountain Lion, and I have found out which OS is for me.
-Debian Debian is a great operating system. It is free and open source, and it is very stable and secure.</description>
     </item>
     
   </channel>
