@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 13 Jul 2021 17:30:44 -0500</lastBuildDate><atom:link href="https://wolf1e.ga/tags/os-review/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Apr 2022 18:06:00 -0500</lastBuildDate><atom:link href="https://wolf1e.ga/tags/os-review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu Touch on the Google Pixel 3a XL | Is it usable?</title>
+      <link>https://wolf1e.ga/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</link>
+      <pubDate>Tue, 05 Apr 2022 18:06:00 -0500</pubDate>
+      
+      <guid>https://wolf1e.ga/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</guid>
+      <description>Ubuntu Logo
+Hey guys, it has been a long time since I last posted on this blog. There are many reasons for that, but I will not get into them. I recently tried out Ubuntu Touch on my Google Pixel 3a XL, and I thought I would give it a review.
+At the time of writing, I was testing this out on OTA-22 with installer version 0.9.5. Some of my complaints may have been fixed in a newer update.</description>
+    </item>
+    
     <item>
       <title>Fedora on Surface Pro 2</title>
       <link>https://wolf1e.ga/posts/2021/07/fedora-on-surface-pro-2/</link>
@@ -102,17 +113,6 @@ Installing Debian I downloaded the operating system on their website using the H
       
       <guid>https://wolf1e.ga/posts/2020/10/trying-cloudready-on-my-macbook/</guid>
       <description>Today, I thought it would be a good idea to revisit CloudReady on my Macbook 4,1. I created the USB using a tool in Linux called dd. It took some time, but it worked. I took out an old hard drive, that I originally got from the Macbook itself, and put it in the computer. CloudReady discontinued dual booting in 2018, so I couldn&amp;rsquo;t dual boot it with OS X Mountain Lion.</description>
-    </item>
-    
-    <item>
-      <title>Running Mountain Lion in 2020</title>
-      <link>https://wolf1e.ga/posts/2020/10/running-mountain-lion-in-2020/</link>
-      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://wolf1e.ga/posts/2020/10/running-mountain-lion-in-2020/</guid>
-      <description>Mountain Lion Running On My Macbook 4,1
-This is a review on the state of OS X Mountain Lion in 2020 from my personal experience.
-OS X Mountain Lion was released on July 25, 2012. The OS received security updates until 2015. Most app developers decided to leave the platform. The major blow to older OS&amp;rsquo;s was Google unsupporting Chrome and not updating it anymore for OS X 10.9 and older.</description>
     </item>
     
   </channel>

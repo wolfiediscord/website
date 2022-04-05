@@ -6,8 +6,110 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 13 Jul 2021 17:30:44 -0500</lastBuildDate>
+        <lastBuildDate>Tue, 05 Apr 2022 18:06:00 -0500</lastBuildDate>
         <atom:link href="https://wolf1e.ga/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Ubuntu Touch on the Google Pixel 3a XL | Is it usable?</title>
+            <link>https://wolf1e.ga/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</link>
+            <pubDate>Tue, 05 Apr 2022 18:06:00 -0500</pubDate>
+            
+            <guid>https://wolf1e.ga/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</guid>
+            <description>Ubuntu Logo
+Hey guys, it has been a long time since I last posted on this blog. There are many reasons for that, but I will not get into them. I recently tried out Ubuntu Touch on my Google Pixel 3a XL, and I thought I would give it a review.
+At the time of writing, I was testing this out on OTA-22 with installer version 0.9.5. Some of my complaints may have been fixed in a newer update.</description>
+            <content type="html"><![CDATA[<p><img src="/post-photos/ubuntu-logo.jpg" alt="Ubuntu Logo">
+<em>Ubuntu Logo</em></p>
+<p>Hey guys, it has been a long time since I last posted on this blog. There are many reasons for that, but I will not get into them. I recently tried out Ubuntu Touch on my Google Pixel 3a XL, and I thought I would give it a review.</p>
+<p>At the time of writing, I was testing this out on OTA-22 with installer version 0.9.5. Some of my complaints may have been fixed in a newer update. <a href="https://ubports.com/blog/ubports-news-1">Be sure to check the Ubuntu Touch blog.</a></p>
+<h1 id="installation">Installation</h1>
+<p>The installation of Ubuntu Touch was fairly seemless. Although, at the start, it complained that my device (bonito) was incompatible. This is clearly not the case, since the official device list shows the XL version too. I tried older versions of the installer, which presented the same issue. Luckily, it let me continue, and it installed just fine. Installation took around 10-15 minutes, but that&rsquo;s fine.</p>
+<p>After installation, I decided to write up a list of negatives and positives.</p>
+<h1 id="the-good">The Good</h1>
+<h2 id="notifications">Notifications</h2>
+<p>The way notifications are handled in Ubuntu Touch is pretty nice. While it isn&rsquo;t on par with Android or iOS, it was quite nice. In the statusbar, there is a mail envelope that turns green when there are notifications. I like that better than the cluttered look of app icons in the statusbar on Android. iOS doesn&rsquo;t win on this either, as it straight up doesn&rsquo;t let you know at all if you have notifications unless you swipe down.</p>
+<h2 id="weather">Weather</h2>
+<p>The weather app built into Ubuntu Touch is one of the best weather apps built into a mobile OS. It has a radar, forecast, moon phases, and more. While iOS does have a similar weather app, it doesn&rsquo;t have all of the features of the Ubuntu Touch weather app.</p>
+<h2 id="calculator">Calculator</h2>
+<p>I love the calculator app too. It feels like it belongs on Ubuntu Touch, and it does all of the things a normal calculator app does.</p>
+<h2 id="music">Music</h2>
+<p>The music app is very nice. Once you get your music onto your device, it looks really good and functions well. You can even access the music controls in the sound section of the statusbar dropdown.</p>
+<h2 id="third-party-apps">Third Party Apps</h2>
+<h3 id="quickddit">Quickddit</h3>
+<p>Quickddit is a reddit client built for Ubuntu Touch. It works alright, and I like the fact that you can move the UI buttons down (a complaint that I will dive into later).</p>
+<h1 id="the-okay">The Okay</h1>
+<h2 id="interface--gestures">Interface &amp; Gestures</h2>
+<p>The whole interface looks pretty good. Although, you need to adjust the active border for my device. This is probably due to the fact that I have a case on my phone, but it&rsquo;s a solvable problem. I didn&rsquo;t have any real issues with the interface and gestures afterwards.</p>
+<h2 id="openstore">OpenStore</h2>
+<p>I did notice that you have to sign into either Github, Gitlab, or Ubuntu One in order to leave a review. It worked out just fine, so just keep that in mind.</p>
+<h2 id="gallery">Gallery</h2>
+<p>The gallery app looks pretty nice. You get a collage of all of your photos in order of year and month. The only complaint I have with it is that the media player isn&rsquo;t integrated within the app. Every time you want to play a video from the Gallery app, it opens the Media Player. I would like it to be integrated, but as long as it works.</p>
+<h2 id="morph-browser">Morph Browser</h2>
+<p>The Morph Browser, a Chromium-based browser for Ubuntu Touch, works alright. It gets the job done. I would like to see extension support in the future, but it is functional.</p>
+<h1 id="the-bad">The Bad</h1>
+<h2 id="no-night-filter">No Night Filter</h2>
+<p>When I am using my phone at night, I like to have an orange or red filter on my phone to help block out blue light. No such app or feature exists on Ubuntu Touch. This is a feature on Android and iOS, so I would like to see a similar app or feature added on Ubuntu Touch.</p>
+<h2 id="surudark">SuruDark</h2>
+<p>The SuruDark theme, which is Ubuntu Touch&rsquo;s dark theme, isn&rsquo;t an AMOLED theme. This means that instead of being #000000, which helps save battery life, it is a really dark gray. This isn&rsquo;t really a huge problem, since the SuruDark theme isn&rsquo;t accessible unless you use the UT Tweak Tool to enable it.</p>
+<h2 id="fingerprint-unlock">Fingerprint Unlock</h2>
+<p>The fingerprint unlock option isn&rsquo;t turned on when you create a fingerprint. I found this out the hard way when I went to unlock my phone with my fingerprint. I tried to figure out what was the problem only to find that you need to enable the Fingerprint unlock option in order to turn it on. Android and iOS enable this when you add a fingerprint, so it kind of sucks that Ubuntu Touch didn&rsquo;t do this automatically.</p>
+<h2 id="keyboard">Keyboard</h2>
+<p>The keyboard just feels much slower to type on than with Android or iOS. This may be device specific, but the keyboard shouldn&rsquo;t be nearly as slow as it is. I cannot fast type with the keyboard, since it inserts characters way too slow.</p>
+<p>Also, when you adjust the scaling of the UI using the UT Tweak Tool, there is no option to change the keyboard height. This is very annoying, but it isn&rsquo;t necessary since there isn&rsquo;t a scaling option in the settings app.</p>
+<h2 id="heat">Heat</h2>
+<p>With my usage on my device, the phone just got really hot compared to Android. This is probably due to some optimization issue or something. It is totally usable, just slightly annoying.</p>
+<h2 id="everything-is-at-the-top">Everything is at the Top</h2>
+<p>Within almost all of the apps, with the exception being Quickddit, all of the menus and buttons are at the top of the screen. With my big screen, it did not help at all. One handing Ubuntu Touch is simply impossible. This is probably mostly on the app developers, but I would like to see some kind of option to move the elements to the bottom of the screen.</p>
+<h2 id="autobrightness">Autobrightness</h2>
+<p>The autobrightness is just way too sensitive. Even just hovering my hand over the light sensor causes the screen to dim excessively. I have heard that this is being fixed with the OTA-23 update.</p>
+<h2 id="silent-mode">Silent Mode</h2>
+<p>The Silent Mode on Ubuntu Touch does not have a way to automatically turn it on. On Android, you can have the Do Not Disturb mode turn on automatically, and on iOS you can do the same thing with Focuses. It&rsquo;s unfortunate that Ubuntu Touch does not have a similar mode. I take my phone with me everywhere, and I would like to be able to automatically turn on Silent mode instead of having to manually do it every time.</p>
+<h2 id="openstore-1">OpenStore</h2>
+<p>The OpenStore app is the App Store on Ubuntu Touch. It works pretty well, but has quite a few annoyances.</p>
+<p>The Donate Now button appears every single time you try to install an app. While I know that open source developers don&rsquo;t get paid for their work and donations are nice, having a popup <strong>every single time</strong> you try to install an app is super annoying. Instead, I would suggest a banner above the app page or something similar.</p>
+<p>Another note about the OpenStore app is that it does not let you exit the app page when installing an app. This may just be due to how Ubuntu Touch installs apps, but Android and iOS both allow you to download multiple apps at the same time. I would like to see the same functionality added to Ubuntu Touch.</p>
+<h2 id="calendar">Calendar</h2>
+<p>The Calendar app does not automatically add calendars from your Online Accounts in the settings. You have to manually turn them on yourself. This is slightly annoying, but it does work.</p>
+<p>Another annoyance with the Calendar app is that it shows 24 hour time on events instead of AM/PM, which appears everywhere else in the app. Slightly annoying, but it still works.</p>
+<h2 id="clock">Clock</h2>
+<p>The Clock app UI is somewhat confusing. Instead of the alarms being in a separate tab like the rest of the options (World Clock, Timer, and Stopwatch), you need to swipe up to see them. I could see this being confusing for someone using Ubuntu Touch for the very first time.</p>
+<p>Another note about the alarms would be that they use 24 hour time when setting an alarm. This is a pretty big annoyance, as most people in the U.S. do not know how to read 24 hour time. I do know that not everyone uses AM/PM, but it is very inconsistient. The rest of the Ubuntu Touch OS uses AM/PM when set, so the clock app should too.</p>
+<h2 id="camera">Camera</h2>
+<p>The autofocus on Ubuntu Touch is terrible. This may be device specific, but you need to focus manually in order to take good photos.</p>
+<p>Another annoyance that could be device specific is the selection of 8MP photos instead of 12MP. This lowers the quality of photos that I take.</p>
+<p>A bug that I actually encountered would be video playback. When you play a video from the camera app, it is very quiet. If you open it from the gallery or media player, it is just fine.</p>
+<h2 id="third-party-apps-1">Third Party Apps</h2>
+<h3 id="ubuntu-tweak-tool">Ubuntu Tweak Tool</h3>
+<p>You really need to install the Ubuntu Touch Tweak Tool in order to adjust any major settings (theme, active edge, etc.). I would like all of these customization options were integrated within the settings app (could be like a developer mode like on Android).</p>
+<h3 id="pure-maps">Pure Maps</h3>
+<p>Pure Maps is a good map app, however, it needs a huge UI redesign. The UI looks like it&rsquo;s a GPS system from 2010, with the confusing interface too. When trying to start a route, you need to press an unlabled icon that looks like a roadsign. It would be extremely helpful if there was text underneath the icons for clarity.</p>
+<h3 id="unav">uNav</h3>
+<p>On the topic of map applications, uNav seems like a good option. It is based on Mapbox, which is an API available for developers to make maps. Although, when you try to search for a place to go, the app just crashes.</p>
+<h3 id="odysee-web-app">Odysee Web App</h3>
+<p>The Odysee Web App does not let you go into fullscreen. When visiting the odysee.com website in the Morph Browser, it lets you go into fullscreen just fine.</p>
+<h3 id="webber">Webber</h3>
+<p>The Webber app lets you create web apps from the Morph Browser. This app is essential for adding apps to Ubuntu Touch that otherwise wouldn&rsquo;t be available. My only complaint is that website icons do not appear when you create a web app, leaving a blank Ubuntu Touch icon instead.</p>
+<h3 id="quickddit-1">Quickddit</h3>
+<p>The UI is pretty confusing to navigate. It also looks somewhat dated compared to the rest of the OS.</p>
+<p>Another issue would be that it saves images to <code>.local</code> instead of the <code>Pictures</code> folder. This may be due to some limitation on the OS level, but it is pretty annoying.</p>
+<h3 id="dekko-2">Dekko 2</h3>
+<p>Dekko 2 is basically a dead email client at this point. It is claimed to be experimental, but it hasn&rsquo;t received an update in a very long time. This is very evident when using it. Trying to sign in with Google does not work until you enable less secure email clients.</p>
+<p>Another annoyance with Dekko 2 would be that it doesn&rsquo;t integrate with the system&rsquo;s Online Accounts. You have to add your Google accounts again instead of just having them autopopulate Dekko 2.</p>
+<h3 id="axolotl">Axolotl</h3>
+<p>Axolotl is a signal client for Ubuntu Touch. It seems to work pretty well, but I didn&rsquo;t do a thorough test with it. The only real annoyance is that you have to press the individual text fields when inserting your 6 digit code from signal.</p>
+<h3 id="mitubo">MiTubo</h3>
+<p>MiTubo is a Youtube client for Ubuntu Touch. It uses youtube-dl in order to grab videos. Unfortunately, it only works well at 360p, which is not usable. 720p videos cause MiTubo to chug to the point of being unwatchable.</p>
+<p>MiTubo also searches using Yandex by default, which is terrible for a YouTube app. It also forces you to use RSS feeds to subscribe to your creators.</p>
+<h3 id="uadblock">uAdBlock</h3>
+<p>uAdBlock is a pretty decent ad blocking app. I have two complaints with this app. First, it does not block every single ad. Going to an adblock tester like canyoublockit.com and using the eXtreme test shows that not all ads are blocked. I also wish that the uAdBlock app would have a custom list option.</p>
+<h3 id="ursses">uRSSes</h3>
+<p>uRSSes, an RSS client, is pretty decent. My only complaint is that brings you to the site of the post instead of just viewing the text of the post.</p>
+<h3 id="waydroid-helperwaydroid">Waydroid Helper/Waydroid</h3>
+<p>Waydroid is an Anbox replacement. It lets you run Android apps on Linux. On Ubuntu Touch, you can install it using an app called Waydroid Helper. There are a few issues though. For example, the navigation buttons are cut off on the bottom. Also, if you open an app from the App Drawer on Ubuntu Touch, then press the home button on Waydroid, it crashes Lomori (the UI of Ubuntu Touch).</p>
+<h1 id="overall-thoughts">Overall Thoughts</h1>
+<p>With all of these issues, I personally could not run Ubuntu Touch as a daily driver without sacrificing my modern conveniences. If you are a basic user who only uses their phone to call and text people, it is a great alternative to Android and iOS. For more advanced users, I would stick with Android or iOS. Regardless, you should still give it a shot if you haven&rsquo;t already. <a href="https://ubuntu-touch.io/">Check it out here.</a></p>
+]]></content>
+        </item>
         
         <item>
             <title>Fedora on Surface Pro 2</title>
