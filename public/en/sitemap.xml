@@ -3,18 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://wolf1e.ga/tags/os-review/</loc>
-    <lastmod>2022-04-05T18:06:00-05:00</lastmod>
+    <loc>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</loc>
+    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.ga/tags/os-tutorial/</loc>
+    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wolf1e.ga/posts/</loc>
-    <lastmod>2022-04-05T18:06:00-05:00</lastmod>
+    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wolf1e.ga/tags/</loc>
-    <lastmod>2022-04-05T18:06:00-05:00</lastmod>
+    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -28,13 +33,8 @@
   </url>
   
   <url>
-    <loc>https://wolf1e.ga/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</loc>
-    <lastmod>2022-04-05T18:06:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wolf1e.ga/</loc>
-    <lastmod>2022-04-05T18:06:00-05:00</lastmod>
+    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -45,6 +45,16 @@
                 hreflang="en"
                 href="https://wolf1e.ga/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.ga/tags/os-review/</loc>
+    <lastmod>2022-04-05T18:06:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wolf1e.ga/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</loc>
+    <lastmod>2022-04-05T18:06:00-05:00</lastmod>
   </url>
   
   <url>
@@ -74,11 +84,6 @@
   
   <url>
     <loc>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</loc>
-    <lastmod>2021-02-12T23:07:06-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/tags/os-tutorial/</loc>
     <lastmod>2021-02-12T23:07:06-06:00</lastmod>
   </url>
   

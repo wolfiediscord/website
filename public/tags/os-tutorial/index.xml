@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 12 Feb 2021 23:07:06 -0600</lastBuildDate><atom:link href="https://wolf1e.ga/tags/os-tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wolf1e.ga/tags/os-tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Turn Debian 11 into LMDE 5</title>
+      <link>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</link>
+      <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</guid>
+      <description>Linux Mint Background
+Note: This is not endoursed by the Debian or Linux Mint Debian Edition team. Continue with this guide at your own risk.
+Today, I decided to try and take a bare Debian 11 installation and turn it into an LMDE 5 install. How hard could it be?
+Why would you do this? I already use LMDE 5 on my laptop. The only thing I don&amp;rsquo;t like about it is how many packages are pre-installed (over 2000!</description>
+    </item>
+    
     <item>
       <title>How to Install Debian 10 On a Macbook (Early 2008)</title>
       <link>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</link>

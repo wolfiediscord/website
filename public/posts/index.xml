@@ -6,8 +6,118 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 05 Apr 2022 18:06:00 -0500</lastBuildDate>
+        <lastBuildDate>Fri, 22 Apr 2022 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://wolf1e.ga/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to Turn Debian 11 into LMDE 5</title>
+            <link>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</link>
+            <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
+            
+            <guid>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</guid>
+            <description>Linux Mint Background
+Note: This is not endoursed by the Debian or Linux Mint Debian Edition team. Continue with this guide at your own risk.
+Today, I decided to try and take a bare Debian 11 installation and turn it into an LMDE 5 install. How hard could it be?
+Why would you do this? I already use LMDE 5 on my laptop. The only thing I don&amp;rsquo;t like about it is how many packages are pre-installed (over 2000!</description>
+            <content type="html"><![CDATA[<p><img src="/post-photos/linux-mint.png" alt="Linux Mint Background">
+<em>Linux Mint Background</em></p>
+<p><strong>Note</strong>: This is not endoursed by the Debian or Linux Mint Debian Edition team. Continue with this guide at your own risk.</p>
+<p>Today, I decided to try and take a bare Debian 11 installation and turn it into an LMDE 5 install. How hard could it be?</p>
+<h1 id="why-would-you-do-this">Why would you do this?</h1>
+<p>I already use LMDE 5 on my laptop. The only thing I don&rsquo;t like about it is how many packages are pre-installed (over 2000!). The &ldquo;Expert Mode&rdquo; installer does not give you a minimal option, unlike Ubuntu. I decided to try this out in a VM just to see how hard it is to do.</p>
+<h1 id="installing-debian-11">Installing Debian 11</h1>
+<p>I went ahead and did a <em>very</em> barebones installation. During the desktop environment selection, I only chose &ldquo;Standard System Utilties&rdquo;. This means that there is no desktop installed at all.</p>
+<h1 id="after-installation">After Installation</h1>
+<p>Once you have finished installing Debian 11, you will have no network connectivity. You need to use the <code>apt-cdrom</code> command to mount your installation media (this means you need the offline installer). Once you have done this, run these commands:</p>
+<pre><code>sudo apt update
+sudo apt install network-manager
+sudo reboot
+</code></pre><p>Once you have rebooted, you can take out your installation media. If there is still no network connectivity, then run the command below.</p>
+<pre><code>systemctl enable --now NetworkManager 
+</code></pre><ul>
+<li><a href="https://manpages.debian.org/bullseye/apt/apt-cdrom.8.en.html">apt-cdrom Man Page</a></li>
+</ul>
+<h1 id="fixing-apt-sources">Fixing Apt Sources</h1>
+<p>After you have network connectivity, you need to first fix your apt sources. Edit the sources.list file using this command:</p>
+<pre><code>sudo nano /etc/apt/sources.list
+</code></pre><p>Once you have done this, make this file look EXACTLY like this:</p>
+<pre><code>deb https://deb.debian.org/debian/ bullseye main contrib non-free
+deb https://deb.debian.org/debian/ bullseye-updates main contrib non-free
+deb https://security.debian.org/ bullseye-security main contrib non-free
+deb https://deb.debian.org/ bullseye-backports main contrib non-free
+</code></pre><p>Once you have done this, Hit <code>Ctrl</code> + <code>x</code>, press <code>y</code>, then press <code>Enter</code>. Then, run these commands:</p>
+<pre><code>sudo apt update; sudo apt upgrade
+sudo apt install gpg
+</code></pre><p>This will install the <code>gpg</code> package, which is required for using <code>apt-key</code>.</p>
+<h1 id="adding-the-linux-mint-keyring">Adding the Linux Mint Keyring</h1>
+<p>Now that we have <code>apt-key</code> ready, type the commands below to add the Linux Mint Repository Key.</p>
+<pre><code>wget http://packages.linuxmint.com/pool/main/l/linuxmint-keyring/linuxmint-keyring_2016.05.26_all.deb
+sudo apt install ./linuxmint-keyring_2016.05.26_all.deb
+</code></pre><p>After you have done this, we are ready to add the Linux Mint repositories.</p>
+<h1 id="adding-the-linux-mint-repositories--fixing-mintupdate">Adding the Linux Mint Repositories &amp; Fixing mintupdate</h1>
+<p>Now that we have the Linux Mint keyring, we need to change our apt sources. Run these commands below.</p>
+<pre><code>sudo rm /etc/apt/sources.list
+sudo nano /etc/apt/sources.list.d/official-package-repositories.list
+</code></pre><p>Once you are in <code>nano</code>, make the file look EXACTLY like this:</p>
+<pre><code>deb http://packages.linuxmint.com elsie main upstream import backport
+
+deb https://deb.debian.org/debian/ bullseye main contrib non-free
+deb https://deb.debian.org/debian/ bullseye-update main contrib non-free
+deb https://security.debian.org/ bullseye-security main contrib non-free
+
+deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free
+</code></pre><p>After you have done this, press <code>Ctrl</code> + <code>x</code>, then <code>y</code>, then <code>Enter</code>. Now, we need to configure our pinning. Run the command below.</p>
+<pre><code>sudo nano /etc/apt/preferences.d/official-package-repositories.pref
+</code></pre><p>Make this file look exactly like this:</p>
+<pre><code>Package: *
+Pin: origin live.linuxmint.com
+Pin-Priority: 750
+
+Package: *
+Pin: release o=linuxmint,c=upstream
+Pin-Priority: 700
+
+Package: *
+Pin: release o=LP-PPA-linuxmint-daily-build-team-daily-builds
+Pin-Priority: 700
+</code></pre><p>After you have done this, press <code>Ctrl</code> + <code>x</code>, then <code>y</code>, then <code>Enter</code>. We are going to do the same thing to a different file. Type the command below.</p>
+<pre><code>sudo nano /etc/apt/preferences.d/official-extra-repositories.pref
+</code></pre><p>Make it look exactly like this:</p>
+<pre><code>Package: *
+Pin: origin &quot;build.linuxmint.com&quot;
+Pin-Priority: 700
+</code></pre><p>After you have done this, press <code>Ctrl</code> + <code>x</code>, then <code>y</code>, then <code>Enter</code>. We are now ready to install the desktop environment.</p>
+<h1 id="installing-cinnamon">Installing Cinnamon</h1>
+<p>Now that we have done all of the configuration of apt, we can now install the Cinnamon desktop environment. You can also install MATE or XFCE, but this won&rsquo;t be covered in this guide. Run the commands below.</p>
+<pre><code>sudo apt update; sudo apt upgrade
+sudo apt install cinnamon nemo mintdesktop mintinstall mintmenu mintsources mintsystem mintupdate mint-x-icons mint-y-icons mint-themes mint-mirrors gnome-terminal lightdm slick-greeter lightdm-settings dmz-cursor-theme 
+</code></pre><p>This will install the Cinnamon desktop, Nemo (the file manager), the Software Sources App, the Mint Updater, the Software Center, the Linux Mint Themes, a list of mirrors (for Software Sources app), Gnome Terminal, LightDM, the Linux Mint greeter for LightDM, the LightDM configuration tool, and the default Linux Mint cursors.</p>
+<p>You might think we are ready to reboot into the desktop, but we aren&rsquo;t there yet! We still need to configure LightDM.</p>
+<h1 id="configuring-lightdm">Configuring LightDM</h1>
+<p>First, we need to change the greeter from the default GTK greeter to the Linux Mint greeter. Type the command below.</p>
+<pre><code>sudo nano /etc/lightdm/lightdm.conf
+</code></pre><p>Go all the way down until you see the <code>greeter-session</code> underneath <code>[Seat:*]</code>. Change this value to:</p>
+<pre><code>greeter-session=slick-greeter
+</code></pre><p>After you have done this, press <code>Ctrl</code> + <code>x</code>, then <code>y</code>, then <code>Enter</code>. Now, we need to enable the LightDM greeter. Type the command below.</p>
+<pre><code>systemctl enable lightdm
+</code></pre><p>Once you have done this, type <code>sudo reboot</code>. We can now start configuring the Cinnamon desktop.</p>
+<h1 id="fixing-the-theme">Fixing the Theme</h1>
+<p>The first thing you may notice is that the theme is not present. Open the <code>System Settings</code> application, go into <code>Themes</code>, then change the options to the ones below.</p>
+<p><strong>Window Borders</strong>: Mint-Y</p>
+<p><strong>Icons</strong>: Mint-Y-Dark (can be any of the Mint-Y icons)</p>
+<p><strong>Controls</strong>: Mint-Y-Dark (can be any of the Mint-Y themes)</p>
+<p><strong>Mouse Pointer</strong>: DMZ-White (can be any of the DMZ cursors)</p>
+<p><strong>Desktop</strong>: Mint-Y-Dark (can be any of the Mint-Y themes)</p>
+<p>Now that we have the theme figured out, lets fix LightDM again.</p>
+<h1 id="showing-users-in-lightdm">Showing Users In LightDM</h1>
+<p>You may have noticed that you need to type out your username in LightDM first. To fix this, go into <code>System Settings</code>, then <code>Login Window</code>, then <code>Users</code>. Once you are here, uncheck the <code>Hide the user list *</code> option. Restart your system, and you shouldn&rsquo;t have to type your username out anymore.</p>
+<h1 id="what-now">What Now?</h1>
+<p>From here, you are free to configure your system how you want. Some of the Linux Mint specific apps are listed below.</p>
+<pre><code>thingy, webapp-manager, pix, hypnotix, bulky, drawing, xed, warpinator, xreader, xviewer
+</code></pre><h1 id="conclusion">Conclusion</h1>
+<p>Changing from Debian 11 to LMDE 5 is not super hard to do. It requires some advanced knowledge about Linux. I would recommend new users to just download LMDE 5 from the Linux Mint website. Only advanced users should attempt this. Overall, this leads to a system with less packages, and a lighter system overall. I recorded around 550MB of RAM being used on a cold boot. Thanks for reading this guide, and I hope you found it helpful.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Ubuntu Touch on the Google Pixel 3a XL | Is it usable?</title>

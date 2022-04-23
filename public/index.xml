@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 05 Apr 2022 18:06:00 -0500</lastBuildDate><atom:link href="https://wolf1e.ga/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wolf1e.ga/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Turn Debian 11 into LMDE 5</title>
+      <link>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</link>
+      <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</guid>
+      <description>Linux Mint Background
+Note: This is not endoursed by the Debian or Linux Mint Debian Edition team. Continue with this guide at your own risk.
+Today, I decided to try and take a bare Debian 11 installation and turn it into an LMDE 5 install. How hard could it be?
+Why would you do this? I already use LMDE 5 on my laptop. The only thing I don&amp;rsquo;t like about it is how many packages are pre-installed (over 2000!</description>
+    </item>
+    
     <item>
       <title>Ubuntu Touch on the Google Pixel 3a XL | Is it usable?</title>
       <link>https://wolf1e.ga/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</link>
@@ -101,17 +113,6 @@ UPDATE: I have finished uploading the posts from my old blog to here. Now, you d
       
       <guid>https://wolf1e.ga/posts/2021/02/first-post/</guid>
       <description>Hello world! This is my first post! Pretty cool!</description>
-    </item>
-    
-    <item>
-      <title>My Experience with Ubuntu On My Surface Pro 2</title>
-      <link>https://wolf1e.ga/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</link>
-      <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://wolf1e.ga/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</guid>
-      <description>Ubuntu 20.04 Desktop (Screenshot by OMG! Ubuntu!)
-A while ago, I decided to try out Ubuntu on my Surface Pro 2. I thought that since my sister&amp;rsquo;s laptop ran Kubuntu so well, I figured that I should give Ubuntu a try on my Surface Pro 2. I also run Debian on my main machine, so I figured that Ubuntu wouldn&amp;rsquo;t be too bad to try.
-Installation Installation wasn&amp;rsquo;t hard. I booted into the USB drive after repeatedly trying to boot from it.</description>
     </item>
     
   </channel>
