@@ -2,72 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Wolfie</title>
-    <link>https://wolf1e.ga/tags/</link>
+    <link>https://wolf1e.xyz/tags/</link>
     <description>Recent content in Tags on Wolfie</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 22 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wolf1e.ga/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Oct 2023 09:59:26 -0600</lastBuildDate><atom:link href="https://wolf1e.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>untagged</title>
+      <link>https://wolf1e.xyz/tags/untagged/</link>
+      <pubDate>Fri, 06 Oct 2023 09:59:26 -0600</pubDate>
+      
+      <guid>https://wolf1e.xyz/tags/untagged/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>OS Tutorial</title>
-      <link>https://wolf1e.ga/tags/os-tutorial/</link>
+      <link>https://wolf1e.xyz/tags/os-tutorial/</link>
       <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.ga/tags/os-tutorial/</guid>
+      <guid>https://wolf1e.xyz/tags/os-tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OS Review</title>
-      <link>https://wolf1e.ga/tags/os-review/</link>
+      <link>https://wolf1e.xyz/tags/os-review/</link>
       <pubDate>Tue, 05 Apr 2022 18:06:00 -0500</pubDate>
       
-      <guid>https://wolf1e.ga/tags/os-review/</guid>
+      <guid>https://wolf1e.xyz/tags/os-review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Desktop Environment</title>
-      <link>https://wolf1e.ga/tags/desktop-environment/</link>
+      <link>https://wolf1e.xyz/tags/desktop-environment/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.ga/tags/desktop-environment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>untagged</title>
-      <link>https://wolf1e.ga/tags/untagged/</link>
-      <pubDate>Fri, 09 Apr 2021 17:52:39 -0500</pubDate>
-      
-      <guid>https://wolf1e.ga/tags/untagged/</guid>
+      <guid>https://wolf1e.xyz/tags/desktop-environment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Earbuds Review</title>
-      <link>https://wolf1e.ga/tags/earbuds-review/</link>
+      <link>https://wolf1e.xyz/tags/earbuds-review/</link>
       <pubDate>Thu, 11 Feb 2021 18:22:17 -0600</pubDate>
       
-      <guid>https://wolf1e.ga/tags/earbuds-review/</guid>
+      <guid>https://wolf1e.xyz/tags/earbuds-review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Headphones Review</title>
-      <link>https://wolf1e.ga/tags/headphones-review/</link>
+      <link>https://wolf1e.xyz/tags/headphones-review/</link>
       <pubDate>Thu, 11 Feb 2021 18:22:17 -0600</pubDate>
       
-      <guid>https://wolf1e.ga/tags/headphones-review/</guid>
+      <guid>https://wolf1e.xyz/tags/headphones-review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Phone Review</title>
-      <link>https://wolf1e.ga/tags/phone-review/</link>
+      <link>https://wolf1e.xyz/tags/phone-review/</link>
       <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.ga/tags/phone-review/</guid>
+      <guid>https://wolf1e.xyz/tags/phone-review/</guid>
       <description></description>
     </item>
     

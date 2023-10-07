@@ -1,208 +1,145 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</loc>
-    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/tags/os-tutorial/</loc>
-    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/</loc>
-    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/tags/</loc>
-    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
+    <loc>https://wolf1e.xyz/posts/2023/10/im-back/</loc>
+    <lastmod>2023-10-06T09:59:26-06:00</lastmod>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/</loc>
+    <lastmod>2023-10-06T09:59:26-06:00</lastmod>
+  </url><url>
+    <loc>https://wolf1e.xyz/tags/</loc>
+    <lastmod>2023-10-06T09:59:26-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://wolf1e.ga/fr/tags/"
+                href="https://wolf1e.xyz/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wolf1e.ga/tags/"
+                href="https://wolf1e.xyz/tags/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/</loc>
-    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wolf1e.xyz/tags/untagged/</loc>
+    <lastmod>2023-10-06T09:59:26-06:00</lastmod>
+  </url><url>
+    <loc>https://wolf1e.xyz/</loc>
+    <lastmod>2023-10-06T09:59:26-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://wolf1e.ga/fr/"
+                href="https://wolf1e.xyz/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wolf1e.ga/"
+                href="https://wolf1e.xyz/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/tags/os-review/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</loc>
+    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wolf1e.xyz/tags/os-tutorial/</loc>
+    <lastmod>2022-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wolf1e.xyz/tags/os-review/</loc>
     <lastmod>2022-04-05T18:06:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</loc>
     <lastmod>2022-04-05T18:06:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2021/07/fedora-on-surface-pro-2/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2021/07/fedora-on-surface-pro-2/</loc>
     <lastmod>2021-07-13T17:30:44-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/tags/desktop-environment/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/tags/desktop-environment/</loc>
     <lastmod>2021-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</loc>
     <lastmod>2021-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2021/04/new-domain/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2021/04/new-domain/</loc>
     <lastmod>2021-04-09T17:52:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/tags/untagged/</loc>
-    <lastmod>2021-04-09T17:52:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</loc>
     <lastmod>2021-02-12T23:07:06-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2021/02/airpods-1st-generation-first-impressions/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2021/02/airpods-1st-generation-first-impressions/</loc>
     <lastmod>2021-02-11T18:22:17-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/tags/earbuds-review/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/tags/earbuds-review/</loc>
     <lastmod>2021-02-11T18:22:17-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/tags/headphones-review/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/tags/headphones-review/</loc>
     <lastmod>2021-02-11T18:22:17-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</loc>
     <lastmod>2021-02-10T20:30:09-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2021/02/update-transitioning-blog/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2021/02/update-transitioning-blog/</loc>
     <lastmod>2021-02-06T11:38:21-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2021/02/first-post/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2021/02/first-post/</loc>
     <lastmod>2021-02-06T09:59:26-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</loc>
     <lastmod>2021-02-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</loc>
     <lastmod>2021-02-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2020/12/debian-troubles-and-why-i-switched-back/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2020/12/debian-troubles-and-why-i-switched-back/</loc>
     <lastmod>2020-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</loc>
     <lastmod>2020-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</loc>
     <lastmod>2020-11-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2020/10/using-fedora-linux/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2020/10/using-fedora-linux/</loc>
     <lastmod>2020-10-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/tags/phone-review/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/tags/phone-review/</loc>
     <lastmod>2020-10-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2020/10/using-the-galaxy-s5-in-2020/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2020/10/using-the-galaxy-s5-in-2020/</loc>
     <lastmod>2020-10-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2020/10/running-debian-10-on-my-macbook/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2020/10/running-debian-10-on-my-macbook/</loc>
     <lastmod>2020-10-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2020/10/trying-cloudready-on-my-macbook/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2020/10/trying-cloudready-on-my-macbook/</loc>
     <lastmod>2020-10-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2020/10/running-mountain-lion-in-2020/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2020/10/running-mountain-lion-in-2020/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/posts/2020/10/using-the-htc-first-in-2020/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/posts/2020/10/using-the-htc-first-in-2020/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/categories/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://wolf1e.ga/fr/categories/"
+                href="https://wolf1e.xyz/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wolf1e.ga/categories/"
+                href="https://wolf1e.xyz/categories/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/series/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://wolf1e.ga/fr/series/"
+                href="https://wolf1e.xyz/fr/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wolf1e.ga/series/"
+                href="https://wolf1e.xyz/series/"
                 />
   </url>
-  
 </urlset>

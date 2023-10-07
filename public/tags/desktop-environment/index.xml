@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Desktop Environment on Wolfie</title>
-    <link>https://wolf1e.ga/tags/desktop-environment/</link>
+    <link>https://wolf1e.xyz/tags/desktop-environment/</link>
     <description>Recent content in Desktop Environment on Wolfie</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://wolf1e.ga/tags/desktop-environment/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://wolf1e.xyz/tags/desktop-environment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu Unity in 2021. Is it actually usable?</title>
-      <link>https://wolf1e.ga/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</link>
+      <link>https://wolf1e.xyz/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.ga/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</guid>
+      <guid>https://wolf1e.xyz/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</guid>
       <description>Ubuntu Logo
 I used the Ubuntu Unity desktop for a few days. Here are my thoughts about the Unity desktop in 2021.
 The Good I love the Unity desktop. I used it back in 2014 and 2016 when I would try out Ubuntu from time to time. I never really dove into the power user features of it, but I liked the desktop. Around a few days ago, I decided to try it out again using Ubuntu 20.</description>

@@ -2,37 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>untagged on Wolfie</title>
-    <link>https://wolf1e.ga/tags/untagged/</link>
+    <link>https://wolf1e.xyz/tags/untagged/</link>
     <description>Recent content in untagged on Wolfie</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 09 Apr 2021 17:52:39 -0500</lastBuildDate><atom:link href="https://wolf1e.ga/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Oct 2023 09:59:26 -0600</lastBuildDate><atom:link href="https://wolf1e.xyz/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I&#39;m Back!</title>
+      <link>https://wolf1e.xyz/posts/2023/10/im-back/</link>
+      <pubDate>Fri, 06 Oct 2023 09:59:26 -0600</pubDate>
+      
+      <guid>https://wolf1e.xyz/posts/2023/10/im-back/</guid>
+      <description>I&amp;rsquo;m Back! After a ton of turmoil and pain, I am finally back, and I am able to write and make articles again.
+Where Did I Go? I went through basic training. It was tough, and it took a lot out of me. Now, I am finally able to update my website again.
+Moving forward, this website will be about more than just tech. I will be doing reviews and such on more products, especially considering how I am now in the military.</description>
+    </item>
+    
     <item>
       <title>New Domain</title>
-      <link>https://wolf1e.ga/posts/2021/04/new-domain/</link>
+      <link>https://wolf1e.xyz/posts/2021/04/new-domain/</link>
       <pubDate>Fri, 09 Apr 2021 17:52:39 -0500</pubDate>
       
-      <guid>https://wolf1e.ga/posts/2021/04/new-domain/</guid>
+      <guid>https://wolf1e.xyz/posts/2021/04/new-domain/</guid>
       <description>Hey guys! I just wanted to let you know that I got a new domain! The existing one will still work, but from now on, I suggest using the new domain: https://wolf1e.ga.</description>
     </item>
     
     <item>
       <title>[UPDATE] Transitioning Blog</title>
-      <link>https://wolf1e.ga/posts/2021/02/update-transitioning-blog/</link>
+      <link>https://wolf1e.xyz/posts/2021/02/update-transitioning-blog/</link>
       <pubDate>Sat, 06 Feb 2021 11:38:21 -0600</pubDate>
       
-      <guid>https://wolf1e.ga/posts/2021/02/update-transitioning-blog/</guid>
+      <guid>https://wolf1e.xyz/posts/2021/02/update-transitioning-blog/</guid>
       <description>Since I now have this new website where I can blog, I will gradually transition my current blog to this website. If you didn&amp;rsquo;t already know, my blog is wolfiestech.blogspot.com. I will be uploading posts from that blog to here.
 UPDATE: I have finished uploading the posts from my old blog to here. Now, you don&amp;rsquo;t need to visit that site again.</description>
     </item>
     
     <item>
       <title>First Post</title>
-      <link>https://wolf1e.ga/posts/2021/02/first-post/</link>
+      <link>https://wolf1e.xyz/posts/2021/02/first-post/</link>
       <pubDate>Sat, 06 Feb 2021 09:59:26 -0600</pubDate>
       
-      <guid>https://wolf1e.ga/posts/2021/02/first-post/</guid>
+      <guid>https://wolf1e.xyz/posts/2021/02/first-post/</guid>
       <description>Hello world! This is my first post! Pretty cool!</description>
     </item>
     

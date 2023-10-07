@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OS Tutorial on Wolfie</title>
-    <link>https://wolf1e.ga/tags/os-tutorial/</link>
+    <link>https://wolf1e.xyz/tags/os-tutorial/</link>
     <description>Recent content in OS Tutorial on Wolfie</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 22 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wolf1e.ga/tags/os-tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wolf1e.xyz/tags/os-tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Turn Debian 11 into LMDE 5</title>
-      <link>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</link>
+      <link>https://wolf1e.xyz/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</link>
       <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</guid>
+      <guid>https://wolf1e.xyz/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</guid>
       <description>Linux Mint Background
 Note: This is not endoursed by the Debian or Linux Mint Debian Edition team. Continue with this guide at your own risk.
 Today, I decided to try and take a bare Debian 11 installation and turn it into an LMDE 5 install. How hard could it be?
@@ -22,10 +22,10 @@ Why would you do this? I already use LMDE 5 on my laptop. The only thing I don&a
     
     <item>
       <title>How to Install Debian 10 On a Macbook (Early 2008)</title>
-      <link>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</link>
+      <link>https://wolf1e.xyz/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</link>
       <pubDate>Fri, 12 Feb 2021 23:07:06 -0600</pubDate>
       
-      <guid>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</guid>
+      <guid>https://wolf1e.xyz/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</guid>
       <description>Debian Logo
 After reinstalling Debian 10 on my Macbook 4,1, I realized that I made a few mistakes in my guide. This post is a tutorial on how to properly install Debian 10 on a Macbook 4,1.
 Installation When you go through the installation process, choose graphical install. You need to have a secondary mouse, as the trackpad won&amp;rsquo;t work during the install, and it won&amp;rsquo;t work very well after the install.</description>
@@ -33,10 +33,10 @@ Installation When you go through the installation process, choose graphical inst
     
     <item>
       <title>[OUTDATED] How to Run Newer Versions of macOS on Unsupported Macs</title>
-      <link>https://wolf1e.ga/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
+      <link>https://wolf1e.xyz/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
       <pubDate>Wed, 10 Feb 2021 20:30:09 -0600</pubDate>
       
-      <guid>https://wolf1e.ga/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
+      <guid>https://wolf1e.xyz/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
       <description>This post is outdated. See the Github Gist for an up to date guide.
 Hello guys! This post is a guide on what macOS versions you can run on a Unsupported Mac and what patcher to use. If you have any issues with the patchers in this post, feel free to join this discord server, and they will help you out. Anyways, enjoy the post!
 Mountain Lion (10.8) Mountain Lion Banner</description>

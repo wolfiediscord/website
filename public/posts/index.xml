@@ -1,20 +1,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Wolfie</title>
-        <link>https://wolf1e.ga/posts/</link>
+        <link>https://wolf1e.xyz/posts/</link>
         <description>Recent content in Posts on Wolfie</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>en</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 22 Apr 2022 00:00:00 +0000</lastBuildDate>
-        <atom:link href="https://wolf1e.ga/posts/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Fri, 06 Oct 2023 09:59:26 -0600</lastBuildDate>
+        <atom:link href="https://wolf1e.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>I&#39;m Back!</title>
+            <link>https://wolf1e.xyz/posts/2023/10/im-back/</link>
+            <pubDate>Fri, 06 Oct 2023 09:59:26 -0600</pubDate>
+            
+            <guid>https://wolf1e.xyz/posts/2023/10/im-back/</guid>
+            <description>I&amp;rsquo;m Back! After a ton of turmoil and pain, I am finally back, and I am able to write and make articles again.
+Where Did I Go? I went through basic training. It was tough, and it took a lot out of me. Now, I am finally able to update my website again.
+Moving forward, this website will be about more than just tech. I will be doing reviews and such on more products, especially considering how I am now in the military.</description>
+            <content type="html"><![CDATA[<h2 id="im-back">I&rsquo;m Back!</h2>
+<p>After a ton of turmoil and pain, I am finally back, and I am able to write and make articles again.</p>
+<h2 id="where-did-i-go">Where Did I Go?</h2>
+<p>I went through basic training. It was tough, and it took a lot out of me. Now, I am finally able to update my website again.</p>
+<p>Moving forward, this website will be about more than just tech. I will be doing reviews and such on more products, especially considering how I am now in the military.</p>
+]]></content>
+        </item>
         
         <item>
             <title>How to Turn Debian 11 into LMDE 5</title>
-            <link>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</link>
+            <link>https://wolf1e.xyz/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</link>
             <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</guid>
+            <guid>https://wolf1e.xyz/posts/2022/04/how-to-turn-debian-11-into-lmde-5/</guid>
             <description>Linux Mint Background
 Note: This is not endoursed by the Debian or Linux Mint Debian Edition team. Continue with this guide at your own risk.
 Today, I decided to try and take a bare Debian 11 installation and turn it into an LMDE 5 install. How hard could it be?
@@ -29,37 +46,37 @@ Why would you do this? I already use LMDE 5 on my laptop. The only thing I don&a
 <p>I went ahead and did a <em>very</em> barebones installation. During the desktop environment selection, I only chose &ldquo;Standard System Utilties&rdquo;. This means that there is no desktop installed at all.</p>
 <h1 id="after-installation">After Installation</h1>
 <p>Once you have finished installing Debian 11, you will have no network connectivity. You need to use the <code>apt-cdrom</code> command to mount your installation media (this means you need the offline installer). Once you have done this, run these commands:</p>
-<pre><code>sudo apt update
+<pre tabindex="0"><code>sudo apt update
 sudo apt install network-manager
 sudo reboot
 </code></pre><p>Once you have rebooted, you can take out your installation media. If there is still no network connectivity, then run the command below.</p>
-<pre><code>systemctl enable --now NetworkManager 
+<pre tabindex="0"><code>systemctl enable --now NetworkManager 
 </code></pre><ul>
 <li><a href="https://manpages.debian.org/bullseye/apt/apt-cdrom.8.en.html">apt-cdrom Man Page</a></li>
 </ul>
 <h1 id="fixing-apt-sources">Fixing Apt Sources</h1>
 <p>After you have network connectivity, you need to first fix your apt sources. Edit the sources.list file using this command:</p>
-<pre><code>sudo nano /etc/apt/sources.list
+<pre tabindex="0"><code>sudo nano /etc/apt/sources.list
 </code></pre><p>Once you have done this, make this file look EXACTLY like this:</p>
-<pre><code>deb https://deb.debian.org/debian/ bullseye main contrib non-free
+<pre tabindex="0"><code>deb https://deb.debian.org/debian/ bullseye main contrib non-free
 deb https://deb.debian.org/debian/ bullseye-updates main contrib non-free
 deb https://security.debian.org/ bullseye-security main contrib non-free
 deb https://deb.debian.org/ bullseye-backports main contrib non-free
 </code></pre><p>Once you have done this, Hit <code>Ctrl</code> + <code>x</code>, press <code>y</code>, then press <code>Enter</code>. Then, run these commands:</p>
-<pre><code>sudo apt update; sudo apt upgrade
+<pre tabindex="0"><code>sudo apt update; sudo apt upgrade
 sudo apt install gpg
 </code></pre><p>This will install the <code>gpg</code> package, which is required for using <code>apt-key</code>.</p>
 <h1 id="adding-the-linux-mint-keyring">Adding the Linux Mint Keyring</h1>
 <p>Now that we have <code>apt-key</code> ready, type the commands below to add the Linux Mint Repository Key.</p>
-<pre><code>wget http://packages.linuxmint.com/pool/main/l/linuxmint-keyring/linuxmint-keyring_2016.05.26_all.deb
+<pre tabindex="0"><code>wget http://packages.linuxmint.com/pool/main/l/linuxmint-keyring/linuxmint-keyring_2016.05.26_all.deb
 sudo apt install ./linuxmint-keyring_2016.05.26_all.deb
 </code></pre><p>After you have done this, we are ready to add the Linux Mint repositories.</p>
 <h1 id="adding-the-linux-mint-repositories--fixing-mintupdate">Adding the Linux Mint Repositories &amp; Fixing mintupdate</h1>
 <p>Now that we have the Linux Mint keyring, we need to change our apt sources. Run these commands below.</p>
-<pre><code>sudo rm /etc/apt/sources.list
+<pre tabindex="0"><code>sudo rm /etc/apt/sources.list
 sudo nano /etc/apt/sources.list.d/official-package-repositories.list
 </code></pre><p>Once you are in <code>nano</code>, make the file look EXACTLY like this:</p>
-<pre><code>deb http://packages.linuxmint.com elsie main upstream import backport
+<pre tabindex="0"><code>deb http://packages.linuxmint.com elsie main upstream import backport
 
 deb https://deb.debian.org/debian/ bullseye main contrib non-free
 deb https://deb.debian.org/debian/ bullseye-update main contrib non-free
@@ -67,9 +84,9 @@ deb https://security.debian.org/ bullseye-security main contrib non-free
 
 deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free
 </code></pre><p>After you have done this, press <code>Ctrl</code> + <code>x</code>, then <code>y</code>, then <code>Enter</code>. Now, we need to configure our pinning. Run the command below.</p>
-<pre><code>sudo nano /etc/apt/preferences.d/official-package-repositories.pref
+<pre tabindex="0"><code>sudo nano /etc/apt/preferences.d/official-package-repositories.pref
 </code></pre><p>Make this file look exactly like this:</p>
-<pre><code>Package: *
+<pre tabindex="0"><code>Package: *
 Pin: origin live.linuxmint.com
 Pin-Priority: 750
 
@@ -81,25 +98,25 @@ Package: *
 Pin: release o=LP-PPA-linuxmint-daily-build-team-daily-builds
 Pin-Priority: 700
 </code></pre><p>After you have done this, press <code>Ctrl</code> + <code>x</code>, then <code>y</code>, then <code>Enter</code>. We are going to do the same thing to a different file. Type the command below.</p>
-<pre><code>sudo nano /etc/apt/preferences.d/official-extra-repositories.pref
+<pre tabindex="0"><code>sudo nano /etc/apt/preferences.d/official-extra-repositories.pref
 </code></pre><p>Make it look exactly like this:</p>
-<pre><code>Package: *
-Pin: origin &quot;build.linuxmint.com&quot;
+<pre tabindex="0"><code>Package: *
+Pin: origin &#34;build.linuxmint.com&#34;
 Pin-Priority: 700
 </code></pre><p>After you have done this, press <code>Ctrl</code> + <code>x</code>, then <code>y</code>, then <code>Enter</code>. We are now ready to install the desktop environment.</p>
 <h1 id="installing-cinnamon">Installing Cinnamon</h1>
 <p>Now that we have done all of the configuration of apt, we can now install the Cinnamon desktop environment. You can also install MATE or XFCE, but this won&rsquo;t be covered in this guide. Run the commands below.</p>
-<pre><code>sudo apt update; sudo apt upgrade
+<pre tabindex="0"><code>sudo apt update; sudo apt upgrade
 sudo apt install cinnamon nemo mintdesktop mintinstall mintmenu mintsources mintsystem mintupdate mint-x-icons mint-y-icons mint-themes mint-mirrors gnome-terminal lightdm slick-greeter lightdm-settings dmz-cursor-theme 
 </code></pre><p>This will install the Cinnamon desktop, Nemo (the file manager), the Software Sources App, the Mint Updater, the Software Center, the Linux Mint Themes, a list of mirrors (for Software Sources app), Gnome Terminal, LightDM, the Linux Mint greeter for LightDM, the LightDM configuration tool, and the default Linux Mint cursors.</p>
 <p>You might think we are ready to reboot into the desktop, but we aren&rsquo;t there yet! We still need to configure LightDM.</p>
 <h1 id="configuring-lightdm">Configuring LightDM</h1>
 <p>First, we need to change the greeter from the default GTK greeter to the Linux Mint greeter. Type the command below.</p>
-<pre><code>sudo nano /etc/lightdm/lightdm.conf
+<pre tabindex="0"><code>sudo nano /etc/lightdm/lightdm.conf
 </code></pre><p>Go all the way down until you see the <code>greeter-session</code> underneath <code>[Seat:*]</code>. Change this value to:</p>
-<pre><code>greeter-session=slick-greeter
+<pre tabindex="0"><code>greeter-session=slick-greeter
 </code></pre><p>After you have done this, press <code>Ctrl</code> + <code>x</code>, then <code>y</code>, then <code>Enter</code>. Now, we need to enable the LightDM greeter. Type the command below.</p>
-<pre><code>systemctl enable lightdm
+<pre tabindex="0"><code>systemctl enable lightdm
 </code></pre><p>Once you have done this, type <code>sudo reboot</code>. We can now start configuring the Cinnamon desktop.</p>
 <h1 id="fixing-the-theme">Fixing the Theme</h1>
 <p>The first thing you may notice is that the theme is not present. Open the <code>System Settings</code> application, go into <code>Themes</code>, then change the options to the ones below.</p>
@@ -113,7 +130,7 @@ sudo apt install cinnamon nemo mintdesktop mintinstall mintmenu mintsources mint
 <p>You may have noticed that you need to type out your username in LightDM first. To fix this, go into <code>System Settings</code>, then <code>Login Window</code>, then <code>Users</code>. Once you are here, uncheck the <code>Hide the user list *</code> option. Restart your system, and you shouldn&rsquo;t have to type your username out anymore.</p>
 <h1 id="what-now">What Now?</h1>
 <p>From here, you are free to configure your system how you want. Some of the Linux Mint specific apps are listed below.</p>
-<pre><code>thingy, webapp-manager, pix, hypnotix, bulky, drawing, xed, warpinator, xreader, xviewer
+<pre tabindex="0"><code>thingy, webapp-manager, pix, hypnotix, bulky, drawing, xed, warpinator, xreader, xviewer
 </code></pre><h1 id="conclusion">Conclusion</h1>
 <p>Changing from Debian 11 to LMDE 5 is not super hard to do. It requires some advanced knowledge about Linux. I would recommend new users to just download LMDE 5 from the Linux Mint website. Only advanced users should attempt this. Overall, this leads to a system with less packages, and a lighter system overall. I recorded around 550MB of RAM being used on a cold boot. Thanks for reading this guide, and I hope you found it helpful.</p>
 ]]></content>
@@ -121,10 +138,10 @@ sudo apt install cinnamon nemo mintdesktop mintinstall mintmenu mintsources mint
         
         <item>
             <title>Ubuntu Touch on the Google Pixel 3a XL | Is it usable?</title>
-            <link>https://wolf1e.ga/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</link>
+            <link>https://wolf1e.xyz/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</link>
             <pubDate>Tue, 05 Apr 2022 18:06:00 -0500</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</guid>
+            <guid>https://wolf1e.xyz/posts/2022/04/ubuntu-touch-on-the-google-pixel-3a-xl-is-it-usable/</guid>
             <description>Ubuntu Logo
 Hey guys, it has been a long time since I last posted on this blog. There are many reasons for that, but I will not get into them. I recently tried out Ubuntu Touch on my Google Pixel 3a XL, and I thought I would give it a review.
 At the time of writing, I was testing this out on OTA-22 with installer version 0.9.5. Some of my complaints may have been fixed in a newer update.</description>
@@ -223,10 +240,10 @@ At the time of writing, I was testing this out on OTA-22 with installer version 
         
         <item>
             <title>Fedora on Surface Pro 2</title>
-            <link>https://wolf1e.ga/posts/2021/07/fedora-on-surface-pro-2/</link>
+            <link>https://wolf1e.xyz/posts/2021/07/fedora-on-surface-pro-2/</link>
             <pubDate>Tue, 13 Jul 2021 17:30:44 -0500</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2021/07/fedora-on-surface-pro-2/</guid>
+            <guid>https://wolf1e.xyz/posts/2021/07/fedora-on-surface-pro-2/</guid>
             <description>Fedora Logo
 I decided to try Fedora 34 on my Surface Pro 2, and here is my experience.
 Installation Installation of Fedora was pretty easy. I just selected my disk, changed my timezone, and off it went. The Anaconda installer is really good, but I still think that certain installers are better. Everything went well, and it installed properly.
@@ -247,10 +264,10 @@ Using Fedora Using Fedora on my Surface Pro 2 was pretty cool.</description>
         
         <item>
             <title>Ubuntu Unity in 2021. Is it actually usable?</title>
-            <link>https://wolf1e.ga/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</link>
+            <link>https://wolf1e.xyz/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</link>
             <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</guid>
+            <guid>https://wolf1e.xyz/posts/2021/07/ubuntu-unity-in-2021.-is-it-actually-usable/</guid>
             <description>Ubuntu Logo
 I used the Ubuntu Unity desktop for a few days. Here are my thoughts about the Unity desktop in 2021.
 The Good I love the Unity desktop. I used it back in 2014 and 2016 when I would try out Ubuntu from time to time. I never really dove into the power user features of it, but I liked the desktop. Around a few days ago, I decided to try it out again using Ubuntu 20.</description>
@@ -268,10 +285,10 @@ The Good I love the Unity desktop. I used it back in 2014 and 2016 when I would 
         
         <item>
             <title>New Domain</title>
-            <link>https://wolf1e.ga/posts/2021/04/new-domain/</link>
+            <link>https://wolf1e.xyz/posts/2021/04/new-domain/</link>
             <pubDate>Fri, 09 Apr 2021 17:52:39 -0500</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2021/04/new-domain/</guid>
+            <guid>https://wolf1e.xyz/posts/2021/04/new-domain/</guid>
             <description>Hey guys! I just wanted to let you know that I got a new domain! The existing one will still work, but from now on, I suggest using the new domain: https://wolf1e.ga.</description>
             <content type="html"><![CDATA[<p>Hey guys! I just wanted to let you know that I got a new domain! The existing one will still work, but from now on, I suggest using the new domain: <code>https://wolf1e.ga</code>.</p>
 ]]></content>
@@ -279,10 +296,10 @@ The Good I love the Unity desktop. I used it back in 2014 and 2016 when I would 
         
         <item>
             <title>How to Install Debian 10 On a Macbook (Early 2008)</title>
-            <link>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</link>
+            <link>https://wolf1e.xyz/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</link>
             <pubDate>Fri, 12 Feb 2021 23:07:06 -0600</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</guid>
+            <guid>https://wolf1e.xyz/posts/2021/02/how-to-install-debian-10-on-a-macbook-early-2008/</guid>
             <description>Debian Logo
 After reinstalling Debian 10 on my Macbook 4,1, I realized that I made a few mistakes in my guide. This post is a tutorial on how to properly install Debian 10 on a Macbook 4,1.
 Installation When you go through the installation process, choose graphical install. You need to have a secondary mouse, as the trackpad won&amp;rsquo;t work during the install, and it won&amp;rsquo;t work very well after the install.</description>
@@ -297,23 +314,23 @@ Installation When you go through the installation process, choose graphical inst
 <p>If you do not have a working internet connection that isn&rsquo;t Wi-Fi, you need to get one in order to follow the next steps. Once you have a working internet connection via ethernet or other means, you need to make sure you have the right wireless card. I have a model that is compatible with Debian. You can follow the wiki page <a href="https://wiki.debian.org/bcm43xx">here</a> to check if you have a Broadcom 43xx wireless card. Once you have verified that you have the right card, install the <code>b43-firmware-installer</code> package. After you have installed it, reboot the machine. Hopefully, you will have networking working, and you will be able to proceed with this tutorial. If not, there are various amounts of resources available on the internet.</p>
 <h3 id="trackpad">Trackpad</h3>
 <p>The first thing you want to do to fix the trackpad is to install the following packages. The command is below.</p>
-<pre><code>sudo apt install xserver-xorg-input-libinput xserver-xorg-input-evdev xserver-xorg-input-mouse
+<pre tabindex="0"><code>sudo apt install xserver-xorg-input-libinput xserver-xorg-input-evdev xserver-xorg-input-mouse
 </code></pre><p>If your system has the <code>xserver-xorg-input-synaptics</code> package installed, remove it. It will interfere with the libinput driver we are going to proceed with. Once you have made sure that the package isn&rsquo;t on your system, type the following commands below.</p>
-<pre><code>sudo su
+<pre tabindex="0"><code>sudo su
 mkdir -p /etc/X11/xorg.conf.d
-echo 'Section &quot;InputClass&quot;
-        Identifier &quot;libinput touchpad catchall&quot;
-        MatchIsTouchpad &quot;on&quot;
-        MatchDevicePath &quot;/dev/input/event*&quot;
-        Driver &quot;libinput&quot;
-        Option &quot;Tapping&quot; &quot;on&quot;
-EndSection' &gt; /etc/X11/xorg.conf.d/40-libinput.conf
+echo &#39;Section &#34;InputClass&#34;
+        Identifier &#34;libinput touchpad catchall&#34;
+        MatchIsTouchpad &#34;on&#34;
+        MatchDevicePath &#34;/dev/input/event*&#34;
+        Driver &#34;libinput&#34;
+        Option &#34;Tapping&#34; &#34;on&#34;
+EndSection&#39; &gt; /etc/X11/xorg.conf.d/40-libinput.conf
 systemctl restart lightdm
 </code></pre><p>The last command will send you back to the login screen, so make sure you have everything saved. If you have a different login manager than lightdm, replace lightdm with your login manager&rsquo;s name. Some examples would be <code>gdm3</code>, <code>sddm</code>, etc.</p>
 <p>Once you have done that, you should have a functioning touchpad that you can use tap to click with. The Macbook 4,1 doesn&rsquo;t have a right click button, so you have to press with two fingers on the touchpad in order to get it to right click.</p>
 <h3 id="isight-camera">iSight Camera</h3>
 <p>In order to get the iSight camera to work, you are going to need to find the firmware on the internet. If you have a dualboot of Debian and OS X, you can get the location of the firmware by typing the following commands:</p>
-<pre><code>sudo su
+<pre tabindex="0"><code>sudo su
 mkdir -p /MacOSX
 mount -t hfsplus /dev/sdaXX /MacOSX
 ls /MacOSX/System/Library/Extensions/IOUSBFamily.kext/Contents/PlugIns/AppleUSBVideoSupport.kext/Contents/MacOS/AppleUSBVideoSupport
@@ -322,11 +339,11 @@ exit
 <p>Once you have the location of the iSight Camera firmware, you can type in <code>sudo apt install isight-firmware-tools</code> into your terminal. It will ask you where the firmware is located. You need to type in the location of the firmware, which we did above. If you downloaded it, put the path to the file you downloaded. If everything goes right, it should work just fine.</p>
 <h3 id="the-bootloader">The Bootloader</h3>
 <p>There is an issue with the Debian 10 bootloader that happens upon post installation. This fix is a workaround, so don&rsquo;t expect it to work forever. The error you get is an error saying <code>flipdone timeout</code> or something along those lines. In order to fix it, you need to change one of the values of the <code>/etc/grub/default</code> file. From your terminal, you need to run these commands:</p>
-<pre><code>sudo nano /etc/default/grub
+<pre tabindex="0"><code>sudo nano /etc/default/grub
 </code></pre><p>Once you are in the file, change the value of the <code>GRUB_CMDLINE_LINUX_DEFAULT</code> to the following:</p>
-<pre><code>GRUB_CMD_LINUX_DEFAULT=&quot;quiet splash video=SVIDEO-1:d&quot;
+<pre tabindex="0"><code>GRUB_CMD_LINUX_DEFAULT=&#34;quiet splash video=SVIDEO-1:d&#34;
 </code></pre><p>Once you are done, press <code>Ctrl</code> + <code>X</code> to exit out of the nano text editor. If it asks you to save, say yes. Once you are back into your terminal, type in the following commands:</p>
-<pre><code>sudo upgrade-grub
+<pre tabindex="0"><code>sudo upgrade-grub
 sudo reboot
 </code></pre><p>Once you have done that, the bootloader should be fine, and your Debian 10 installation should boot much faster.</p>
 <h2 id="conclusion">Conclusion</h2>
@@ -343,10 +360,10 @@ sudo reboot
         
         <item>
             <title>Airpods 1st Generation First Impressions</title>
-            <link>https://wolf1e.ga/posts/2021/02/airpods-1st-generation-first-impressions/</link>
+            <link>https://wolf1e.xyz/posts/2021/02/airpods-1st-generation-first-impressions/</link>
             <pubDate>Thu, 11 Feb 2021 18:22:17 -0600</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2021/02/airpods-1st-generation-first-impressions/</guid>
+            <guid>https://wolf1e.xyz/posts/2021/02/airpods-1st-generation-first-impressions/</guid>
             <description>Airpods (Photo by PCMag)
 Hello guys! I have been trying out the Airpods 1st generation for around a week now, and I have a few things to say. Let&amp;rsquo;s get right into it!
 The Good The Airpods are really nice. The integration with my iPhone 7 is great because I get to use the battery widget. I also like the popup that appears that tells me the case battery percentage and the Airpods themselves.</description>
@@ -368,10 +385,10 @@ The Good The Airpods are really nice. The integration with my iPhone 7 is great 
         
         <item>
             <title>[OUTDATED] How to Run Newer Versions of macOS on Unsupported Macs</title>
-            <link>https://wolf1e.ga/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
+            <link>https://wolf1e.xyz/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</link>
             <pubDate>Wed, 10 Feb 2021 20:30:09 -0600</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
+            <guid>https://wolf1e.xyz/posts/2021/02/outdated-how-to-run-newer-versions-of-macos-on-unsupported-macs/</guid>
             <description>This post is outdated. See the Github Gist for an up to date guide.
 Hello guys! This post is a guide on what macOS versions you can run on a Unsupported Mac and what patcher to use. If you have any issues with the patchers in this post, feel free to join this discord server, and they will help you out. Anyways, enjoy the post!
 Mountain Lion (10.8) Mountain Lion Banner</description>
@@ -381,7 +398,7 @@ Mountain Lion (10.8) Mountain Lion Banner</description>
 <p><img src="/post-photos/macOS/mountain-lion.png" alt="Mountain Lion Banner">
 <em>Mountain Lion Banner</em></p>
 <h3 id="supported-macs-macs-that-can-run-it-natively">Supported Macs (Macs that can run it natively)</h3>
-<pre><code>MacBook Pro – 13″ from mid 2009 or later, 15″ from late 2007 and newer, 17″ from late 2007 and newer
+<pre tabindex="0"><code>MacBook Pro – 13″ from mid 2009 or later, 15″ from late 2007 and newer, 17″ from late 2007 and newer
 MacBook Air – late 2008 and newer
 iMac – models from mid 2007 and newer
 MacBook – 13″ aluminum from 2008, 13″ from 2009 and newer
@@ -389,7 +406,7 @@ Mac Mini – early 2009 and newer
 Mac Pro – early 2008 models and newer
 XServe – early 2009 models and newer
 </code></pre><h3 id="unsupported-macs-macs-that-can-run-it-using-a-patcher">Unsupported Macs (Macs that can run it using a patcher)</h3>
-<pre><code>iMac4,1* 4,2 (CPU upgraded)
+<pre tabindex="0"><code>iMac4,1* 4,2 (CPU upgraded)
 iMac5,1* 5,2 6,1
 MacBook2,1 3,1 4,1
 MacBookAir1,1
@@ -409,17 +426,17 @@ You can tell by seeing if your model has a *.</em></p>
 <p><img src="/post-photos/macOS/mavericks.png" alt="Mavericks Banner">
 <em>Mavericks Banner</em></p>
 <h3 id="supported-macs-macs-that-can-run-it-natively-1">Supported Macs (Macs that can run it natively)</h3>
-<pre><code>iMac (Mid-2007 to Mid-2014)
-MacBook (13&quot; Late 2008 Aluminum, Early 2009 to Mid-2010)
-MacBook Pro (13&quot; Mid-2009 to Mid-2014)
-MacBook Pro (15&quot; Mid/Late 2007 to Mid-2014)
-MacBook Pro (17&quot; Late 2007 to Late 2011)
+<pre tabindex="0"><code>iMac (Mid-2007 to Mid-2014)
+MacBook (13&#34; Late 2008 Aluminum, Early 2009 to Mid-2010)
+MacBook Pro (13&#34; Mid-2009 to Mid-2014)
+MacBook Pro (15&#34; Mid/Late 2007 to Mid-2014)
+MacBook Pro (17&#34; Late 2007 to Late 2011)
 MacBook Air (Late 2008 to Early 2014)
 Mac mini (Early 2009 to Late 2012)
 Mac Pro (Early 2008 to Late 2013)
 Xserve (Early 2009)
 </code></pre><h3 id="unsupported-macs-macs-that-can-run-it-using-a-patcher-1">Unsupported Macs (Macs that can run it using a patcher)</h3>
-<pre><code>Macbook 2,1 3,1 4,1
+<pre tabindex="0"><code>Macbook 2,1 3,1 4,1
 MacBookAir 1,1
 iMac4,1*(if CPU upgraded to Core 2 Duo) 4,2 5,1* 5,2
 Macmini1,1 2,1
@@ -435,17 +452,17 @@ Xserve1,1* 2,1*
 <p><img src="/post-photos/macOS/yosemite.png" alt="Yosemite Banner">
 <em>Yosemite Banner</em></p>
 <h3 id="supported-macs-macs-that-can-run-it-natively-2">Supported Macs (Macs that can run it natively)</h3>
-<pre><code>iMac (Mid-2007 or later)
-MacBook (13&quot; Late 2008 Aluminum, Early 2009 or later)
-MacBook Pro (13&quot; Mid-2009 or later)
-MacBook Pro (15&quot; Mid/Late 2007 or later)
-MacBook Pro (17&quot; Late 2007 or later)
+<pre tabindex="0"><code>iMac (Mid-2007 or later)
+MacBook (13&#34; Late 2008 Aluminum, Early 2009 or later)
+MacBook Pro (13&#34; Mid-2009 or later)
+MacBook Pro (15&#34; Mid/Late 2007 or later)
+MacBook Pro (17&#34; Late 2007 or later)
 MacBook Air (Late 2008 or later)
 Mac mini (Early 2009 or later)
 Mac Pro (Early 2008 or later)
 Xserve (Early 2009)
 </code></pre><h3 id="unsupported-macs-macs-that-can-run-it-using-a-patcher-2">Unsupported Macs (Macs that can run it using a patcher)</h3>
-<pre><code>MacBook2,1 3,1 4,1
+<pre tabindex="0"><code>MacBook2,1 3,1 4,1
 MacBookAir1,1
 MacBookPro2,1 2,2
 iMac4,1 4,2 5,1 5,2
@@ -459,7 +476,7 @@ Xserve1,1 2,1
 <p><img src="/post-photos/macOS/el-capitan.png" alt="El Capitan Banner">
 <em>El Capitan Banner</em></p>
 <h3 id="supported-macs-macs-that-can-run-it-natively-3">Supported Macs (Macs that can run it natively)</h3>
-<pre><code>iMac (Mid-2007 or newer)
+<pre tabindex="0"><code>iMac (Mid-2007 or newer)
 MacBook (Late 2008 Aluminum, Early 2009 or newer)
 MacBook Air (Late 2008 or newer)
 MacBook Pro (Mid/Late 2007 or newer)
@@ -467,7 +484,7 @@ Mac mini (Early 2009 or newer)
 Mac Pro (Early 2008 or newer)
 Xserve (Early 2009)
 </code></pre><h3 id="unsupported-macs-macs-that-can-run-it-using-a-patcher-3">Unsupported Macs (Macs that can run it using a patcher)</h3>
-<pre><code>MacBook2,1 3,1 4,1
+<pre tabindex="0"><code>MacBook2,1 3,1 4,1
 MacBookAir1,1
 MacBookPro2,1 2,2
 iMac4,1 4,2 5,1 5,2
@@ -481,14 +498,14 @@ Xserve1,1 2,1
 <p><img src="/post-photos/macOS/sierra.png" alt="Sierra Banner">
 <em>Sierra Banner</em></p>
 <h3 id="supported-macs-macs-that-can-run-it-natively-4">Supported Macs (Macs that can run it natively)</h3>
-<pre><code>iMac (Late 2009 or later)
+<pre tabindex="0"><code>iMac (Late 2009 or later)
 MacBook (Late 2009 or later)
 MacBook Air (Late 2010 or later)
 MacBook Pro (Mid-2010 or later)
 Mac mini (Mid-2010 or later)
 Mac Pro (Mid-2010 or later)
 </code></pre><h3 id="unsupported-macs-macs-that-can-run-it-using-a-patcher-4">Unsupported Macs (Macs that can run it using a patcher)</h3>
-<pre><code>Macbook4,1 5,1* 5,2*
+<pre tabindex="0"><code>Macbook4,1 5,1* 5,2*
 MacBookAir2,1*
 MacBookPro4,1* 5,1* 5,2* 5,3* 5,4* 5,5*
 iMac7,1 8,1* 9,1*
@@ -504,14 +521,14 @@ Xserve2,1* 3,1*
 <p><img src="/post-photos/macOS/high-sierra.png" alt="High Sierra Banner">
 <em>High Sierra Banner</em></p>
 <h3 id="supported-macs-macs-that-can-run-it-natively-5">Supported Macs (Macs that can run it natively)</h3>
-<pre><code>iMac (Late 2009 or later)
+<pre tabindex="0"><code>iMac (Late 2009 or later)
 MacBook (Late 2009 or later)
 MacBook Air (Late 2010 or later)
 MacBook Pro (Mid-2010 or later)
 Mac mini (Mid-2010 or later)
 Mac Pro (Mid-2010 or later)
 </code></pre><h3 id="unsupported-macs-macs-that-can-run-it-using-a-patcher-5">Unsupported Macs (Macs that can run it using a patcher)</h3>
-<pre><code>MacBook4,1 5,1 5,2*
+<pre tabindex="0"><code>MacBook4,1 5,1 5,2*
 MacBookAir2,1*
 MacBookPro4,1* 5,1* 5,2* 5,3* 5,4* 5,5*
 iMac7,1 8,1* 9,1*
@@ -527,7 +544,7 @@ XServe2,1* 3,1*
 <p><img src="/post-photos/macOS/mojave.png" alt="Mojave Banner">
 <em>Mojave Banner</em></p>
 <h3 id="supported-macs-macs-that-can-run-it-natively-6">Supported Macs (Macs that can run it natively)</h3>
-<pre><code>MacBook (Early 2015 or later)
+<pre tabindex="0"><code>MacBook (Early 2015 or later)
 MacBook Air (Mid-2012 or later)
 MacBook Pro (Mid-2012 or later)
 iMac Pro
@@ -535,7 +552,7 @@ iMac (Late 2012 or later)
 Mac mini (Late 2012 or later)
 Mac Pro (Mid-2010 or later*) (only with a compatible Metal card)
 </code></pre><h3 id="unsupported-macs-macs-that-can-run-it-using-a-patcher-6">Unsupported Macs (Macs that can run it using a patcher)</h3>
-<pre><code>Macbook4,1 5,1* 5,2* 6,1* 7,1*
+<pre tabindex="0"><code>Macbook4,1 5,1* 5,2* 6,1* 7,1*
 MacBookAir2,1* 3,1* 3,2* 4,1* 4,2*
 MacBookPro4,1* 5,1* 5,2* 5,3* 5,4* 5,5* 6,1* 6,2* 7,1* 8,1* 8,2* 8,3*
 iMac7,1 8,1* 9,1* 10,1* 10,2* 11,1*^ 11,2*^ 11,3*^ 12,1*^ 12,2*^
@@ -552,7 +569,7 @@ Xserve2,1* 3,1*
 <p><img src="/post-photos/macOS/catalina.png" alt="Catalina Banner">
 <em>Catalina Banner</em></p>
 <h3 id="supported-macs-macs-that-can-run-it-natively-7">Supported Macs (Macs that can run it natively)</h3>
-<pre><code>MacBook (2015 and later)
+<pre tabindex="0"><code>MacBook (2015 and later)
 MacBook Air (2012 and later)
 MacBook Pro (2012 and later)
 iMac Pro (2017 and later)
@@ -560,7 +577,7 @@ iMac (2012 and later)
 Mac mini (2012 and later)
 Mac Pro (2013 and later)
 </code></pre><h3 id="unsupported-macs-macs-that-can-run-it-using-a-patcher-7">Unsupported Macs (Macs that can run it using a patcher)</h3>
-<pre><code>Macbook4,1 5,1* 5,2* 6,1* 7,1*
+<pre tabindex="0"><code>Macbook4,1 5,1* 5,2* 6,1* 7,1*
 MacBookAir2,1* 3,1* 3,2* 4,1* 4,2*
 MacBookPro4,1* 5,1* 5,2* 5,3* 5,4* 5,5* 6,1* 6,2* 7,1* 8,1* 8,2* 8,3*
 iMac7,1 8,1* 9,1* 10,1* 10,2* 11,1*^ 11,2*^ 11,3*^ 12,1*^ 12,2*^
@@ -577,7 +594,7 @@ Xserve2,1* 3,1*
 <p><img src="/post-photos/macOS/big-sur.png" alt="Big Sur Banner">
 <em>Big Sur Banner</em></p>
 <h3 id="supported-macs-macs-that-can-run-it-natively-8">Supported Macs (Macs that can run it natively)</h3>
-<pre><code>MacBook (2015 and later)
+<pre tabindex="0"><code>MacBook (2015 and later)
 MacBook Air (2013 and later)
 MacBook Pro (Late 2013 and later)
 iMac Pro (2017 and later)
@@ -585,14 +602,14 @@ iMac (2014 and later)
 Mac mini (2014 and later)
 Mac Pro (2013 and later)
 </code></pre><h3 id="unsupported-macs-macs-that-can-run-it-using-a-patcher-8">Unsupported Macs (Macs that can run it using a patcher)</h3>
-<pre><code>Late 2012/2013 iMac
+<pre tabindex="0"><code>Late 2012/2013 iMac
 Mac Pro 2008*, 2009*, 2010*, 2012*
 2011 Macs
 Mid 2010 white MacBook
-2010 13&quot; MacBook Pro
+2010 13&#34; MacBook Pro
 2010 MacBook Air
 Late 2009 white MacBook
-Late 2009 21.5&quot; iMac
+Late 2009 21.5&#34; iMac
 2010 Mac Mini
 </code></pre><p><em>For a full list of unsupported macs that can run it, <a href="https://bensova.gitbook.io/big-sur/supported-macs">click this link</a>.</em></p>
 <h3 id="available-patchers-8">Available Patchers</h3>
@@ -608,10 +625,10 @@ Late 2009 21.5&quot; iMac
         
         <item>
             <title>[UPDATE] Transitioning Blog</title>
-            <link>https://wolf1e.ga/posts/2021/02/update-transitioning-blog/</link>
+            <link>https://wolf1e.xyz/posts/2021/02/update-transitioning-blog/</link>
             <pubDate>Sat, 06 Feb 2021 11:38:21 -0600</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2021/02/update-transitioning-blog/</guid>
+            <guid>https://wolf1e.xyz/posts/2021/02/update-transitioning-blog/</guid>
             <description>Since I now have this new website where I can blog, I will gradually transition my current blog to this website. If you didn&amp;rsquo;t already know, my blog is wolfiestech.blogspot.com. I will be uploading posts from that blog to here.
 UPDATE: I have finished uploading the posts from my old blog to here. Now, you don&amp;rsquo;t need to visit that site again.</description>
             <content type="html"><![CDATA[<p>Since I now have this new website where I can blog, I will gradually transition my current blog to this website. If you didn&rsquo;t already know, my blog is <a href="https://wolfiestech.blogspot.com">wolfiestech.blogspot.com</a>. I will be uploading posts from that blog to here.</p>
@@ -621,10 +638,10 @@ UPDATE: I have finished uploading the posts from my old blog to here. Now, you d
         
         <item>
             <title>First Post</title>
-            <link>https://wolf1e.ga/posts/2021/02/first-post/</link>
+            <link>https://wolf1e.xyz/posts/2021/02/first-post/</link>
             <pubDate>Sat, 06 Feb 2021 09:59:26 -0600</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2021/02/first-post/</guid>
+            <guid>https://wolf1e.xyz/posts/2021/02/first-post/</guid>
             <description>Hello world! This is my first post! Pretty cool!</description>
             <content type="html"><![CDATA[<h2 id="hello-world">Hello world!</h2>
 <p>This is my first post! Pretty cool!</p>
@@ -633,10 +650,10 @@ UPDATE: I have finished uploading the posts from my old blog to here. Now, you d
         
         <item>
             <title>My Experience with Ubuntu On My Surface Pro 2</title>
-            <link>https://wolf1e.ga/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</link>
+            <link>https://wolf1e.xyz/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</link>
             <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</guid>
+            <guid>https://wolf1e.xyz/posts/2021/02/my-experience-with-ubuntu-on-my-surface-pro-2/</guid>
             <description>Ubuntu 20.04 Desktop (Screenshot by OMG! Ubuntu!)
 A while ago, I decided to try out Ubuntu on my Surface Pro 2. I thought that since my sister&amp;rsquo;s laptop ran Kubuntu so well, I figured that I should give Ubuntu a try on my Surface Pro 2. I also run Debian on my main machine, so I figured that Ubuntu wouldn&amp;rsquo;t be too bad to try.
 Installation Installation wasn&amp;rsquo;t hard. I booted into the USB drive after repeatedly trying to boot from it.</description>
@@ -655,10 +672,10 @@ Installation Installation wasn&amp;rsquo;t hard. I booted into the USB drive aft
         
         <item>
             <title>Why I Downgraded From Windows 10 to 8.1</title>
-            <link>https://wolf1e.ga/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</link>
+            <link>https://wolf1e.xyz/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</link>
             <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</guid>
+            <guid>https://wolf1e.xyz/posts/2021/02/why-i-downgraded-from-windows-10-to-8.1/</guid>
             <description>Windows 8.1 Start Menu (Photo by Confidential Files!)
 A while ago, I decided to try out Windows 8.1 on my Surface Pro 2. I thought that it might be faster, or I might get better battery life out of it. I downgraded from Windows 10 using a recovery image, and booted into Windows 8.1. I had no idea how much I would love Windows 8.1.
 Once I finished the setup and installed all of the updates, I figured I would get my regular applications.</description>
@@ -680,10 +697,10 @@ Once I finished the setup and installed all of the updates, I figured I would ge
         
         <item>
             <title>Debian Troubles and Why I Switched Back</title>
-            <link>https://wolf1e.ga/posts/2020/12/debian-troubles-and-why-i-switched-back/</link>
+            <link>https://wolf1e.xyz/posts/2020/12/debian-troubles-and-why-i-switched-back/</link>
             <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2020/12/debian-troubles-and-why-i-switched-back/</guid>
+            <guid>https://wolf1e.xyz/posts/2020/12/debian-troubles-and-why-i-switched-back/</guid>
             <description>Debian Logo
 I have been using Debian again for the past two weeks. I think that the experience is great, even though I have had a few issues (mostly KDE related).
 The Fedora Story I switched back to Debian for one major issue. My old NVIDIA graphics card was acting up on Fedora and causing it to slow down immensely and freeze the system, forcing me to reboot. I also switched back because I know how Debian functions compared to not knowing much in Fedora.</description>
@@ -707,10 +724,10 @@ The Fedora Story I switched back to Debian for one major issue. My old NVIDIA gr
         
         <item>
             <title>Debian vs OS X Mountain Lion | Why I Switched Back to OS X</title>
-            <link>https://wolf1e.ga/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</link>
+            <link>https://wolf1e.xyz/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</link>
             <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</guid>
+            <guid>https://wolf1e.xyz/posts/2020/12/debian-vs-os-x-mountain-lion-why-i-switched-back-to-os-x/</guid>
             <description>Mountain Lion Installer
 I have recently started to use my Macbook 4,1 again, even after getting my Surface Pro 2. There are a variety of reasons why, but that is for another time. I decided to try Debian and Mountain Lion, and I have found out which OS is for me.
 Debian Debian is a great operating system. It is free and open source, and it is very stable and secure.</description>
@@ -728,10 +745,10 @@ Debian Debian is a great operating system. It is free and open source, and it is
         
         <item>
             <title>My Personal Top 5 Linux Distros of 2020</title>
-            <link>https://wolf1e.ga/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</link>
+            <link>https://wolf1e.xyz/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</link>
             <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</guid>
+            <guid>https://wolf1e.xyz/posts/2020/11/my-personal-top-5-linux-distros-of-2020/</guid>
             <description>Hey guys, I am going to review my personal top five Linux distributions for this year. These distros, (distributions), are ones that I have personally used in the year of 2020. You may not agree with what I say, but that is alright. We are all human beings and we have our own opinions. These distros are just the ones that I selected because I thought they were the best.</description>
             <content type="html"><![CDATA[<p>Hey guys, I am going to review my personal top five Linux distributions for this year. These distros, (distributions), are ones that I have personally used in the year of 2020. You may not agree with what I say, but that is alright. We are all human beings and we have our own opinions. These distros are just the ones that I selected because I thought they were the best.</p>
 <h2 id="5-ubuntu">5. Ubuntu</h2>
@@ -767,13 +784,13 @@ Debian Debian is a great operating system. It is free and open source, and it is
         
         <item>
             <title>Using Fedora Linux</title>
-            <link>https://wolf1e.ga/posts/2020/10/using-fedora-linux/</link>
+            <link>https://wolf1e.xyz/posts/2020/10/using-fedora-linux/</link>
             <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2020/10/using-fedora-linux/</guid>
+            <guid>https://wolf1e.xyz/posts/2020/10/using-fedora-linux/</guid>
             <description>Fedora Logo
 Awhile ago, I decided to try out Fedora. I really like GNOME&amp;rsquo;s workflow and Fedora seemed like the best option because it is based around GNOME.
-Initial Installation I installed it, which was pretty easy thanks to the Anaconda installer, and tried to get the proprietary NVIDIA drivers working, but my card, a NVIDIA GT 8800, is older so the drivers ended up making the experience not great. The background would be all corrupted after suspending.</description>
+Initial Installation I installed it, which was pretty easy thanks to the Anaconda installer, and tried to get the proprietary NVIDIA drivers working, but my card, a NVIDIA GT 8800, is older so the drivers ended up making the experience not great.</description>
             <content type="html"><![CDATA[<p><img src="/post-photos/fedora-logo.jpg" alt="Fedora Logo">
 <em>Fedora Logo</em></p>
 <p>Awhile ago, I decided to try out Fedora. I really like GNOME&rsquo;s workflow and Fedora seemed like the best option because it is based around GNOME.</p>
@@ -790,10 +807,10 @@ Initial Installation I installed it, which was pretty easy thanks to the Anacond
         
         <item>
             <title>Using the Galaxy S5 in 2020</title>
-            <link>https://wolf1e.ga/posts/2020/10/using-the-galaxy-s5-in-2020/</link>
+            <link>https://wolf1e.xyz/posts/2020/10/using-the-galaxy-s5-in-2020/</link>
             <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2020/10/using-the-galaxy-s5-in-2020/</guid>
+            <guid>https://wolf1e.xyz/posts/2020/10/using-the-galaxy-s5-in-2020/</guid>
             <description>I tend to switch phones somewhat often, just to rediscover what made these devices great. Today, I decided to switch to the Samsung Galaxy S5 for one day. The experience was pretty good, as I will write later in this post. I managed to get Android 10 to run on it using a custom ROM called Resurrection Remix.
 The Good The phone experience was pretty good. It was even better than some low budget phones that I have tried in the past.</description>
             <content type="html"><![CDATA[<p>I tend to switch phones somewhat often, just to rediscover what made these devices great. Today, I decided to switch to the Samsung Galaxy S5 for one day. The experience was pretty good, as I will write later in this post. I managed to get Android 10 to run on it using a custom ROM called Resurrection Remix.</p>
@@ -808,10 +825,10 @@ The Good The phone experience was pretty good. It was even better than some low 
         
         <item>
             <title>Running Debian 10 On My Macbook</title>
-            <link>https://wolf1e.ga/posts/2020/10/running-debian-10-on-my-macbook/</link>
+            <link>https://wolf1e.xyz/posts/2020/10/running-debian-10-on-my-macbook/</link>
             <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2020/10/running-debian-10-on-my-macbook/</guid>
+            <guid>https://wolf1e.xyz/posts/2020/10/running-debian-10-on-my-macbook/</guid>
             <description>My Macbook Running Debian 10
 Yes, I know that I have written quite a bit of OS reviews, but this one is really good. Two days ago, I decided it would be nice to give Debian a try on my 4,1, as it has an older kernel and the lid closing might work. At the time of this post, the latest Debian release is Debian 10 Buster.
 Installing Debian I downloaded the operating system on their website using the HTTP option (I found it to be the easiest).</description>
@@ -847,10 +864,10 @@ Installing Debian I downloaded the operating system on their website using the H
         
         <item>
             <title>Trying Cloudready On My Macbook</title>
-            <link>https://wolf1e.ga/posts/2020/10/trying-cloudready-on-my-macbook/</link>
+            <link>https://wolf1e.xyz/posts/2020/10/trying-cloudready-on-my-macbook/</link>
             <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2020/10/trying-cloudready-on-my-macbook/</guid>
+            <guid>https://wolf1e.xyz/posts/2020/10/trying-cloudready-on-my-macbook/</guid>
             <description>Today, I thought it would be a good idea to revisit CloudReady on my Macbook 4,1. I created the USB using a tool in Linux called dd. It took some time, but it worked. I took out an old hard drive, that I originally got from the Macbook itself, and put it in the computer. CloudReady discontinued dual booting in 2018, so I couldn&amp;rsquo;t dual boot it with OS X Mountain Lion.</description>
             <content type="html"><![CDATA[<p>Today, I thought it would be a good idea to revisit CloudReady on my Macbook 4,1. I created the USB using a tool in Linux called dd. It took some time, but it worked. I took out an old hard drive, that I originally got from the Macbook itself, and put it in the computer. CloudReady discontinued dual booting in 2018, so I couldn&rsquo;t dual boot it with OS X Mountain Lion.</p>
 <p>I booted into the hard drive, so I could see what was on it before I wiped it. It turns out that there was macOS Catalina 10.15.3 on there. I checked out what was on there, and it was just a bunch of hackintosh kexts and such, some dmgs of programs I installed, and some of my music library. I figured that the Catalina partition wasn&rsquo;t very important, so I decided to go through with my install of CloudReady.</p>
@@ -865,10 +882,10 @@ Installing Debian I downloaded the operating system on their website using the H
         
         <item>
             <title>Running Mountain Lion in 2020</title>
-            <link>https://wolf1e.ga/posts/2020/10/running-mountain-lion-in-2020/</link>
+            <link>https://wolf1e.xyz/posts/2020/10/running-mountain-lion-in-2020/</link>
             <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2020/10/running-mountain-lion-in-2020/</guid>
+            <guid>https://wolf1e.xyz/posts/2020/10/running-mountain-lion-in-2020/</guid>
             <description>Mountain Lion Running On My Macbook 4,1
 This is a review on the state of OS X Mountain Lion in 2020 from my personal experience.
 OS X Mountain Lion was released on July 25, 2012. The OS received security updates until 2015. Most app developers decided to leave the platform. The major blow to older OS&amp;rsquo;s was Google unsupporting Chrome and not updating it anymore for OS X 10.9 and older.</description>
@@ -886,10 +903,10 @@ OS X Mountain Lion was released on July 25, 2012. The OS received security updat
         
         <item>
             <title>Using the HTC First in 2020</title>
-            <link>https://wolf1e.ga/posts/2020/10/using-the-htc-first-in-2020/</link>
+            <link>https://wolf1e.xyz/posts/2020/10/using-the-htc-first-in-2020/</link>
             <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://wolf1e.ga/posts/2020/10/using-the-htc-first-in-2020/</guid>
+            <guid>https://wolf1e.xyz/posts/2020/10/using-the-htc-first-in-2020/</guid>
             <description>My HTC First&amp;rsquo;s Homescreen
 Last night, I decided to try out the HTC First, (also known as the Facebook phone), in 2020. It runs Android 4.1.2. I got the idea from watching a Luke Smith video about how he did not use a phone at all apart from when he goes out to shoot in the forest.
 I installed some apps on there, such as TickTick, a Flashlight app (Android didn&amp;rsquo;t have a flashlight toggle yet!</description>

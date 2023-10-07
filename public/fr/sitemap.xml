@@ -1,61 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://wolf1e.ga/fr/categories/</loc>
+    <loc>https://wolf1e.xyz/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wolf1e.ga/categories/"
+                href="https://wolf1e.xyz/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://wolf1e.ga/fr/categories/"
+                href="https://wolf1e.xyz/fr/categories/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/fr/series/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wolf1e.ga/series/"
+                href="https://wolf1e.xyz/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://wolf1e.ga/fr/series/"
+                href="https://wolf1e.xyz/fr/series/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/fr/tags/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wolf1e.ga/tags/"
+                href="https://wolf1e.xyz/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://wolf1e.ga/fr/tags/"
+                href="https://wolf1e.xyz/fr/tags/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://wolf1e.ga/fr/</loc>
+  </url><url>
+    <loc>https://wolf1e.xyz/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wolf1e.ga/"
+                href="https://wolf1e.xyz/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://wolf1e.ga/fr/"
+                href="https://wolf1e.xyz/fr/"
                 />
   </url>
-  
 </urlset>
